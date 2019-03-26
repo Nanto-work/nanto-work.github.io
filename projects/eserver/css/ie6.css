@@ -1,0 +1,36 @@
+@charset "utf-8";
+/* CSS Document */
+/* guys, please please pleeeeease, don't use ie6!! */
+
+.banner .bottom-shadow{background:none;}
+input {scrollbar-face-color: expression(runtimeStyle.scrollbarFaceColor = '#fff', className = (className) ? ' type-'+type : 'type-'+type)}
+
+.banner .whois input.type-text{width:130px; height:20px; border:1px solid #bfbbb5; background:#fff; position:absolute; left:42px; top:45px; padding:0 3px; color:#46505a; line-height:20px;}
+.banner .whois input.type-submit{width:23px; height:23px; border:none; background:url(../img/whois-button.gif) no-repeat; position:absolute; top:45px; left:262px; cursor:pointer;}
+
+.leftcol, .footer .copy{margin-left:15px;}
+.login input.type-submit{border:none; background:none; font-size:11px; color:#19a7ad; font-weight:bold; text-align:left; width:50px; background:url(../img/button-enter-green.gif) no-repeat right; cursor:pointer;}
+
+h3 a, h3 a:hover{background-position: right 9px;}
+h3.min a, h3.min a:hover{background-position: right 7px;}
+
+
+.hosting thead th{
+	font-size:expression(this.previousSibling==null ?'11px' :''); 
+	text-align:expression(this.previousSibling==null ?'left' :''); 
+	padding-left:expression(this.previousSibling==null ?'20px' :'');
+	}
+.hosting tbody td{
+	font-size:expression(this.previousSibling==null ?'11px' :''); 
+	color:expression(this.previousSibling==null ?'#676767' :''); 
+	padding-left:expression(this.previousSibling==null ?'20px' :''); 
+	text-align:expression(this.previousSibling==null ?'left' :'');
+	border-bottom:1px solid #ebeef5;
+	}
+	
+	
+.banner .star{ 
+  height: expression(document.getElementById("banner").offsetHeight +"px"); 
+} 
+
+.banner p.category{margin-right:20px;}

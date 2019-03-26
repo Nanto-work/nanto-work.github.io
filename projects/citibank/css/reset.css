@@ -1,0 +1,109 @@
+/*html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, sub, tt, var,
+u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video*/ 
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, sub, tt, var, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, caption, tbody, tfoot, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video{
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: top;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:12px;
+	line-height:15px;
+} /*sup, /
+
+table{border-collapse: collapse;}
+a {
+    color: #3798CB;
+    outline: medium none;
+    text-decoration: none;
+}
+img{outline:none; border:none;}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+img{ border:none;}
+
+body {
+	line-height: 1;-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(opacity=99)";
+    filter:progid:DXImageTransform.Microsoft.Alpha(opacity=99);
+	/*background: url("../images/bg-pattern.gif") repeat;*/
+}
+ol, ul {
+	list-style: none;}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+a {
+    color: #3798CB;
+    outline: medium none;
+    text-decoration: none;
+}
+
+ 
+/* Icon */
+
+.clsDenganIcon, .clsperbankanIcon, .clsPilihanIcon, .clsLaporanIcon, .clsemailIcon, .clsTelegraphicIcon, 
+.clsTransferIcon, .clsGratisIcon, .clsDebitAtmIcon, .clsFlightIcon, .clsShoppingIcon, .clsMasterCardIcon, 
+.clsTreeIcon, .clsHotelIcon, .clsCarIcon, .clsBillIcon, .clsHanyaIcon, .clsInstallmentIcon, .clsJumlahIcon, 
+.clsAndaIcon, .clsDolorIcon, .clsBisaIcon, .clsTarikIcon, .clsTetapIcon, .clsKapanIcon, .clsTingkatIcon, 
+.clsParsialIcon, .clsSimpanIcon, .clsKarenaIcon, .clsButuhIcon, .clsCitiIcon, .clsRupiahIcon, .clsGlobalSecIcon, 
+.clsforeignIcon, .clsCitiPhoneIcon, .clsemailAdIcon, .clsTelePhoneIcon, .clsAtmPinIcon, .clseasyServIcon, .clsPercentIcon, 
+.clsForeignersIcon, .clsAgeIcon, .clsRolloverIcon, .clsFlexibleIcon, .clsColletralIcon, .clsCurrenciesIcon, .clsSavingsIcon, 
+.ClsJumlahIcon, .ClsTenorIcon, .ClsOlehIcon, .ClsYangIcon, .clsSupSwitichIcon1, .clsSupSwitichIcon2, .clsSupSwitichIcon3, 
+.clsSupSwitichIcon4, .clsLadderIcon1, .clsLadderIcon2, .clsLadderIcon3, .clsLadderIcon4 {
+    display: inline-block;
+    height: 25px;
+    margin-right: 10px;
+    vertical-align: middle;
+    width: 25px;
+}
+
+.iconBlock {float: left;height: 27px;margin-right: 10px;width: 30px; margin-top: -5px;}
+
+.gridTable {display: block;margin-top: 9px;}
+.gridTable tr {vertical-align: top;}
+.gridTableLftAlign tr td {
+    text-align: left !important;
+}
+.gridTableLftAlign tr td h4 {
+	color: #000000;
+ 	font-size: 12px;
+    padding: 0 0 10px;
+}
+
+
+/* Icon End */
+
+h3 {
+    color: #333333;
+    font-size: 15px;
+    font-weight: bold;
+    line-height: 17px;
+    padding: 0 0 15px;
+}
+

@@ -1,0 +1,90 @@
+@charset "utf-8";
+
+*{
+	margin:0;
+	padding:0;
+}
+body{
+	font-family: Tahoma, 'Tahoma', sans-serif;
+	text-align:center;
+}
+.wrapper{
+	padding:20px;
+	display:inline-block;
+}
+#maze{
+	border-collapse: collapse;
+}
+#maze td{
+	width:20px;
+	height:20px;
+	font-size:8px;
+	line-height:20px;
+	text-align:center;
+	vertical-align:top;
+	border:none;
+	color:#000;
+}
+.cellPath{
+	/* background:green; */
+}
+input{
+	border:1px solid #777;
+	width:60px;
+	padding:0 5px;
+	background:#fff;
+}
+a{
+	border-radius:3px;
+	background:green;
+	color:#fff;
+	font-size:12px;
+	font-weight:bold;
+	padding:5px 10px;
+	text-decoration:none;
+	display:inline-block;
+	display:-webkit-box;
+}
+.linkBox span{
+	font-size:12px;
+	line-height:12px;
+}
+.genMazeLink{
+	width:800px;
+	text-align:center;
+	margin:10px auto 20px;
+    display:-webkit-box;
+    -webkit-box-pack:justify;
+    display:-webkit-flex;
+    webkit-justify-content:space-between;
+    display:flex;
+    justify-content:space-between;
+    text-align:justify;
+    text-align-last:justify;
+}
+.linkBox{
+	width:800px;
+	margin:10px auto 0;
+	text-align:left;
+}
+.genMazeBoxInputs{
+	margin-top: 10px;
+}
+#maze tr:first-child td:first-child,
+#maze tr:last-child td:last-child{
+	position:relative;
+}
+#maze tr:first-child td:first-child:before{
+	content:'⇒';
+	position:absolute;
+	left:-18px;
+	top:-4px;
+	font-size:20px;
+}
+#maze tr:last-child td:last-child:before{
+	content:'⇒';
+	position:absolute;
+	left:25px;
+	top:0;
+	font-size:20px;
+}
