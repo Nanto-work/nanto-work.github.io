@@ -1,7 +1,14 @@
-/* logo-font */
+/* fonts */
 @font-face {
-    font-family:'Nanto-web';
-    src:url('nanto.woff') format('woff');
-    font-weight:normal;
-    font-style:normal;
+	font-family:'Nanto-web';
+	src:url('nanto.woff') format('woff');
+	font-weight:normal;
+	font-style:normal;
+}
+
+@font-face {
+	font-family:'Inconsolata';
+	src:url('inconsolata.woff') format('woff');
+	font-weight:400;
+	font-style:normal;
 }

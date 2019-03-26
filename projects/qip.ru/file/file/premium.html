@@ -1,0 +1,585 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ru" lang="ru">
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+<head>
+	<title>file.qip.ru - хранение и обмен файлами</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link rel="stylesheet" href="../skin/file.css" type="text/css" />
+	<script type="text/javascript" src="../js/s_index.js"></script>
+	<script type="text/javascript" src="../js/jq.js"></script>
+</head>
+
+<body>
+	<div class="qip_main_wrapper">
+		<div class="main">
+			<div id="qip_head" class="qip_head">
+				<ul class="qh_user_block qh_auth q_fr">
+					<li class="q_bold" title="">
+						<a id="qhu_username" href="#" target="_top"></a>
+					</li>
+					<li class="qhu_delimiter">|</li>
+					<li><a href="#" target="_top">Почта</a><span class="q_hidden">: <a id="qhu_mail_top" class="qhu_mail_top" href="#" target="_top"></a></span></li>
+					<li class="qhu_delimiter">|</li>
+					<li><a class="qhu_logout" href="#" target="_top">Выход</a></li>
+				</ul>
+				<ul class="qh_user_block qh_unauth q_fr">
+					<li><a href="#" target="_top">Скачать QIP</a></li>
+					<li class="qhu_delimiter">|</li>
+					<li><a class="q_bold" href="#" target="_top" onclick="return showLoginForm()">Войти на сайт</a></li>
+				</ul>
+				<form id="qip_login_form" class="qh_login q_abs q_plate q_hidden" action="#" method="post" onsubmit="test(this);return false;">
+					<div id="qip_login_error" class="qhl_error q_hidden"></div>
+					<input id="qip_login_redirect" type="hidden" value="" />
+					<input class="qhl_field" type="text" name="login" value="Логин" onfocus="focusField(this, 'Логин')" onblur="blurField(this, 'Логин')" maxlength="60" />&nbsp;@&nbsp;
+					<select class="qhl_host" name="host">
+						<option value="qip.ru" selected="selected">qip.ru</option>
+						<option value="pochta.ru">pochta.ru</option>
+						<option value="fromru.com">fromru.com</option>
+						<option value="front.ru">front.ru</option>
+						<option value="hotbox.ru">hotbox.ru</option>
+						<option value="hotmail.ru">hotmail.ru</option>
+						<option value="krovatka.su">krovatka.su</option>
+						<option value="land.ru">land.ru</option>
+						<option value="mail15.com">mail15.com</option>
+						<option value="mail333.com">mail333.com</option>
+						<option value="newmail.ru">newmail.ru</option>
+						<option value="nightmail.ru">nightmail.ru</option>
+						<option value="nm.ru">nm.ru</option>
+						<option value="pisem.net">pisem.net</option>
+						<option value="pochtamt.ru">pochtamt.ru</option>
+						<option value="pop3.ru">pop3.ru</option>
+						<option value="rbcmail.ru">rbcmail.ru</option>
+						<option value="smtp.ru">smtp.ru</option>
+						<option value="5ballov.ru">5ballov.ru</option>
+						<option value="aeterna.ru">aeterna.ru</option>
+						<option value="ziza.ru">ziza.ru</option>
+						<option value="memori.ru">memori.ru</option>
+						<option value="photofile.ru">photofile.ru</option>
+						<option value="fotoplenka.ru">fotoplenka.ru</option>
+						<option value="pochta.com">pochta.com</option>
+					</select>&nbsp;
+					<input class="qhl_field qhl_field_inact" type="password" name="password" value="Пароль" onfocus="focusField(this, 'Пароль')" onblur="blurField(this, 'Пароль')" maxlength="128" />&nbsp;
+					<input class="qhl_button" type="submit" value="войти" />
+					<div class="qhl_splitter"></div>
+					<div class="qhl_extra"> <a class="q_fl" href="#" target="_top">Забыли пароль?</a>
+						<label class="qhl_alien q_fr" for="qhl_alien">Чужой компьютер
+							<input id="qhl_alien" type="checkbox" name="alien" value="1" />
+						</label> <a class="q_bold" href="#" target="_top">Регистрация</a> </div>
+				</form>
+				<ul class="qh_menu">
+					<li id="qhm_home"><a href="#" target="_top">QIP.RU:</a></li>
+					<li id="qhm_mail"><a href="#" target="_top">Почта</a></li>
+					<li id="qhm_news"><a href="#" target="_top">Новости</a></li>
+					<li id="qhm_search"><a href="#" target="_top">Поиск</a></li>
+					<li id="qhm_video"><a href="#" target="_top">Видео</a></li>
+					<li id="qhm_photo"><a href="#" target="_top">Фото</a></li>
+					<li id="qhm_love"><a href="#" target="_top">Знакомства</a></li>
+					<li id="qhm_kards"><a href="#" target="_top">Открытки</a></li>
+					<li id="qhm_ziza"><a href="#" target="_top">Юмор</a></li>
+					<li id="qhm_store"><a href="#" target="_top">Игры</a></li>
+					<li class="q_more qm_inactive">
+						<table class="qs_all qm_list q_plate" onmouseout="var _this = this.parentNode; this.timeout = setTimeout(function(){show_more.apply(_this, [true])}, 1000)" onmouseover="clearTimeout(this.timeout)">
+							<tr>
+								<td>
+									<a href="#">
+										<div class="qs_all_icon qs_ic_mail"></div>
+										<div class="qs_all_pointer"></div>
+										<div class="qs_all_title">Почта</div>
+									</a>
+								</td>
+								<td>
+									<a href="#">
+										<div class="qs_all_icon qs_ic_news"></div>
+										<div class="qs_all_pointer"></div>
+										<div class="qs_all_title">Новости</div>
+									</a>
+								</td>
+								<td>
+									<a href="#">
+										<div class="qs_all_icon qs_ic_oboi"></div>
+										<div class="qs_all_pointer"></div>
+										<div class="qs_all_title">Обои</div>
+									</a>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="#">
+										<div class="qs_all_icon qs_ic_i"></div>
+										<div class="qs_all_pointer"></div>
+										<div class="qs_all_title">i.QIP</div>
+									</a>
+								</td>
+								<td>
+									<a href="#">
+										<div class="qs_all_icon qs_ic_auto"></div>
+										<div class="qs_all_pointer"></div>
+										<div class="qs_all_title">Авто</div>
+									</a>
+								</td>
+								<td>
+									<a href="#">
+										<div class="qs_all_icon qs_ic_avatars"></div>
+										<div class="qs_all_pointer"></div>
+										<div class="qs_all_title">Аватары</div>
+									</a>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="#">
+										<div class="qs_all_icon qs_ic_ziza"></div>
+										<div class="qs_all_pointer"></div>
+										<div class="qs_all_title">Юмор</div>
+									</a>
+								</td>
+								<td>
+									<a href="#">
+										<div class="qs_all_icon qs_ic_sport"></div>
+										<div class="qs_all_pointer"></div>
+										<div class="qs_all_title">Спорт</div>
+									</a>
+								</td>
+								<td>
+									<a href="#">
+										<div class="qs_all_icon qs_ic_maps"></div>
+										<div class="qs_all_pointer"></div>
+										<div class="qs_all_title">Карты</div>
+									</a>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="#">
+										<div class="qs_all_icon qs_ic_love"></div>
+										<div class="qs_all_pointer"></div>
+										<div class="qs_all_title">Знакомства</div>
+									</a>
+								</td>
+								<td>
+									<a href="#">
+										<div class="qs_all_icon qs_ic_radio"></div>
+										<div class="qs_all_pointer"></div>
+										<div class="qs_all_title">Радио</div>
+									</a>
+								</td>
+								<td>
+									<a href="#">
+										<div class="qs_all_icon qs_ic_memori"></div>
+										<div class="qs_all_pointer"></div>
+										<div class="qs_all_title">Закладки</div>
+									</a>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="#">
+										<div class="qs_all_icon qs_ic_video"></div>
+										<div class="qs_all_pointer"></div>
+										<div class="qs_all_title">Видео</div>
+									</a>
+								</td>
+								<td>
+									<a href="#">
+										<div class="qs_all_icon qs_ic_b"></div>
+										<div class="qs_all_pointer"></div>
+										<div class="qs_all_title">Форумы</div>
+									</a>
+								</td>
+								<td>
+									<a href="#">
+										<div class="qs_all_icon qs_ic_afisha"></div>
+										<div class="qs_all_pointer"></div>
+										<div class="qs_all_title">Афиша</div>
+									</a>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="#">
+										<div class="qs_all_icon qs_ic_foto"></div>
+										<div class="qs_all_pointer"></div>
+										<div class="qs_all_title">Фото</div>
+									</a>
+								</td>
+								<td>
+									<a href="#">
+										<div class="qs_all_icon qs_ic_hosting"></div>
+										<div class="qs_all_pointer"></div>
+										<div class="qs_all_title">Хостинг</div>
+									</a>
+								</td>
+								<td>
+									<a href="#">
+										<div class="qs_all_icon qs_ic_mblogi"></div>
+										<div class="qs_all_pointer"></div>
+										<div class="qs_all_title">Микроблоги</div>
+									</a>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="#">
+										<div class="qs_all_icon qs_ic_file"></div>
+										<div class="qs_all_pointer"></div>
+										<div class="qs_all_title">Файлы</div>
+									</a>
+								</td>
+								<td>
+									<a href="#">
+										<div class="qs_all_icon qs_ic_flink"></div>
+										<div class="qs_all_pointer"></div>
+										<div class="qs_all_title">QIP Shot</div>
+									</a>
+								</td>
+								<td>
+									<a href="#">
+										<div class="qs_all_icon qs_ic_history"></div>
+										<div class="qs_all_pointer"></div>
+										<div class="qs_all_title">История</div>
+									</a>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="#">
+										<div class="qs_all_icon qs_ic_5ballov"></div>
+										<div class="qs_all_pointer"></div>
+										<div class="qs_all_title">Рефераты</div>
+									</a>
+								</td>
+								<td>
+									<a href="#">
+										<div class="qs_all_icon qs_ic_aeterna"></div>
+										<div class="qs_all_pointer"></div>
+										<div class="qs_all_title">Тесты</div>
+									</a>
+								</td>
+								<td>
+									<a href="#">
+										<div class="qs_all_icon qs_ic_paint"></div>
+										<div class="qs_all_pointer"></div>
+										<div class="qs_all_title">Рисование</div>
+									</a>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="#">
+										<div class="qs_all_icon qs_ic_kards"></div>
+										<div class="qs_all_pointer"></div>
+										<div class="qs_all_title">Открытки</div>
+									</a>
+								</td>
+								<td>
+									<a href="#">
+										<div class="qs_all_icon qs_ic_horo"></div>
+										<div class="qs_all_pointer"></div>
+										<div class="qs_all_title">Гороскопы</div>
+									</a>
+								</td>
+								<td>
+									<a href="#">
+										<div class="qs_all_icon qs_ic_ip"></div>
+										<div class="qs_all_pointer"></div>
+										<div class="qs_all_title">Твой IP</div>
+									</a>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="#">
+										<div class="qs_all_icon qs_ic_voip"></div>
+										<div class="qs_all_pointer"></div>
+										<div class="qs_all_title">Звонки</div>
+									</a>
+								</td>
+								<td>
+									<a href="#">
+										<div class="qs_all_icon qs_ic_realty"></div>
+										<div class="qs_all_pointer"></div>
+										<div class="qs_all_title">Недвижимость</div>
+									</a>
+								</td>
+								<td>
+									<a href="#">
+										<div class="qs_all_icon qs_ic_pip"></div>
+										<div class="qs_all_pointer"></div>
+										<div class="qs_all_title">Кнопка</div>
+									</a>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="#">
+										<div class="qs_all_icon qs_ic_stars"></div>
+										<div class="qs_all_pointer"></div>
+										<div class="qs_all_title">Звёзды</div>
+									</a>
+								</td>
+								<td>
+									<a href="#">
+										<div class="qs_all_icon qs_ic_skidki"></div>
+										<div class="qs_all_pointer"></div>
+										<div class="qs_all_title">Скидки</div>
+									</a>
+								</td>
+								<td>
+									<a href="#">
+										<div class="qs_all_icon qs_ic_how"></div>
+										<div class="qs_all_pointer"></div>
+										<div class="qs_all_title">Инструкции</div>
+									</a>
+								</td>
+							</tr>
+							<tr>
+								<td></td>
+								<td></td>
+								<td>
+									<a href="#">
+										<div class="qs_all_icon qs_ic_services"></div>
+										<div class="qs_all_pointer"></div>
+										<div class="qs_all_title">Все сервисы</div>
+									</a>
+								</td>
+							</tr>
+						</table> <a class="qm_link" href="#" onclick="show_more.apply(this.parentNode);return false;" target="_top"><span class="qm_dotted">ещё</span> &#9660;</a> </li>
+				</ul>
+			</div>
+		</div>
+		<!-- Лого и поиск -->
+		<div id="qfile_search" class="qip_row q_mb5 q_mt20">
+			<div class="q_logo q_fl">
+				<a class="ql_master q_fr" href="#" title="QIP.ru"></a>
+				<a class="ql_slave" href="index.html" title="Файлы"></a>
+				<h3 class="ql_caption"><a href="index.html" title="Файлы">Файлы</a></h3> </div>
+			<div class="q_search">
+				<ul class="q_search_tabs">
+					<li class="q_bold">Поиск</li>
+					<li><a id="q_searchtabs_photo" href="#">Картинки</a></li>
+					<li><a id="q_searchtabs_video" href="#">Видео</a></li>
+					<li><a id="q_searchtabs_maps" href="#">Карты</a></li>
+					<li><a id="q_searchtabs_file" href="#">Файлы</a></li>
+					<li><a id="q_searchtabs_market" href="#">Маркет</a></li>
+					<li><a id="q_searchtabs_5ballov_dictionary" href="#">Словари</a></li>
+					<li class="q_more qm_inactive">
+						<ul class="qm_list q_plate" onmouseout="var more = this.parentNode; this.timeout = setTimeout(function(){show_more.call(more, true)}, 1000)" onmouseover="clearTimeout(this.timeout)">
+							<li><a id="q_searchtabs_job" href="#">Работа</a></li>
+							<li><a id="q_searchtabs_stars" href="#">Звёзды</a></li>
+							<li><a id="q_searchtabs_5ballov" href="#">Рефераты</a></li>
+							<li><a id="q_searchtabs_realty" href="#">Недвижимость</a></li>
+							<li><a id="q_searchtabs_cards" href="#">Открытки</a></li>
+							<li><a id="q_searchtabs_memori" href="#">Закладки</a></li>
+							<li><a id="q_searchtabs_games" href="#">Игры</a></li>
+							<li><a id="q_searchtabs_ziza" href="#">Юмор</a></li>
+							<li><a id="q_searchtabs_blogs" href="#">Блоги</a></li>
+							<li class="qml_services"><a id="q_searchtabs_services" href="serviceshtml.html">Все сервисы</a></li>
+						</ul><a id="q_searchtabs_more" class="qm_link" href="#" onclick="show_more.apply(this.parentNode);return false;"><span class="qm_dotted">ещё</span><b>&nbsp;&#9660;</b></a></li>
+				</ul>
+				<form id="qip_search_form" class="q_search_form" name="qip_search_form" action="#" method="get">
+					<input type="hidden" name="from" value="qip" />
+					<table cellpadding="0" cellspacing="0" border="0">
+						<tr>
+							<td class="qs_tfield_cell">
+								<input id="qip_search_form_input" class="qs_tfield" type="text" name="query" value="" maxlength="200" tabindex="1" autocomplete="off" />
+							</td>
+							<td class="qs_submit_cell">
+								<input id="qip_search_form_submit" class="qs_submit" type="submit" value="Найти" tabindex="2" />
+							</td>
+						</tr>
+						<tr>
+							<td class="qs_example" align="left"><a id="q_search_extended" class="q_fr" href="#">Расширенный поиск</a>Пример:
+							</td>
+							<td></td>
+						</tr>
+					</table>
+				</form>
+			</div>
+		</div>
+<script type="text/javascript">
+	(function() {
+		$(document).ready(function (){
+			$('a.qfile_pr_tab_dropdown').click(function (){
+				$('tr.qfile_pr_tab_dnd').toggleClass('on');
+			})
+			$('a#qfile_pr_tab_dropdown_mid').click(function (){
+				$('tr#qfile_pr_tab_down').css({'display' : 'none'});
+			})
+			$('a#qfile_pr_tab_dropdown_down').click(function (){
+				$('tr#qfile_pr_tab_down').css({'display' : 'table-row'});
+			})
+		})
+	})();
+
+	(function() {
+		$(document).ready(function (){
+			$('.qfile_pr_tab_plus-minus').click(function (){
+				var display = $(this).nextAll('p.qfile_pr_tab_hidetext').css('display');
+				if (display == 'none') {
+					$(this).nextAll('p.qfile_pr_tab_hidetext').css({'display' : 'block'});
+					$(this).removeClass('qfile_pr_tab_plus');
+					$(this).prevAll('div.qfile_pr_tab_plus-minus').removeClass('qfile_pr_tab_plus');
+					$(this).addClass('qfile_pr_tab_minus');
+					$(this).prevAll('div.qfile_pr_tab_plus-minus').addClass('qfile_pr_tab_minus');
+				} else {
+					$(this).nextAll('p.qfile_pr_tab_hidetext').css({'display' : 'none'});
+					$(this).removeClass('qfile_pr_tab_minus');
+					$(this).prevAll('div.qfile_pr_tab_plus-minus').removeClass('qfile_pr_tab_minus');
+					$(this).addClass('qfile_pr_tab_plus');
+					$(this).prevAll('div.qfile_pr_tab_plus-minus').addClass('qfile_pr_tab_plus');
+				}
+			})
+		})
+		$(document).ready(function (){
+			$('a.qfile_pr_tab_plus_min').click(function (){
+				$('p.qfile_pr_tab_hidetext').css({'display' : 'block'});
+				$('div.qfile_pr_tab_plus-minus').removeClass('qfile_pr_tab_plus');
+				$('div.qfile_pr_tab_plus-minus').addClass('qfile_pr_tab_minus');
+			})
+			$('a.qfile_pr_tab_minus_min').click(function (){
+				$('p.qfile_pr_tab_hidetext').css({'display' : 'none'});
+				$('div.qfile_pr_tab_plus-minus').removeClass('qfile_pr_tab_minus');
+				$('div.qfile_pr_tab_plus-minus').addClass('qfile_pr_tab_plus');
+			})
+		})
+	})();
+</script>
+	<div class="qip_row q_mt30">
+		<div class="qfile_left"></div>
+		<div class="qfile_right_tour q_mb30">
+			<h1 class="q_mb20">Премиум возможности QIP File</h1>
+			<div class="qfile_about">
+				<p class="qfile_about_pr">Бесплатный план подписки QIP File позволяет вам использовать до 10 Гб места на сервере. Если вам необходимо больше места, воспользуйтесь Премиум планом и получите до <span class="q_bold">100 Гб</span> места на сервере и <a href="#features">расширенные возможности</a>.</p>
+				<p class="qfile_about_pr">Чтобы узнать больше о QIP File, посмотрите <a href="tour.html" title="Обзорный тур">обзорный тур</a>.</p>
+				<div class="qfile_about_pr_dload">
+					<div class="qfile_dload_pr q_fl"><a href="#" title="Перейти на Премиум-аккаунт"></a></div>
+					<p>Попробуйте возможности Премиум-аккаунта бесплатно в течение месяца!</p>
+				</div>
+			</div>
+			<a name="features"></a>
+			<table class="qfile_pr_tab" cols="3">
+				<caption>Сравните возможности Бесплатного и Премиум планов подписок</caption>
+				<tr class="qfile_pr_tab_up"><td class="qfile_pr_tab1"></td><td class="qfile_pr_tab2">Премиум<div class="qfile_pr_btn"><a href="#" title="Купить Премиум-аккаунт">Купить!</a></div></td><td class="qfile_pr_tab3">Бесплатный<div class="qfile_pr_reg_btn"><a href="#" title="Регистрация">Регистрация</a></div></td></tr>
+				<tr><td class="qfile_pr_tab1"><h4>Стоимость подписки</h4></td><td class="qfile_pr_tab2"><select><option>3 мес&nbsp;&mdash;&nbsp;240 руб.</option><option>6 мес&nbsp;&mdash;&nbsp;400 руб.</option></select></td><td class="qfile_pr_tab3">Бесплатно</td></tr>
+				<tr><td class="qfile_pr_tab1"><h4>Премиум трафик</h4><p>Объем данных, которые Вы можете скачать с премиум возможностями</p></td><td class="qfile_pr_tab2">100 Gb</td><td class="qfile_pr_tab3">Нет</td></tr>
+				<tr><td class="qfile_pr_tab1"><a name="features"></a><h4>Мгновенное начало загрузки</h4><p>Без времени ожидания для начала скачивания каждого файла</p></td><td class="qfile_pr_tab2"><div class="qfile_pr_yes"></div></td><td class="qfile_pr_tab3"><div class="qfile_pr_no"></div></td></tr>
+				<tr><td class="qfile_pr_tab1"><h4>Свободное скачивание</h4><p>Отсутствие рекламы</p></td><td class="qfile_pr_tab2"><div class="qfile_pr_yes"></div></td><td class="qfile_pr_tab3"><div class="qfile_pr_no"></div></td></tr>
+				<tr><td class="qfile_pr_tab1"><h4>Скорость скачивания</h4><p>Приоритет скорости передачи данных</p></td><td class="qfile_pr_tab2">Высокий</td><td class="qfile_pr_tab3">Низкий</td></tr>
+				<tr><td class="qfile_pr_tab1"><h4>Возможность докачки</h4><p>Использование менеджеров загрузок</p></td><td class="qfile_pr_tab2"><div class="qfile_pr_yes"></div></td><td class="qfile_pr_tab3"><div class="qfile_pr_no"></div></td></tr>
+				<tr><td class="qfile_pr_tab1"><h4>Максимальный размер файла</h4><p>Максимально допустимый размер файла для загрузки</p></td><td class="qfile_pr_tab2">5 Gb</td><td class="qfile_pr_tab3">1024 Mb</td></tr>
+				<tr><td class="qfile_pr_tab1"><h4>Загрузка из интернета</h4><p>Загрузка файлов из сети Интернет</p></td><td class="qfile_pr_tab2"><div class="qfile_pr_yes"></div></td><td class="qfile_pr_tab3"><div class="qfile_pr_no"></div></td></tr>
+				<tr><td class="qfile_pr_tab1"><h4>Объем виртуального диска</h4><p>Объем виртуального диска для загрузки Ваших файлов</p></td><td class="qfile_pr_tab2">100 Gb</td><td class="qfile_pr_tab3">10 Gb</td></tr>
+				<tr><td class="qfile_pr_tab1"><h4>Обмен файлами без рекламы</h4><p>Отсутствие рекламы в вашем аккаунте</p></td><td class="qfile_pr_tab2"><div class="qfile_pr_yes"></div></td><td class="qfile_pr_tab3"><div class="qfile_pr_no"></div></td></tr>
+				<tr><td class="qfile_pr_tab1"><h4>Прямые ссылки</h4><p>Прямые ссылки для работы с менеджерами загрузок, или для размещения Ваших файлов на любых веб-страницах</p></td><td class="qfile_pr_tab2"><div class="qfile_pr_yes"></div></td><td class="qfile_pr_tab3"><div class="qfile_pr_no"></div></td></tr>
+				<tr id="qfile_pr_tab_down"><td class="qfile_pr_tab1"><div class="qfile_pr_tab_down_dnd q_fl"></div><a href="javascript:void(0)" class="qfile_pr_tab_dropdown" id="qfile_pr_tab_dropdown_mid">Посмотреть все возможности</a></td><td class="qfile_pr_tab2"><div class="qfile_pr_btn"><a href="#" title="Купить Премиум-аккаунт">Купить!</a></div></td><td class="qfile_pr_tab3"><div class="qfile_pr_reg_btn"><a href="#" title="Регистрация">Регистрация</a></div></td></tr>
+				<tr class="qfile_pr_tab_dnd"><td class="qfile_pr_tab1"><div class="qfile_pr_tab_plus-minus qfile_pr_tab_plus"></div><a href="javascript:void(0)" class="qfile_pr_tab_plus-minus">Количество субдоменов</a><p class="qfile_pr_tab_hidetext">Имя субдомена позволяет Вам изменить ссылку на общедоступную папку, сделав ее простой и легко запоминающейся, например ИмяПапки.file.qip.ru</p></td><td class="qfile_pr_tab2">100</td><td class="qfile_pr_tab3">100</td></tr>
+                <tr class="qfile_pr_tab_dnd"><td class="qfile_pr_tab1"><div class="qfile_pr_tab_plus-minus qfile_pr_tab_plus"></div><a href="javascript:void(0)" class="qfile_pr_tab_plus-minus">Compatibility</a><p class="qfile_pr_tab_hidetext">QIP Sync для мобильного<br />&bull;&nbsp;QIP Sync service is now supported by popular mobile operating systems, like Symbian, Android, Blackberry, iOS.<br />You get instant access to QIP Sync from your smartphone or pad anywhere and anytime, you wish to, and enjoy using all features, that is, upload, download, share and manage any of your files easily.<br />&bull;&nbsp;Access to QIP Sync via Internet Browsers<br />QIP Sync services and features are supported by all popular internet browsers: Internet Explorer, Chrome, FireFox, Opera and Safari.</p></td><td class="qfile_pr_tab2"><div class="qfile_pr_yes"></div></td><td class="qfile_pr_tab3"><div class="qfile_pr_yes"></div></td></tr>
+                <tr class="qfile_pr_tab_dnd"><td class="qfile_pr_tab1"><div class="qfile_pr_tab_plus-minus qfile_pr_tab_plus"></div><a href="javascript:void(0)" class="qfile_pr_tab_plus-minus">24/7 Technical Support</a><p class="qfile_pr_tab_hidetext">The members of QIP Sync 24/7 Support team will be glad to answer any users' questions and help them resolve any occurring technical problems, regarding QIP Sync services.</p></td><td class="qfile_pr_tab2"><div class="qfile_pr_yes"></div></td><td class="qfile_pr_tab3"><div class="qfile_pr_yes"></div></td></tr>
+                <tr class="qfile_pr_tab_dnd"><td class="qfile_pr_tab1"><div class="qfile_pr_tab_plus-minus qfile_pr_tab_plus"></div><a href="javascript:void(0)" class="qfile_pr_tab_plus-minus">Updates</a><p class="qfile_pr_tab_hidetext">All QIP Sync users are provided with newly-updated QIP Sync services and applications for free.</p></td><td class="qfile_pr_tab2"><div class="qfile_pr_yes"></div></td><td class="qfile_pr_tab3"><div class="qfile_pr_yes"></div></td></tr>
+                <tr class="qfile_pr_tab_dnd"><td class="qfile_pr_tab1"><div class="qfile_pr_tab_plus-minus qfile_pr_tab_plus"></div><a href="javascript:void(0)" class="qfile_pr_tab_plus-minus">Возобновление скачивания</a><p class="qfile_pr_tab_hidetext">Вы можете возобновлять скачивание файлов с помощью менеджеров закачек FlashGet, ReGet, GetRight и т.п., если соединение было прервано</p></td><td class="qfile_pr_tab2"><div class="qfile_pr_yes"></div></td><td class="qfile_pr_tab3"><div class="qfile_pr_no"></div></td></tr>
+                <tr class="qfile_pr_tab_dnd"><td class="qfile_pr_tab1"><div class="qfile_pr_tab_plus-minus qfile_pr_tab_plus"></div><a href="javascript:void(0)" class="qfile_pr_tab_plus-minus">Детальная статистика использования аккаунта</a><p class="qfile_pr_tab_hidetext">Вы можете проверить статистику о количестве скачиваний и загрузок Ваших файлов, а также время последнего скачивания и остаток свободного места на Вашем виртуальном диске</p></td><td class="qfile_pr_tab2"><div class="qfile_pr_yes"></div></td><td class="qfile_pr_tab3"><div class="qfile_pr_no"></div></td></tr>
+                <tr class="qfile_pr_tab_dnd"><td class="qfile_pr_tab1"><div class="qfile_pr_tab_plus-minus qfile_pr_tab_plus"></div><a href="javascript:void(0)" class="qfile_pr_tab_plus-minus">Просмотр содержимого zip-архива</a><p class="qfile_pr_tab_hidetext">Вы сможете просмотреть содержимое файла с расширением .zip в отдельном окне</p></td><td class="qfile_pr_tab2"><div class="qfile_pr_yes"></div></td><td class="qfile_pr_tab3"><div class="qfile_pr_no"></div></td></tr>
+                <tr class="qfile_pr_tab_dnd"><td class="qfile_pr_tab1"><div class="qfile_pr_tab_plus-minus qfile_pr_tab_plus"></div><a href="javascript:void(0)" class="qfile_pr_tab_plus-minus">Архивация файлов онлайн</a><p class="qfile_pr_tab_hidetext">С этой функцией Вы можете архивировать файлы, находящиеся в Вашем аккаунте, и скачать их единым архивом</p></td><td class="qfile_pr_tab2"><div class="qfile_pr_yes"></div></td><td class="qfile_pr_tab3"><div class="qfile_pr_no"></div></td></tr>
+                <tr class="qfile_pr_tab_dnd"><td class="qfile_pr_tab1"><div class="qfile_pr_tab_plus-minus qfile_pr_tab_plus"></div><a href="javascript:void(0)" class="qfile_pr_tab_plus-minus">Редактирование текстовых файлов</a><p class="qfile_pr_tab_hidetext">Вы сможете редактировать текстовые документы прямо в Вашем аккаунте</p></td><td class="qfile_pr_tab2"><div class="qfile_pr_yes"></div></td><td class="qfile_pr_tab3"><div class="qfile_pr_no"></div></td></tr>
+                <tr class="qfile_pr_tab_dnd"><td class="qfile_pr_tab1"><div class="qfile_pr_tab_plus-minus qfile_pr_tab_plus"></div><a href="javascript:void(0)" class="qfile_pr_tab_plus-minus">Функция поиска</a><p class="qfile_pr_tab_hidetext">Функция поиска позволит Вам найти все необходимые файлы, размещённые на QIP Sync</p></td><td class="qfile_pr_tab2"><div class="qfile_pr_yes"></div></td><td class="qfile_pr_tab3"><div class="qfile_pr_yes"></div></td></tr>
+                <tr class="qfile_pr_tab_dnd"><td class="qfile_pr_tab1"><div class="qfile_pr_tab_plus-minus qfile_pr_tab_plus"></div><a href="javascript:void(0)" class="qfile_pr_tab_plus-minus">Управление файлами онлайн</a><p class="qfile_pr_tab_hidetext">Вы можете загружать, скачивать и упорядочивать файлы непосредственно в Вашем аккаунте, используя лишь Интернет-браузер</p></td><td class="qfile_pr_tab2"><div class="qfile_pr_yes"></div></td><td class="qfile_pr_tab3"><div class="qfile_pr_yes"></div></td></tr>
+                <tr class="qfile_pr_tab_dnd"><td class="qfile_pr_tab1"><div class="qfile_pr_tab_plus-minus qfile_pr_tab_plus"></div><a href="javascript:void(0)" class="qfile_pr_tab_plus-minus">Windows-интерфейс</a><p class="qfile_pr_tab_hidetext">Все меню и панели инструментов просты в применении, благодаря понятному интерфейсу</p></td><td class="qfile_pr_tab2"><div class="qfile_pr_yes"></div></td><td class="qfile_pr_tab3"><div class="qfile_pr_yes"></div></td></tr>
+                <tr class="qfile_pr_tab_dnd"><td class="qfile_pr_tab1"><div class="qfile_pr_tab_plus-minus qfile_pr_tab_plus"></div><a href="javascript:void(0)" class="qfile_pr_tab_plus-minus">Совместимость с операционными системами Windows, Linux и Mac</a><p class="qfile_pr_tab_hidetext">Наш сервис совместим с такими распространенными операционными системами, как Windows, Linux и Mac/p></td><td class="qfile_pr_tab2"><div class="qfile_pr_yes"></div></td><td class="qfile_pr_tab3"><div class="qfile_pr_yes"></div></td></tr>
+                <tr class="qfile_pr_tab_dnd"><td class="qfile_pr_tab1"><div class="qfile_pr_tab_plus-minus qfile_pr_tab_plus"></div><a href="javascript:void(0)" class="qfile_pr_tab_plus-minus">Многоуровневая файловая система</a><p class="qfile_pr_tab_hidetext">Удобство использования сервиса обеспечивается древообразной структурой Вашего виртуального диска</p></td><td class="qfile_pr_tab2"><div class="qfile_pr_yes"></div></td><td class="qfile_pr_tab3"><div class="qfile_pr_yes"></div></td></tr>
+                <tr class="qfile_pr_tab_dnd"><td class="qfile_pr_tab1"><div class="qfile_pr_tab_plus-minus qfile_pr_tab_plus"></div><a href="javascript:void(0)" class="qfile_pr_tab_plus-minus">Клиент WebDav</a><p class="qfile_pr_tab_hidetext">Возможность использования Вашего QIP Sync аккаунта как обычной папки в Windows Explorer, подобно папки "Мои документы" на персональном компьютере.</p></td><td class="qfile_pr_tab2"><div class="qfile_pr_yes"></div></td><td class="qfile_pr_tab3"><div class="qfile_pr_yes"></div></td></tr>
+                <tr class="qfile_pr_tab_dnd"><td class="qfile_pr_tab1"><div class="qfile_pr_tab_plus-minus qfile_pr_tab_plus"></div><a href="javascript:void(0)" class="qfile_pr_tab_plus-minus">FTP access</a><p class="qfile_pr_tab_hidetext">QIP Sync users' ability to access their accounts with FTP (File Transfer Protocol), upload, download and manage any of their files.</p></td><td class="qfile_pr_tab2"><div class="qfile_pr_yes"></div></td><td class="qfile_pr_tab3"><div class="qfile_pr_yes"></div></td></tr>
+                <tr class="qfile_pr_tab_dnd"><td class="qfile_pr_tab1"><div class="qfile_pr_tab_plus-minus qfile_pr_tab_plus"></div><a href="javascript:void(0)" class="qfile_pr_tab_plus-minus">SFTP access</a><p class="qfile_pr_tab_hidetext">All QIP Sync users can access their accounts with SFTP (Secure File Transfer Protocol).</p></td><td class="qfile_pr_tab2"><div class="qfile_pr_yes"></div></td><td class="qfile_pr_tab3"><div class="qfile_pr_yes"></div></td></tr>
+                <tr class="qfile_pr_tab_dnd"><td class="qfile_pr_tab1"><div class="qfile_pr_tab_plus-minus qfile_pr_tab_plus"></div><a href="javascript:void(0)" class="qfile_pr_tab_plus-minus">Drag-and-Drop</a><p class="qfile_pr_tab_hidetext">An ability to drag many files or folders at one QIP Sync account and place them into the different folders of the account with the help of the mouse.</p></td><td class="qfile_pr_tab2"><div class="qfile_pr_yes"></div></td><td class="qfile_pr_tab3"><div class="qfile_pr_yes"></div></td></tr>
+                <tr class="qfile_pr_tab_dnd"><td class="qfile_pr_tab1"><div class="qfile_pr_tab_plus-minus qfile_pr_tab_plus"></div><a href="javascript:void(0)" class="qfile_pr_tab_plus-minus">Multi-Select Actions</a><p class="qfile_pr_tab_hidetext">An ability to upload, download and manage different files simultaneously.</p></td><td class="qfile_pr_tab2"><div class="qfile_pr_yes"></div></td><td class="qfile_pr_tab3"><div class="qfile_pr_yes"></div></td></tr>
+                <tr class="qfile_pr_tab_dnd"><td class="qfile_pr_tab1"><div class="qfile_pr_tab_plus-minus qfile_pr_tab_plus"></div><a href="javascript:void(0)" class="qfile_pr_tab_plus-minus">Direct Download Links</a><p class="qfile_pr_tab_hidetext">An ability to share direct links to files and folders, which makes it possible for other people to download the files instantly.</p></td><td class="qfile_pr_tab2"><div class="qfile_pr_yes"></div></td><td class="qfile_pr_tab3"><div class="qfile_pr_yes"></div></td></tr>
+                <tr class="qfile_pr_tab_dnd"><td class="qfile_pr_tab1"><div class="qfile_pr_tab_plus-minus qfile_pr_tab_plus"></div><a href="javascript:void(0)" class="qfile_pr_tab_plus-minus">Social Media File-Sharing</a><p class="qfile_pr_tab_hidetext">An ability to link the user’s QIP Sync account with his/her accounts in social media networks. Thus, all account updates will be automatically posted at the user's social media pages (e.g. Facebook, Twitter, etc.).</p></td><td class="qfile_pr_tab2"><div class="qfile_pr_yes"></div></td><td class="qfile_pr_tab3"><div class="qfile_pr_yes"></div></td></tr>
+                <tr class="qfile_pr_tab_dnd"><td class="qfile_pr_tab1"><div class="qfile_pr_tab_plus-minus qfile_pr_tab_plus"></div><a href="javascript:void(0)" class="qfile_pr_tab_plus-minus">Restore Files</a><p class="qfile_pr_tab_hidetext">Any deleted files or folders from the user’s QIP Sync account can be restored from the “Trash” folder, if it’s necessary</p></td><td class="qfile_pr_tab2"><div class="qfile_pr_yes"></div></td><td class="qfile_pr_tab3"><div class="qfile_pr_yes"></div></td></tr>
+                <tr class="qfile_pr_tab_dnd"><td class="qfile_pr_tab1"><div class="qfile_pr_tab_plus-minus qfile_pr_tab_plus"></div><a href="javascript:void(0)" class="qfile_pr_tab_plus-minus">Files Backup</a><p class="qfile_pr_tab_hidetext">All Premium users are provided with the backups for all their files and folders at QIP Sync.</p></td><td class="qfile_pr_tab2"><div class="qfile_pr_yes"></div></td><td class="qfile_pr_tab3"><div class="qfile_pr_no"></div></td></tr>
+                <tr class="qfile_pr_tab_dnd"><td class="qfile_pr_tab1"><div class="qfile_pr_tab_plus-minus qfile_pr_tab_plus"></div><a href="javascript:void(0)" class="qfile_pr_tab_plus-minus">Account History</a><p class="qfile_pr_tab_hidetext">The user can check the complete list of his/her file uploads and downloads, anytime it’s needed.</p></td><td class="qfile_pr_tab2"><div class="qfile_pr_yes"></div></td><td class="qfile_pr_tab3"><div class="qfile_pr_yes"></div></td></tr>
+                <tr class="qfile_pr_tab_dnd"><td class="qfile_pr_tab1"><div class="qfile_pr_tab_plus-minus qfile_pr_tab_plus"></div><a href="javascript:void(0)" class="qfile_pr_tab_plus-minus">Customized Background</a><p class="qfile_pr_tab_hidetext">Any QIP Sync user can make his/her QIP Sync account background customized by either selecting a wallpaper from the offered list, or uploading any photo, he/she likes.</p></td><td class="qfile_pr_tab2"><div class="qfile_pr_yes"></div></td><td class="qfile_pr_tab3"><div class="qfile_pr_yes"></div></td></tr>
+                <tr class="qfile_pr_tab_dnd"><td class="qfile_pr_tab1"><div class="qfile_pr_tab_plus-minus qfile_pr_tab_plus"></div><a href="javascript:void(0)" class="qfile_pr_tab_plus-minus">QR Codes for All Files</a><p class="qfile_pr_tab_hidetext">All files at the user’s QIP Sync account have got QR codes, which makes it possible for the users to get the link to any file from QIP Sync in a few seconds with any QR Code Reader.</p></td><td class="qfile_pr_tab2"><div class="qfile_pr_yes"></div></td><td class="qfile_pr_tab3"><div class="qfile_pr_yes"></div></td></tr>
+                <tr class="qfile_pr_tab_dnd"><td class="qfile_pr_tab1"><div class="qfile_pr_tab_plus-minus qfile_pr_tab_plus"></div><a href="javascript:void(0)" class="qfile_pr_tab_plus-minus">Photo View</a><p class="qfile_pr_tab_hidetext">Any user’s photos can be easily viewed in a slideshow, zoomed, rated and commented either by the owner of the account, or by any other users, who have access to the photos.</p></td><td class="qfile_pr_tab2"><div class="qfile_pr_yes"></div></td><td class="qfile_pr_tab3"><div class="qfile_pr_yes"></div></td></tr>
+                <tr class="qfile_pr_tab_dnd"><td class="qfile_pr_tab1"><div class="qfile_pr_tab_plus-minus qfile_pr_tab_plus"></div><a href="javascript:void(0)" class="qfile_pr_tab_plus-minus">Мульти-загрузка файлов</a><p class="qfile_pr_tab_hidetext">Позволяет загружать любое количество файлов в Ваш аккаунт за раз</p></td><td class="qfile_pr_tab2"><div class="qfile_pr_yes"></div></td><td class="qfile_pr_tab3"><div class="qfile_pr_yes"></div></td></tr>
+                <tr class="qfile_pr_tab_dnd"><td class="qfile_pr_tab1"><div class="qfile_pr_tab_plus-minus qfile_pr_tab_plus"></div><a href="javascript:void(0)" class="qfile_pr_tab_plus-minus">Индикатор выполнения загрузки</a><p class="qfile_pr_tab_hidetext">Во время загрузки файлов на сервер Вы увидите индикатор процента выполнения операции</p></td><td class="qfile_pr_tab2"><div class="qfile_pr_yes"></div></td><td class="qfile_pr_tab3"><div class="qfile_pr_yes"></div></td></tr>
+                <tr class="qfile_pr_tab_dnd"><td class="qfile_pr_tab1"><div class="qfile_pr_tab_plus-minus qfile_pr_tab_plus"></div><a href="javascript:void(0)" class="qfile_pr_tab_plus-minus">Загрузка файлов в Ваш аккаунт другими пользователями</a><p class="qfile_pr_tab_hidetext">Другие пользователи могут загружать файлы в Вашу папку, если для неё установлена функция "загружать файлы"</p></td><td class="qfile_pr_tab2"><div class="qfile_pr_yes"></div></td><td class="qfile_pr_tab3"><div class="qfile_pr_yes"></div></td></tr>
+                <tr class="qfile_pr_tab_dnd"><td class="qfile_pr_tab1"><div class="qfile_pr_tab_plus-minus qfile_pr_tab_plus"></div><a href="javascript:void(0)" class="qfile_pr_tab_plus-minus">Копирование, удаление и переименование файлов</a><p class="qfile_pr_tab_hidetext">Вы можете выполнять операции с несколькими файлами одновременно, выбрав определенные файлы в папке для дальнейшей работы с ними</p></td><td class="qfile_pr_tab2"><div class="qfile_pr_yes"></div></td><td class="qfile_pr_tab3"><div class="qfile_pr_yes"></div></td></tr>
+                <tr class="qfile_pr_tab_dnd"><td class="qfile_pr_tab1"><div class="qfile_pr_tab_plus-minus qfile_pr_tab_plus"></div><a href="javascript:void(0)" class="qfile_pr_tab_plus-minus">Откройте доступ к Вашим файлам и папкам другим пользователям</a><p class="qfile_pr_tab_hidetext">Для каждой папки существует уникальная ссылка, с ее помощью другие пользователи сервиса могут получить доступ к Вашим файлам</p></td><td class="qfile_pr_tab2"><div class="qfile_pr_yes"></div></td><td class="qfile_pr_tab3"><div class="qfile_pr_yes"></div></td></tr>
+                <tr class="qfile_pr_tab_dnd"><td class="qfile_pr_tab1"><div class="qfile_pr_tab_plus-minus qfile_pr_tab_plus"></div><a href="javascript:void(0)" class="qfile_pr_tab_plus-minus">Настройка разных уровней доступа к папкам</a><p class="qfile_pr_tab_hidetext">Вы можете установить различные права доступа к файлам в общедоступных папках</p></td><td class="qfile_pr_tab2"><div class="qfile_pr_yes"></div></td><td class="qfile_pr_tab3"><div class="qfile_pr_yes"></div></td></tr>
+                <tr class="qfile_pr_tab_dnd"><td class="qfile_pr_tab1"><div class="qfile_pr_tab_plus-minus qfile_pr_tab_plus"></div><a href="javascript:void(0)" class="qfile_pr_tab_plus-minus">Защита папки паролем</a><p class="qfile_pr_tab_hidetext">Любая из общедоступных папок может быть защищена паролем</p></td><td class="qfile_pr_tab2"><div class="qfile_pr_yes"></div></td><td class="qfile_pr_tab3"><div class="qfile_pr_yes"></div></td></tr>
+                <tr class="qfile_pr_tab_dnd"><td class="qfile_pr_tab1"><div class="qfile_pr_tab_plus-minus qfile_pr_tab_plus"></div><a href="javascript:void(0)" class="qfile_pr_tab_plus-minus">Рассылка файлов с помощью общей ссылки</a><p class="qfile_pr_tab_hidetext">Позволяет отправить ссылки на выбранные файлы по электронной почте</p></td><td class="qfile_pr_tab2"><div class="qfile_pr_yes"></div></td><td class="qfile_pr_tab3"><div class="qfile_pr_yes"></div></td></tr>
+                <tr class="qfile_pr_tab_dnd"><td class="qfile_pr_tab1"><div class="qfile_pr_tab_plus-minus qfile_pr_tab_plus"></div><a href="javascript:void(0)" class="qfile_pr_tab_plus-minus">Автоматический просмотр</a><p class="qfile_pr_tab_hidetext">Вы можете легко просматривать изображения и содержимое pdf-файлов в отдельном окне</p></td><td class="qfile_pr_tab2"><div class="qfile_pr_yes"></div></td><td class="qfile_pr_tab3"><div class="qfile_pr_yes"></div></td></tr>
+                <tr class="qfile_pr_tab_dnd"><td class="qfile_pr_tab1"><div class="qfile_pr_tab_plus-minus qfile_pr_tab_plus"></div><a href="javascript:void(0)" class="qfile_pr_tab_plus-minus">Фотоальбом</a><p class="qfile_pr_tab_hidetext">Вы можете установить режим «Фотоальбом» для папки с изображениями</p></td><td class="qfile_pr_tab2"><div class="qfile_pr_yes"></div></td><td class="qfile_pr_tab3"><div class="qfile_pr_yes"></div></td></tr>
+                <tr class="qfile_pr_tab_dnd"><td class="qfile_pr_tab1"><div class="qfile_pr_tab_plus-minus qfile_pr_tab_plus"></div><a href="javascript:void(0)" class="qfile_pr_tab_plus-minus">Прослушивание аудио-файлов в режиме реального времени</a><p class="qfile_pr_tab_hidetext">Вы можете прослушивать аудио-файлы, не скачивая их</p></td><td class="qfile_pr_tab2"><div class="qfile_pr_yes"></div></td><td class="qfile_pr_tab3"><div class="qfile_pr_yes"></div></td></tr>
+                <tr class="qfile_pr_tab_dnd"><td class="qfile_pr_tab1"><div class="qfile_pr_tab_plus-minus qfile_pr_tab_plus"></div><a href="javascript:void(0)" class="qfile_pr_tab_plus-minus">Просмотр видео-файлов в режиме реального времени</a><p class="qfile_pr_tab_hidetext">Вы можете просматривать видео-файлы, не скачивая их</p></td><td class="qfile_pr_tab2"><div class="qfile_pr_yes"></div></td><td class="qfile_pr_tab3"><div class="qfile_pr_yes"></div></td></tr>
+                <tr class="qfile_pr_tab_dnd"><td class="qfile_pr_tab1"><div class="qfile_pr_tab_plus-minus qfile_pr_tab_plus"></div><a href="javascript:void(0)" class="qfile_pr_tab_plus-minus">Просмотр текстовых файлов</a><p class="qfile_pr_tab_hidetext">В аккаунте возможен просмотр содержимого текстовых файлов в отдельном окне без необходимости скачивания файла</p></td><td class="qfile_pr_tab2"><div class="qfile_pr_yes"></div></td><td class="qfile_pr_tab3"><div class="qfile_pr_yes"></div></td></tr>
+                <tr class="qfile_pr_tab_dnd"><td class="qfile_pr_tab1"><div class="qfile_pr_tab_plus-minus qfile_pr_tab_plus"></div><a href="javascript:void(0)" class="qfile_pr_tab_plus-minus">Изменение описания файла</a><p class="qfile_pr_tab_hidetext">Вы можете добавить любое описания для файла, которое будет отображаться на странице скачивания файла</p></td><td class="qfile_pr_tab2"><div class="qfile_pr_yes"></div></td><td class="qfile_pr_tab3"><div class="qfile_pr_yes"></div></td></tr>
+                <tr class="qfile_pr_tab_dnd"><td class="qfile_pr_tab1"><div class="qfile_pr_tab_plus-minus qfile_pr_tab_plus"></div><a href="javascript:void(0)" class="qfile_pr_tab_plus-minus">Комментарии к файлу</a><p class="qfile_pr_tab_hidetext">Другие пользователи могут оставлять комментарии к Вашим общедоступным файлам</p></td><td class="qfile_pr_tab2"><div class="qfile_pr_yes"></div></td><td class="qfile_pr_tab3"><div class="qfile_pr_yes"></div></td></tr>
+                <tr class="qfile_pr_tab_dnd"><td class="qfile_pr_tab1"><div class="qfile_pr_tab_plus-minus qfile_pr_tab_plus"></div><a href="javascript:void(0)" class="qfile_pr_tab_plus-minus">Темы</a><p class="qfile_pr_tab_hidetext">Вы можете выбрать одну из нескольких тем для внешнего вида страниц скачивания ваших файлов</p></td><td class="qfile_pr_tab2"><div class="qfile_pr_yes"></div></td><td class="qfile_pr_tab3"><div class="qfile_pr_yes"></div></td></tr>
+                <tr class="qfile_pr_tab_dnd"><td class="qfile_pr_tab1"><div class="qfile_pr_tab_plus-minus qfile_pr_tab_plus"></div><a href="javascript:void(0)" class="qfile_pr_tab_plus-minus">Анти-вирус</a><p class="qfile_pr_tab_hidetext">Все файлы автоматически проверяются на предмет отсутствия вирусов. Мы заботимся о Вашей безопасности!</p></td><td class="qfile_pr_tab2"><div class="qfile_pr_yes"></div></td><td class="qfile_pr_tab3"><div class="qfile_pr_yes"></div></td></tr>
+    			<tr class="qfile_pr_tab_dnd"><td class="qfile_pr_tab1"><div class="qfile_pr_tab_plus-minus qfile_pr_tab_plus"></div><a href="javascript:void(0)" class="qfile_pr_tab_plus-minus">Безопасный процесс регистрации и входа</a><p class="qfile_pr_tab_hidetext">Процедура регистрации и входа в аккаунт осуществляются с помощью протокола безопасных соединений. Эта технология использует шифрование при передаче данных</p></td><td class="qfile_pr_tab2"><div class="qfile_pr_yes"></div></td><td class="qfile_pr_tab3"><div class="qfile_pr_yes"></div></td></tr>
+    			<tr class="qfile_pr_tab_dnd"><td class="qfile_pr_tab1"><div class="qfile_pr_tab_plus-minus qfile_pr_tab_plus"></div><a href="javascript:void(0)" class="qfile_pr_tab_plus-minus">Десктоп QIP Sync</a><p class="qfile_pr_tab_hidetext">QIP Sync Desktop is a free application for Windows, Linux and Mac PC’s, developed to expand QIP Sync functionality. This easy-to-use software is designed specifically to help manage multiple file uploads.</p></td><td class="qfile_pr_tab2"><div class="qfile_pr_yes"></div></td><td class="qfile_pr_tab3"><div class="qfile_pr_yes"></div></td></tr>
+    			<tr class="qfile_pr_tab_dnd"><td class="qfile_pr_tab1"><div class="qfile_pr_tab_plus-minus qfile_pr_tab_plus"></div><a href="javascript:void(0)" class="qfile_pr_tab_plus-minus">Панель инструментов QIP Sync</a><p class="qfile_pr_tab_hidetext">Internet Explorer, Mozilla Firefox and Safari compatible, QIP Sync toolbar gives instant access to QIP Sync Desktop, QIP Sync home page and personal QIP Sync account. With QIP Sync Toolbar the user can access free games, watch TV and listen to online radio stations, receive our most important news and announcements instantly.</p></td><td class="qfile_pr_tab2"><div class="qfile_pr_yes"></div></td><td class="qfile_pr_tab3"><div class="qfile_pr_yes"></div></td></tr>
+    			<tr class="qfile_pr_tab_dnd"><td class="qfile_pr_tab1"><div class="qfile_pr_tab_plus-minus qfile_pr_tab_plus"></div><a href="javascript:void(0)" class="qfile_pr_tab_plus-minus">QIP Sync Mobile for Android, Symbian, Blackberry</a><p class="qfile_pr_tab_hidetext">Convenient QIP Sync mobile applications enable the users to get instant access to their QIP Sync accounts from their smartphones, upload any files and folders from their devices’ memory, and vice versa, download any necessary files on their phones directly from QIP Sync.</p></td><td class="qfile_pr_tab2"><div class="qfile_pr_yes"></div></td><td class="qfile_pr_tab3"><div class="qfile_pr_yes"></div></td></tr>
+    			<tr class="qfile_pr_tab_dnd"><td class="qfile_pr_tab1"><div class="qfile_pr_tab_plus-minus qfile_pr_tab_plus"></div><a href="javascript:void(0)" class="qfile_pr_tab_plus-minus">QIP Sync</a><p class="qfile_pr_tab_hidetext">QIP Sync is the service, which allows accessing all files, like music, videos, photos or documents, anywhere and anytime, a QIP Sync user needs them, from every device, including one’s laptop, PC, or even a mobile phone.</p></td><td class="qfile_pr_tab2"><div class="qfile_pr_yes"></div></td><td class="qfile_pr_tab3"><div class="qfile_pr_yes"></div></td></tr>
+    			<tr class="qfile_pr_tab_dnd"><td class="qfile_pr_tab1"><div class="qfile_pr_tab_plus-minus qfile_pr_tab_plus"></div><a href="javascript:void(0)" class="qfile_pr_tab_plus-minus">QIP Sync Music for Android</a><p class="qfile_pr_tab_hidetext">QIP Sync Music for Android allows the user to get instant access to all music files at QIP Sync and his/her account from his/her Android smartphone. "Manage your playlist" option enables the user to add favorite tracks into playlists.</p></td><td class="qfile_pr_tab2"><div class="qfile_pr_yes"></div></td><td class="qfile_pr_tab3"><div class="qfile_pr_yes"></div></td></tr>
+    			<tr class="qfile_pr_tab_dnd"><td class="qfile_pr_tab1"><div class="qfile_pr_tab_plus-minus qfile_pr_tab_plus"></div><a href="javascript:void(0)" class="qfile_pr_tab_plus-minus">QIP Sync Photo for iPhone/iPad</a><p class="qfile_pr_tab_hidetext">QIP Sync Photo for iPhone/iPad is a user-friendly app, with which you can easily take photos on your iPhone/iPad, manage your photo-albums and share your favorite digital masterpieces with anyone, you wish to. Moreover, QIP Sync photo lets you have the back-up of all your photos at the secured QIP Sync account.</p></td><td class="qfile_pr_tab2"><div class="qfile_pr_yes"></div></td><td class="qfile_pr_tab3"><div class="qfile_pr_yes"></div></td></tr>
+                <tr class="qfile_pr_tab_dnd" id="qfile_pr_tab_dnd_predown"><td class="qfile_pr_tab1"><a href="javascript:void(0)" class="qfile_pr_tab_plus_min"><div></div><span>Развернуть все</span></a><a href="javascript:void(0)" class="qfile_pr_tab_minus_min"><div></div><span>Свернуть все</span></a></td><td class="qfile_pr_tab2"><div class="qfile_pr_btn"><a href="#" title="Купить Премиум-аккаунт">Купить!</a></div></td><td class="qfile_pr_tab3"><div class="qfile_pr_reg_btn"><a href="#" title="Регистрация">Регистрация</a></div></td></tr>
+                <tr class="qfile_pr_tab_dnd" id="qfile_pr_tab_underdown"><td class="qfile_pr_tab1" colspan="3"><div class="qfile_pr_tab_down_dnd q_fl"></div><a href="javascript:void(0)" class="qfile_pr_tab_dropdown" id="qfile_pr_tab_dropdown_down">Скрыть список возможностей</a></td></tr>
+			</table>
+		</div>
+		<div class="q_cb"></div>		<div class="qfile_footer">
+				<div class="qfile_footer_menu q_fl">
+					<span>Меню пользователя</span>
+					<ul>
+						<li><a href="../index.html" title="На главную">Главная</a></li>
+						<li><a href="sync.html" title="QIP Sync">Установка</a></li>
+						<li><a href="qipsync.html" title="QIP Sync для мобильных">Для мобильных</a></li>
+						<li><a href="desktop.html" title="QIP Desktop">Desktop</a></li>
+						<li><a href="premium.html" title="Премиум возможности">Премиум</a></li>
+						<li><a href="search.html" title="Поиск">Поиск</a></li>
+					</ul>
+				</div>
+				<div class="qfile_footer_menu q_fl">
+					<span>Помощь</span>
+					<ul>
+						<li><a href="tour.html" title="Обзорный тур">Обзорный тур</a></li>
+						<li><a href="#" title="F.A.Q.">Вопросы</a></li>
+						<li><a href="#" title="Поддержка пользователей">Служба поддержки</a></li>
+					</ul>
+				</div>
+				<div class="qfile_footer_menu q_fl">
+					<span>Сообщества</span>
+					<ul>
+						<li><a href="#">Facebook</a></li>
+						<li><a href="#">Twitter</a></li>
+						<li><a href="#">VKontakte</a></li>
+						<li><a href="#">Ogorod</a></li>
+					</ul>
+				</div>
+			</div>
+	</div>
+			<div class="q_cl0 q_mb30">&nbsp;</div>
+		<div class="footWrap"></div>
+	</div>
+	<div class="qip_footer qf_stretch">
+		<div class="qf_left"><a id="q_footer_pda" href="#" rel="nofollow">Мобильная версия</a></div>
+		<div class="qf_right">
+			<table class="q_fr">
+				<tr>
+					<td class="qf_counter">
+						<a class="qf_c31x31 qf_socials qf_tw" rel="nofollow" href="#" title="Официальная лента в Twitter" target="_blank"></a>
+						<a class="qf_c31x31 qf_socials qf_vk" rel="nofollow" href="#" title="Официальная группа Вконтакте" target="_blank"></a>
+						<a class="qf_c31x31 qf_socials qf_fb" rel="nofollow" href="#" title="Официальная страница в Facebook" target="_blank"></a>
+					</td>
+					<td class="qf_counter" id="qf_bm_counter">
+						<a id="q_footer_li_counter" href="#" target="_blank" rel="nofollow"><img class="qf_c31x31" src="#" title="LiveInternet" alt="" /></a>
+					</td>
+				</tr>
+			</table>
+		</div>
+		<div class="qf_center"><a id="q_footer_help" href="#" rel="nofollow">Помощь</a> <span class="qf_middot">·</span> <a id="q_footer_advertise" href="#" rel="nofollow">Реклама</a> <span class="qf_middot">·</span> <a id="q_footer_partner" href="#" rel="nofollow">Соглашение</a> <span class="qf_middot">·</span> <a id="q_footer_download_qip" href="#" rel="nofollow">Скачать QIP</a> <span class="qf_middot">·</span> <a id="q_footer_services" href="#" rel="nofollow">Все сервисы</a> <span class="qf_middot">·</span> &copy; QIP.ru</div>
+	</div>
+	<div class="q_abs">
+	</div>
+</body>
+</html>

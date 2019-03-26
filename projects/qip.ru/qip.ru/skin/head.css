@@ -1,0 +1,264 @@
+.qip_head_wrap {height: 30px; margin-bottom: 1em;}
+
+.qip_head {
+	left: 0; top: 0; z-index: 1000; margin: 0; padding: 0; width: 100%; min-width: 1000px; height: 30px; overflow: visible;
+	background-color: #2e2e2e; border-width: 0;
+}
+@media screen and (min-width: 1000px){
+	.qip_head {position: fixed;}
+}
+
+.qip_head_limiter {margin: 0 auto; padding: 0 20px; max-width: 1240px; height: 30px; overflow: visible;}
+
+.qip_head,
+.qip_head a,
+.qip_head a:hover {color: #fff;}
+.qip_head a[href=""] {border-bottom-color: red;}
+.qip_head a {text-decoration: none; border-bottom: 1px solid #fff;}
+
+.qip_head .qh_hr_hard,
+.qip_head .qh_hr_light {display: block; margin: 0.5em 0; height: 0; overflow: hidden; border-width: 0;}
+.qip_head .qh_hr_hard {border-top: 1px solid #5a5a5a; border-bottom: 1px solid #8b8b8b;}
+.qip_head .qh_hr_light {border-top: 1px dotted #8d8d8d;}
+
+
+.qip_head .qh_list {margin: 0; padding: 0; height: 30px;}
+.qip_head .qh_list li {display: inline-block; height: 30px; font: normal 12px/30px Arial; vertical-align: middle;}
+.qip_head .qh_list li:first-child {margin-left: 0;}
+.qip_head .qh_list li:last-child {margin-right: 0;}
+
+
+/* popups */
+.qip_head .qh_extra {}
+.qip_head .qh_extra .qhe_popup {
+	position: absolute; display: none; top: 100%; z-index: 100;
+	line-height: 1.5em;
+	background-color: #707070; border-top: 1px solid #a9a9a9; border-radius: 0 0 1px 1px;
+}
+.qip_head .qhe_expanded .qhe_popup {display: block;}
+
+.qip_head .qh_extra .qhe_handler {border-width: 0;}
+
+.qip_head .qh_extra .qh_pseudo {cursor: pointer; border-bottom: 1px dotted #fff;}
+
+.qip_head .qhe_expanded .qhe_handler {position: relative; display: inline-block; z-index: 110;}
+
+.qip_head .qhe_expanded .qhe_handler::before,
+.qip_head .qhe_expanded .qhe_handler::after {
+	content: ''; position: absolute; display: block; left: 50%; top: 100%; z-index: 120; margin: -5px 0 0 -5px; width: 0; height: 0;
+	border: 5px solid transparent; border-top-width: 0;
+}
+.qip_head .qhe_expanded .qhe_handler::before {z-index: 1; border-bottom-color: #a9a9a9;}
+.qip_head .qhe_expanded .qhe_handler::after {z-index: 2; margin-top: -4px; border-bottom-color: #707070;}
+@-moz-document url-prefix(){
+	.qip_head .qhe_expanded .qhe_handler::after {margin-top: -3px;}
+}
+
+.qip_head .qh_extra .qhe_popup p {margin: 1em 15px; line-height: 1.3em;}
+
+.qip_head .qh_extra .qh_dropdown {cursor: pointer;}
+.qip_head .qh_extra .qh_dropdown::after {
+	content: ''; display: inline-block; margin-left: 4px; margin-right: -10px; width: 0; height: 0;
+	vertical-align: middle; border: 4px solid transparent; border-top-color: #fff; border-bottom-width: 0;
+}
+
+
+/* index-only block */
+.qip_head .qh_main {float: left;}
+.qip_head .qh_main li {margin: 0 1em;}
+
+.qip_head .qh_main .qhm_city {position: relative;}
+.qip_head .qh_main .qhm_city .qhe_popup {left: 50%; margin-left: -135px;}
+.qip_head .qh_main .qhm_city .qhe_popup p {margin: 15px;}
+.qip_head .qh_main .qhm_city .qhe_popup p select {
+	padding: 0; width: 240px; height: 20px; box-sizing: border-box; -moz-box-sizing: border-box;
+	font: normal 12px/20px Arial; vertical-align: middle;
+	background-color: #fff; border: 1px solid #bfbfbf;
+}
+.qip_head .qh_main .qhm_city .qhe_loading p {background: transparent url('../i/head/loading.gif') center center no-repeat;}
+.qip_head .qh_main .qhm_city .qhe_loading p select {visibility: hidden;}
+
+
+/* all services block */
+.qip_head .qh_services {float: left;}
+.qip_head .qh_services li {margin: 0 0.5em; /*background-color: rgba(255,0,0,3);*/}
+
+.qip_head .qh_services .qhs_secondary {position: relative;}
+.qip_head .qh_services .qhs_secondary .qhe_popup {left: 50%; margin-left: -200px; width: 400px;}
+
+.qip_head .qh_services .qhs_secondary .qhe_popup .qhsa_list {margin: 0.5em 0.8em; overflow: hidden; /*background-color: rgba(0,255,0,3);*/}
+.qip_head .qh_services .qhs_secondary .qhe_popup .qhsa_list li {
+	margin: 0 0.5em; width: 80px; height: auto; overflow: visible;
+	white-space: nowrap; line-height: 2em;
+}
+.qip_head .qh_services .qhs_secondary .qhe_popup .qhsa_all {font-weight: bold; text-align: center;}
+
+
+/* radio */
+.qip_head .qh_radio {}
+
+
+/* user block */
+.qip_head .qh_user {position: relative; float: right;}
+.qip_head .qh_user li {margin: 0 0.5em; /*background-color: rgba(0,255,0,0.75);*/}
+@-moz-document url-prefix(){
+	.qip_head .qh_user li .qhe_handler {vertical-align: top;}
+}
+
+.qip_head .qh_user .qhu_loading,
+.qip_head .qh_user.qhe_loading .qhu_signin {display: none;}
+.qip_head .qh_user.qhe_loading .qhu_loading {display: inline-block; width: 16px; background: transparent url('../i/head/loading.gif') center center no-repeat;}
+
+.qip_head .qh_user .qhu_signin .qhe_popup {right: -20px; width: 300px;}
+
+.qip_head .qh_user .qhu_signin .qhus_login {white-space: nowrap;}
+.qip_head .qh_user .qhu_signin .qhus_login input,
+.qip_head .qh_user .qhu_signin .qhus_login select,
+.qip_head .qh_user .qhu_signin .qhus_password input {
+	padding: 0 4px; height: 20px;
+	font: normal 12px/16px Arial; vertical-align: middle;
+	background-color: #fff; border: 1px solid #bfbfbf; border-radius: 2px;
+}
+
+.qip_head .qh_user .qhu_signin .qhus_login span {display: inline-block; width: 20px; text-align: center;}
+.qip_head .qh_user .qhu_signin .qhus_login input,
+.qip_head .qh_user .qhu_signin .qhus_login select {width: 120px;}
+.qip_head .qh_user .qhu_signin .qhus_login select {padding: 0; height: 22px;}
+.qip_head .qh_user .qhu_signin .qhus_password input {width: 260px;}
+
+.qip_head .qh_user .qhu_signin .qhus_notice,
+.qip_head .qh_user .qhu_signin .qhus_error {padding: 5px; text-align: center; border-radius: 2px;}
+.qip_head .qh_user .qhu_signin .qhus_notice {background-color: #7a8e97; border: 1px solid #2e7799;}
+.qip_head .qh_user .qhu_signin .qhus_error {background-color: #9c7e7c; border: 1px solid #99352e;}
+
+.qip_head .qh_user .qhu_signin .qhus_recover {text-align: right;}
+
+.qip_head .qh_user .qhu_signin .qhus_flags {float: left; display: block; margin-top: 0;}
+.qip_head .qh_user .qhu_signin .qhus_flags label {display: block; height: 1.4em; overflow: hidden; line-height: 1.4em;}
+.qip_head .qh_user .qhu_signin .qhus_flags label input {margin-left: 0; margin-top: 0; vertical-align: middle;}
+.qip_head .qh_user .qhu_signin .qhus_submit {text-align: right;}
+.qip_head .qh_user .qhu_signin .qhus_submit button {
+	margin: 0; padding: 0; width: 100px; height: 30px;
+	font: bold 14px/30px Arial; color: #fff; vertical-align: middle;
+	background-color: #02b0ef; border: 1px solid #fff; border-radius: 5px;
+}
+.qip_head .qh_user .qhu_signin .qhus_submit button.qhuss_loading {background: #989898 url('../i/head/loading.gif') center center no-repeat; border-color: #bbb;}
+.qip_head .qh_user .qhu_signin .qhus_submit button.qhuss_loading span {display: none;}
+
+
+.qip_head .qh_user .qhu_personal {line-height: 30px;}
+
+.qip_head .qh_user .qhu_personal .qhe_popup {right: -20px; width: 270px;}
+
+.qip_head .qh_user .qhu_personal .qhe_popup .qhup_name,
+.qip_head .qh_user .qhu_personal .qhe_popup .qhup_login {overflow: hidden; white-space: nowrap; text-overflow: ellipsis;}
+.qip_head .qh_user .qhu_personal .qhe_popup .qhup_avatar {float: left; margin: 0.5em 0 0 0; width: 100px; height: 100px; border: 1px solid #cbcbcb;}
+.qip_head .qh_user .qhu_personal .qhe_popup .qhup_list {margin: 0.8em 0 0.8em 135px;}
+.qip_head .qh_user .qhu_personal .qhe_popup .qhup_list li {display: block; float: none; margin: 0.5em 0; height: auto; line-height: 1.5em;}
+.qip_head .qh_user .qhu_personal .qhe_popup .qhup_signout {text-align: right;}
+
+.qip_head .qh_user .qhe_expanded .qhup_username::before,
+.qip_head .qh_user .qhe_expanded .qhup_username::after {left: auto; right: 20px;}
+
+.qip_head .qh_user .qhu_personal .qhup_username {display: inline-block; text-align: right; white-space: nowrap; cursor: pointer;}
+
+.qip_head .qh_user .qhu_personal .qhup_username .qhupu_name {
+	display: inline-block; max-width: 200px; overflow: hidden;
+	text-overflow: ellipsis; vertical-align: middle;
+}
+.qip_head .qh_user .qhu_personal .qhup_username .qhupu_avatar {margin: 3px 0.5em 3px 0; width: 24px; height: 24px; vertical-align: middle; border: none;}
+
+
+.qip_head .qh_user .qhu_notifications {}
+
+.qip_head .qh_user .qhu_notifications .qhe_popup {right: -20px; width: 400px;}
+
+.qip_head .qh_user .qhu_notifications .qhe_loading .qhun_loader {position: absolute; right: 15px; top: 12px; width: 16px; height: 16px; background: transparent url('../i/head/loading.gif') left top no-repeat;}
+
+.qip_head .qh_user .qhu_notifications .qhe_popup .qhun_mail {}
+.qip_head .qh_user .qhu_notifications .qhe_popup .qhun_mail .qhunm_login {margin-left: 2em; width: 270px; display: inline-block; overflow: hidden; text-overflow: ellipsis; vertical-align: middle;}
+.qip_head .qh_user .qhu_notifications .qhe_popup .qhun_mail .qhunm_list {margin: 0 15px; overflow: hidden;}
+.qip_head .qh_user .qhu_notifications .qhe_popup .qhun_mail .qhunm_list li {display: block; margin: 0; height: auto; white-space: nowrap; line-height: 2em;}
+.qip_head .qh_user .qhu_notifications .qhe_popup .qhun_mail .qhunm_list li .qhunml_text {display: inline-block; width: 320px; overflow: hidden; text-overflow: ellipsis; color: #b3b3b3; vertical-align: middle;}
+.qip_head .qh_user .qhu_notifications .qhe_popup .qhun_mail .qhunm_list li .qhunml_time {display: inline-block; width: 50px; text-align: right; vertical-align: middle;}
+.qip_head .qh_user .qhu_notifications .qhe_popup .qhun_mail .qhunm_new {text-align: right;}
+
+.qip_head .qh_user .qhu_notifications .qhe_popup .qhun_love {}
+.qip_head .qh_user .qhu_notifications .qhe_popup .qhun_love .qhunl_list {margin: 0.8em 15px;}
+.qip_head .qh_user .qhu_notifications .qhe_popup .qhun_love .qhunl_list li {display: block; float: none; margin: 0.5em 0; height: auto; line-height: 24px;}
+.qip_head .qh_user .qhu_notifications .qhe_popup .qhun_love .qhunl_list li img {margin-right: 1em; width: 24px; height: 24px; vertical-align: middle;}
+.qip_head .qh_user .qhu_notifications .qhe_popup .qhun_love .qhunl_list li span {display: inline-block;}
+
+.qip_head .qh_user .qhu_notifications .qhun_total {
+	display: inline-block; margin: 5px 0; width: 28px; height: 20px;
+	font: bold 14px/20px Arial; vertical-align: middle; text-align: center; cursor: pointer;
+	background: #666 url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAUCAYAAACeXl35AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAALNJREFUeNq81MEKwyAMBuDmx1vHetwb+P7P0zfYsTDPLg4H61ZN2iUNiEEknwaUcs7DmQEimniOJ1ixWCgZJw9nNFZjQF1IjugbS5+gF7rCvkFr9AfbAq3QTawF/os2sR54FO1iErgXFbHXE+QxaY7OP9KtW4jorqmjBUdlS5O0IWgwvt2F51nRUhGFEVZirnvHo+AeTI3CEFOhMMZEFA5YF4UT1kTBC8s1BA9shVZjeQowAB/fbAFRe1S9AAAAAElFTkSuQmCC) left top no-repeat;
+	border-width: 0; border-radius: 2px;
+}
+.qip_head .qh_user .qhu_notifications .qhun_total_new {
+	background-color: #d94136;
+	-webkit-transition: background-color 300ms ease-in;
+	   -moz-transition: background-color 300ms ease-in;
+	     -o-transition: background-color 300ms ease-in;
+	        transition: background-color 300ms ease-in;
+}
+
+.qip_head .qh_user .qhm_lang {position: relative;}
+.qip_head .qh_user .qhm_lang .qhe_popup {left: 50%; margin-left: -17px; width: 35px;}
+.qip_head .qh_user .qhm_lang .qhe_popup ul {margin: 1em 10px;}
+.qip_head .qh_user .qhm_lang .qhe_popup ul li {height: auto; line-height: 1.3em;}
+
+/******************************************************************************************************************/
+
+.qip_head {
+	//position: fixed;
+}
+
+.qip_head .qh_hr_hard,
+.qip_head .qh_hr_light {
+	//margin: 0 0;
+	//line-height: 2px;
+}
+
+.qip_head .qh_list li {
+	//float: left;
+	//line-height: 28px;
+}
+
+.qip_head .qh_extra .qhe_popup p {
+	//margin: 0.5em 15px 1em 15px;
+	//line-height: 1.5em;
+}
+
+.qip_head .qh_user .qhu_signin .qhus_login input,
+.qip_head .qh_user .qhu_signin .qhus_login select,
+.qip_head .qh_user .qhu_signin .qhus_password input {
+	//height: 18px;
+	//line-height: 18px;
+}
+
+.qip_head .qh_user .qhu_signin .qhus_flags label input {
+	//height: 1em;
+}
+
+.qip_head .qh_user .qhu_signin .qhus_submit button {
+	//line-height: 29px;
+}
+
+.qip_head .qh_user .qhu_personal {
+	//line-height: 28px;
+}
+
+.qip_head .qh_user .qhu_personal .qhup_username {
+	width: 230px \0;
+	line-height: 28px \0;
+}
+
+.qip_head .qh_user .qhu_personal .qhup_username .qhupu_avatar {
+	//margin: 2px 0 2px 0.5em;
+}
+
+.qip_head .qh_user .qhu_notifications .qhun_total {
+	//margin: 2px 0;
+	//background-image: url(../i/head/message.png);
+}
