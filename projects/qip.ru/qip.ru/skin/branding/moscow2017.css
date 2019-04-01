@@ -1,0 +1,33 @@
+.qip_branding body {background-color: #fff;}
+
+.qip_branding .qip_main_wrapper {max-width: none; background-color: #fff;}
+
+.qip_branding .qip_head_underlayer {margin: 0; overflow: hidden;}
+.qip_branding .qip_head_underlayer .qhu_1 {margin: 0 auto; max-width: 1280px; height: 95px; overflow: visible; background: transparent url(../../i/index/branding/moscow2017/bg.jpg) center top no-repeat;}
+.qip_branding .qip_head_underlayer .qhu_2 {height: 90px; background: transparent url(../../i/index/branding/moscow2017/texts.png) right top no-repeat;}
+.qip_branding .qip_head_underlayer .qhu_3 {}
+.qip_branding .qip_head_underlayer .qhu_4 {}
+.qip_branding .qip_head_underlayer .qhu_5 {}
+.qip_branding .qip_head_underlayer .qhu_link {display: block; margin: 0 auto; width: 100%; height: 90px; outline: none; text-decoration: none;}
+.qip_branding .qip_head_underlayer .qhu_link .qhu_pixel {position: absolute; left: 0; top: -1000px; width: 1px; height: 1px; border: none;}
+.qip_branding .qip_head_underlayer .qhu_link .qhu_slogan,
+.qip_branding .qip_head_underlayer .qhu_link .qhu_caption {display: block; margin: 0 auto; width: 325px; background: transparent url(../../i/index/branding/moscow2017/texts.png) no-repeat;}
+.qip_branding .qip_head_underlayer .qhu_link .qhu_slogan {height: 30px;}
+.qip_branding .qip_head_underlayer .qhu_link .qhu_slogan_1 {background-position: 0 -140px;}
+.qip_branding .qip_head_underlayer .qhu_link .qhu_slogan_2 {background-position: 0 -170px;}
+.qip_branding .qip_head_underlayer .qhu_link .qhu_slogan_3 {background-position: 0 -200px;}
+.qip_branding .qip_head_underlayer .qhu_link .qhu_caption {height: 55px; background-position: 0 -90px;}
+
+.qip_branding .qip_footer_wrap {margin-top: -46px; background-color: #fff; border-top: #737373 solid 1px;}
+.qip_branding .qip_footer {margin-top: 0; max-width: 1280px; border-top-width: 0;}
+
+
+.qip_branding .qip_0_row .qip_row_wrap {padding: 0 20px 20px 20px; background-color: #fff;}
+.qip_branding .qip_0_row .qip_row_wrap .qip_message {max-width: 1220px; margin: 0 auto;}
+
+.qip_branding .qip_1st_row .qip_row_wrap,
+.qip_branding .qip_2nd_row .qip_row_wrap {max-width: 1280px; margin-left: auto; margin-right: auto;}
+
+.qip_branding .qip_1st_row {background-color: #fff;}
+
+.qip_branding .qip_3rd_row {margin: 0 auto; max-width: 1280px;}

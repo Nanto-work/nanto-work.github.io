@@ -1,0 +1,60 @@
+
+/*all*/
+.outtaHere {
+    position:absolute;
+    left:-3000px;
+}
+span.left, span.center, .selectArea a, .checkboxArea, .checkboxAreaChecked, .radioArea, .radioAreaChecked {
+    display:inline-block;
+    *display:inline;
+    zoom:1;
+    vertical-align:top;
+}
+
+
+
+/*option*/
+.optionsDivVisible {
+    margin-left:-5px;
+}
+.select-center {
+    padding:5px 5px;
+    background:#fff;
+    border:1px solid #ccc;
+    border-top:0;
+}
+.select-center a {
+    padding-left:10px;
+    line-height:18px;
+    color:#666;
+    text-decoration:none;
+}
+.select-center a:hover {
+    color:#333;
+}
+
+/*radio*/
+.radioArea, .radioAreaChecked {
+    width: 16px;
+    height: 16px;
+}
+.radioArea {
+background:url(../img/elements/radio.png) no-repeat -22px 0;
+}
+.radioAreaChecked {
+background:url(../img/elements/radio.png) no-repeat 0px 0;;
+}
+
+
+/*checkbox*/
+.checkboxArea, .checkboxAreaChecked {
+    width: 18px;
+    height: 18px;
+    float: left;
+}
+.checkboxArea {
+    background:url(../img/elements/checkbox.png)  no-repeat -25px 0;
+}
+.checkboxAreaChecked {
+    background:url(../img/elements/checkbox.png) no-repeat 0 0px;
+}

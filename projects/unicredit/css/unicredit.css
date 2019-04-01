@@ -1,0 +1,1193 @@
+﻿/* Øðèôòû */
+@font-face{
+    font-family:"UniCreditCYMedium";
+    src:url("../fonts/unicredit_cy-medium-webfont.woff") format("woff");
+    font-weight:normal;
+    font-style:normal;
+}
+@font-face{
+    font-family:"UniCreditCYBold";
+    src: url("../fonts/unicredit_cy-bold-webfont.woff") format("woff");
+    font-weight:normal;
+    font-style:normal;
+}
+*{
+	margin:0;
+	padding:0;
+}
+html{
+	height:100%;
+}
+body{
+	height:auto !important;
+	height:100%;
+	min-height:100%;
+	max-width:1920px;
+	min-width:1000px;
+	margin:0 auto;
+	background:#efedec url("../img/background.jpg") no-repeat 50% 0;
+	font-family:"UniCreditCYMedium";
+}
+a,
+a img,
+a div{
+	outline:0;
+	border:0;
+}
+.header{
+	position:relative;
+	height:137px;
+	border-top:2px solid #d8001d;
+	border-bottom:1px solid #e2001a;
+}
+/* Header */
+.top_head{
+	height:21px;
+	background:#ececec;
+	box-shadow:inset 0 -3px 3px #bcbcbc;
+}
+.top_head_inner{
+	width:988px;
+	height:21px;
+	margin:0 auto;
+	text-align:right;
+}
+.top_head_inner a.top_head_language{
+	display:inline-block;
+	width:auto;
+	height:16px;
+	margin:5px 8px 0;
+	font-size:10px;
+	color:#555;
+	vertical-align:top;
+	text-decoration:none;
+}
+.top_head_inner a.top_head_title{
+	width:127px;
+	height:21px;
+	margin:0 0 0 5px;
+}
+.top_head_inner a.top_head_title img{
+	width:127px;
+	height:21px;	
+}
+
+/* Вход */
+.main_head{
+	position:relative;
+	width:988px;
+	margin:19px auto 0;
+}
+.head_logo{
+	width:510px;
+	height:45px;
+	background:transparent url("../img/head_logo.png") no-repeat 0 0; 
+}
+.head_log-in{
+	position:absolute;
+	top:11px;
+	right:0;
+	z-index:1100;
+}
+.head_log-in_button{
+	width:124px;
+	height:22px;
+	cursor:pointer;
+	background:#fff url("../img/head_log-in.png") no-repeat 0 0;
+	border:1px solid #cdcdcd;
+	border-radius:3px;
+	font:normal 10px/24px "UniCreditCYMedium", sans-serif;
+	color:#9d9d9d;
+	text-align:center;
+}
+.head_log-in_reg{
+	display:none;
+	width:124px;
+	border:1px solid #cdcdcd;
+	border-radius:3px;
+	background:#f3f6f9;
+}
+.head_log-in_reg li{
+	list-style-type:none;
+	padding:4px 0;
+	text-align:center; 
+	border-bottom:1px dashed #cdcdcd;
+}
+.head_log-in_reg li div img{
+	vertical-align:middle;
+	cursor:pointer;
+}
+.head_log-in_reg li:last-child{
+	border-bottom:none;
+}
+
+/* Навигация */
+.head_navibar{
+	position:absolute;
+	width:988px;
+	height:29px;
+	bottom:0;	
+	left:50%;
+	margin-left:-494px;
+	*overflow:hidden;
+	z-index:1000;
+}
+.head_navibar li{
+	display:inline-block;
+	*display:block;
+	*float:left;
+	list-style-type:none; 
+	height:22px;
+	padding:3px 0;
+	border-top:1px solid transparent;
+	border-right:1px solid transparent;
+	border-left:1px solid transparent;
+}
+.head_navibar li a{
+	padding:0 16px 0 15px;
+	font:normal 12px/24px "Trebuchet MS",	"Helvetica CY", sans-serif;
+	border-right:1px solid #999;
+	color:#555;
+	text-decoration:none;
+}
+.head_navibar .head_navibar_last a{
+	border-right:none;
+}
+.head_navibar .head_navibar_active{
+	border-top:1px solid #e2001a;
+	border-right:1px solid #e2001a;
+	border-left:1px solid #e2001a;
+}
+.head_navibar .head_navibar_prev a{
+	border-right:1px solid transparent;	
+}
+.head_navibar .head_navibar_active a{
+	border-right:1px solid transparent;
+	color:#000;
+}
+
+/* Content */
+.content{
+	width:100%;
+	height:514px;
+}
+.inner_content{
+	width:988px;
+	margin:0 auto;
+}
+
+/* Footer */
+.footer{
+	width:988px;
+	margin:15px auto;
+	padding:10px 0;
+	background:#fff;
+	box-shadow:0 1px 7px rgba(0, 0, 0, 0.1);
+}
+.footer_menu{
+	margin:0 100px;
+	height:20px;
+	text-align:justify;
+	text-align-last:justify;
+}
+.footer_menu:after{
+	content:'';
+	display:inline-block;
+	width: 100%;
+	height:0;
+	overflow:hidden;
+}
+.footer_menu li{
+	display:inline-block;
+	list-style-type:none;
+	padding:2px 0;
+	font:normal 16px/16px "UniCreditCYMedium", sans-serif;
+	color:#fff;
+}
+.footer_menu li a{
+	font:normal 11px/14px Arial, sans-serif;
+	color:#555;
+	text-decoration:none;
+}
+*+html .footer_menu{
+	text-justify:newspaper;
+	zoom:1;
+}
+*+html .footer_menu li{
+	display:inline;
+	zoom:1;
+	text-align:center;
+}
+.footer .about_bank{
+	margin:10px 0 0;
+	text-align:center;
+}
+.footer .about_bank a{
+	font:normal 9px/11px Arial, sans-serif;
+	color:#acacac;
+	text-decoration:none;
+}
+.footer .about_bank span{
+	font:normal 11px/11px Arial, sans-serif;
+	color:#acacac;
+	margin:0 11px 0 12px;
+}
+.footer .soc_auth{
+	margin:15px 0 0;
+	text-align:center;
+}
+.footer .soc_auth div{
+	display:inline-block;
+	margin:0 10px;
+	outline:0;
+	border:0;
+}
+
+/* About */
+.content.about{
+	background:transparent url("../img/background_about.jpg") no-repeat 50% 0;
+	padding-top:80px;
+}
+.content.about .inner_cont{
+	width:480px;
+	padding:30px;
+	margin:0 auto;
+	background:#fff;
+}
+.content.about .inner_cont h1{
+	margin-bottom:1em;
+	font:normal 20px/22px "UniCreditCYMedium", sans-serif;
+	color:#262626;
+}
+.content.about .inner_cont p{
+	margin-bottom:1em;
+	font:normal 14px/16px "UniCreditCYMedium", sans-serif;
+	color:#000;
+}
+
+/* Rules */
+.content.rules{
+	background:transparent url("../img/background_rules.jpg") no-repeat 50% 0;
+	padding-top:80px;
+}
+.content.rules .inner_cont{
+	width:480px;
+	padding:30px;
+	margin:0 auto;
+	background:#fff;
+}
+.content.rules .inner_cont h1{
+	margin-bottom:1em;
+	font:normal 20px/22px "UniCreditCYMedium", sans-serif;
+	color:#262626;
+}
+.content.rules .inner_cont p{
+	margin-bottom:1em;
+	font:normal 14px/16px "UniCreditCYMedium", sans-serif;
+	color:#000;
+}
+
+/* Competition */
+.content.competition{
+	position:relative;
+	margin:0 auto; 
+	background:transparent url("../img/background_competition.jpg") no-repeat 50% 0;
+	overflow:hidden;
+}
+.content.competition .graph1{
+	position:relative;
+	left:50%;
+	height:514px;
+	padding:0 466px;
+	background:transparent url("../img/compet_graph1.png") repeat-x 50% 100px;
+}
+.content.competition .graph1 .screen{
+	position:absolute;
+	width:988px;
+	height:514px;
+	//overflow:hidden;	
+}
+.graph1 a{
+	position:absolute;
+	overflow:hidden;
+	z-index:5000; 
+}
+.graph1_img1{top:120px;left:0;width:200px;height:100px;}
+.graph1_img2{top:330px;left:750px;width:150px;height:75px;}
+.graph1_img3{top:400px;left:30px;width:120px;height:60px;}
+.graph1_img4{top:250px;left:130px;width:100px;height:50px;}
+.graph1_img5{top:350px;left:400px;width:200px;height:100px;}
+.graph1_img6{top:170px;left:350px;width:150px;height:75px;}
+.graph1_img7{top:100px;left:700px;width:120px;height:60px;}
+.graph1_img8{top:200px;left:670px;width:100px;height:50px;}
+
+.content.competition .graph2{
+	position:relative;
+	top:-514px;
+	left:50%;
+	height:514px;
+	padding:0 466px;
+	background:transparent url("../img/compet_graph2.png") repeat-x 50% 100px;
+	z-index:1000;
+}
+.content.competition .graph2 .screen{
+	position:absolute;
+	width:988px;
+	height:514px;
+	//overflow:hidden;
+}
+.graph2 a{
+	position:absolute;
+	overflow:hidden;
+	z-index:5000;
+}
+.graph2_img1{top:290px;left:40px;width:150px;height:75px;}
+.graph2_img2{top:260px;left:500px;width:120px;height:60px;}
+.graph2_img3{top:380px;left:230px;width:100px;height:50px;}
+.graph2_img4{top:90px;left:260px;width:80px;height:40px;}
+.graph2_img5{top:120px;left:480px;width:120px;height:60px;}
+.graph2_img6{top:270px;left:300px;width:100px;height:50px;}
+.graph2_img7{top:250px;left:880px;width:80px;height:40px;}
+
+.content.competition a .img_gal{ 
+	position:absolute;
+	width:100%;
+	top:0;
+	left:0;
+	z-index:1400;
+}
+.content.competition a .wrap_gal{ 
+	position:absolute;
+	width:100%;
+	top:0;
+	left:0;
+	z-index:1500;
+}
+.content.competition .inner_cont{
+	position:absolute;
+	width:988px;
+	height:514px;
+	top:0;
+	left:50%;
+	margin:0 0 0 -494px;
+	z-index:100;
+}
+.content.competition .left_arrow{
+	position:absolute;
+	width:60px;
+	height:514px;
+	top:0;
+	left:0;
+	margin:0;
+	background:transparent;
+	z-index:20000;
+	cursor:pointer;
+}
+.content.competition .left_arrow:hover{
+	background:transparent url("../img/competition_arrows.png") no-repeat 0 0;
+}
+.content.competition .right_arrow{
+	position:absolute;
+	width:60px;
+	height:514px;
+	top:0;
+	right:0;
+	margin:0;
+	background:transparent;
+	z-index:20000;
+	cursor:pointer;
+}
+.content.competition .right_arrow:hover{
+	background:transparent url("../img/competition_arrows.png") no-repeat -180px 0;
+}
+.upload_link{
+	position:absolute;
+	display:block;
+	width:156px;
+	height:34px;
+	top:464px;
+	left:50%;
+	margin:0 0 0 -78px;
+	z-index:10000;
+	background:transparent url("../img/upload_link.png") no-repeat 0 0;
+}
+.graph_date{
+	position:absolute;
+	width:988px;
+	height:18px;
+	left:0;
+	font-size:0; 
+	bottom:20px;
+	z-index:2000;
+}
+.graph_date span{
+	display:inline-block;
+	width:25%;
+	text-align:center;
+	font:normal 18px/18px "UniCreditCYMedium", sans-serif;;
+	color:rgba(255, 255, 255, .3);
+}
+/* Всплывающее окно с видео */
+.content.competition .video_box{
+	display:none;
+	position:absolute;
+	width:500px;
+	height:380px;
+	left:50%;
+	top:75px;
+	margin:0 0 0 -250px;
+	z-index:30000;
+	background:#fff;
+}
+.content.competition .video_box .close_box{
+	position:absolute;
+	width:36px;
+	height:37px;
+	top:-18px;
+	right:-18px;
+	background:transparent url("../img/close_box.png") no-repeat 0 0;
+	z-index:33000;
+	cursor:pointer;
+}
+.content.competition .video_box object{
+	box-shadow:0 0 10px rgba(0, 0, 0, 1);
+}
+.content.competition .video_box .social_btn{
+	width:480px;
+	height:22px;
+	padding:4px 10px 14px;
+	overflow:hidden;
+	text-align:right; 
+}
+.content.competition .video_box .social_btn .odnoklass_like{
+	display:inline-block;
+	margin-right:10px;
+}
+.content.competition .video_box .social_btn .vk_like{
+	display:inline-block;
+	margin-right:10px;
+}
+.content.competition .video_box .social_btn .face_like{
+	display:inline-block;
+} 
+
+
+/* Video */
+.content.video{
+	position:relative;
+	overflow:hidden;
+}
+
+.content.video .inner_cont{
+	position:relative;
+	width:1000px;
+	margin:0 auto;
+	overflow:hidden;
+}
+.content.video .timeline{
+	position:absolute;
+	width:1717px;
+	height:77px;
+	left:50%;
+	top:407px;
+	margin-left:-858px;
+	background:transparent url("../img/video_timeline.png") no-repeat 0 0;
+	z-index:2000;
+}
+.content.video .inner_cont object{
+	position:relative;
+	z-index:1500;
+}
+.content.video .inner_cont .title{
+	position:absolute;
+	width:371px;
+	height:73px;
+	left:30px;
+	top:30px;
+	background:transparent url("../img/video_title.png") no-repeat 0 0;
+	z-index:2000;
+}
+
+/* Upload */
+.content.upload{
+	background:transparent url("../img/background_upload.jpg") no-repeat 50% 0;	
+}
+
+.content.upload .inner_cont{
+	position:relative;
+	width:988px;
+	height:514px;
+	margin:0 auto;
+	overflow:hidden;
+}
+.content.upload .inner_cont .profile{
+	position:absolute;
+	height:514px;
+	width:400px;
+	top:0;
+	left:0;
+}
+.content.upload .inner_cont .profile h1{
+	margin:15px 0 0 14px;
+	font:normal 30px/38px "UniCreditCYBold", sans-serif;
+	color:#fff;
+	max-height:76px;
+}
+.content.upload .inner_cont .profile div{
+	margin:20px 0 0 14px;
+	position:relative;
+}
+.content.upload .inner_cont .profile div img{
+	height:350px;
+	margin:13px 0 0 30px;
+	border-radius:8px;
+}
+.content.upload .inner_cont .profile div a{
+	position:absolute;
+	display:block;
+	width:155px;
+	height:36px;
+	left:0;
+	top:40px;
+	background:transparent url("../img/video_rec.png") no-repeat 0 0;	
+	z-index:1200;
+}
+.content.upload .inner_cont .upload_story{
+	position:absolute;
+	height:514px;
+	width:555px;
+	top:0;
+	right:0;	
+}
+.content.upload .inner_cont .upload_story h1{
+	margin:15px 0 0;
+	font:normal 30px/38px "UniCreditCYBold", sans-serif;
+	color:#fff;
+}
+.content.upload .story_check{
+	margin:30px 0 13px;
+	overflow:hidden;
+}
+.content.upload .story_check div{
+	position:relative;
+	float:left;
+	width:136px;
+	height:36px;
+	margin:0 15px 0 0;
+	padding:0 0 0 10px;
+	border-radius:8px;
+	font:normal 20px/36px "UniCreditCYMedium", sans-serif;
+	color:#fcfcfa;
+	background:#000; 
+}
+.content.upload .story_check div .storyradio{
+	position:absolute;
+	width:24px;
+	height:23px;
+	display:inline-block;
+	top:6px;
+	right:24px;
+	cursor:pointer;
+	background:transparent url("../img/checkbox.png") no-repeat 0 -23px;	
+}
+.content.upload .story_check div .storyradio input{
+	display:none;
+}
+.content.upload .story_check div .radiochecked {
+	background-position:0 0;
+}
+.content.upload .story label{
+	font:normal 20px/24px "UniCreditCYMedium", sans-serif;
+	color:#fcfcfa;
+}
+.content.upload .story textarea{
+	height:209px;
+	width:484px;
+	border:none;
+	padding:8px; 
+	border-radius:8px;
+	font:normal 14px/16px Arial, sans-serif;;
+	color:#000;
+	resize:none;
+	background:#fff;
+}
+.content.upload .story .story_btns{
+	margin:30px 0 0;
+	overflow:hidden;
+}
+.content.upload .story .story_btns .story_upload_btn{
+	width:113px;
+	height:30px;
+	float:left;
+	margin:0 50px 0 0;
+	outline:none;
+	border:none;
+	cursor:pointer;
+	background:transparent url("../img/profile_btn_upload.png") no-repeat 0 0;	
+}
+.content.upload .story .story_btns .story_upload_share{
+	display:inline-block;
+	width:112px;
+	height:30px;
+	margin:0;
+	outline:none;
+	border:none;
+	background:transparent url("../img/profile_btn_share.png") no-repeat 0 0;	
+}
+
+/* Interview */
+.content.interview{
+	background:transparent url("../img/background_interview.jpg") no-repeat 50% 0;
+}
+.content.interview .inner_cont{
+	position:relative;
+	width:988px;
+	height:514px;
+	left:50%;
+	margin:0 0 0 -494px;
+}
+.content.interview .inner_cont a{ 
+	display:block;
+	position:absolute;
+	background:#ff0000;
+	overflow:hidden;
+}
+.content.interview .inner_cont a .img_gal{ 
+	position:absolute;
+	width:100%;
+	z-index:1400;
+}
+.content.interview .inner_cont a .wrap_gal{ 
+	position:absolute;
+	width:100%;
+	z-index:1500;
+	opacity:0.75;	
+}	
+#interview1{
+	width:208px;
+	height:118px;
+	top:325px;
+	left:17px;
+}
+#interview1 .img_gal{
+	opacity:0.9;
+}
+#interview2{
+	width:181px;
+	height:103px;
+	top:180px;
+	left:215px;
+}
+#interview2 .img_gal{
+	opacity:0.8;
+}
+#interview3{
+	width:150px;
+	height:90px;
+	top:363px;
+	left:410px;
+}
+#interview3 .img_gal{
+	opacity:0.75;
+}
+#interview4{
+	width:240px;
+	height:136px;
+	top:110px;
+	left:590px;
+}
+#interview5{
+	width:150px;
+	height:85px;
+	top:366px;
+	left:766px;
+}
+#interview5 .img_gal{
+	opacity:0.7;
+}
+.content.interview .inner_cont a:hover .wrap_gal{
+	display:none;
+}
+.content.interview .inner_cont a:hover .img_gal{
+	opacity:1 !important;
+}
+
+/* News */
+.content.news{
+	background:transparent url("../img/background_news.jpg") no-repeat 50% 0;
+}
+.content.news .inner_cont{
+	position:relative;
+	width:988px;
+	height:514px;
+	left:50%;
+	margin:0 0 0 -494px;
+}
+.content.news .inner_cont .prev_news{
+	display:block;
+	position:absolute;
+	width:31px;
+	height:30px;
+	left:-2px;
+	top:242px;
+	background:transparent url("../img/news_arrows.png") no-repeat 0 0;
+	z-index:1500;	
+}
+.content.news .inner_cont .next_news{
+	display:block;
+	position:absolute;
+	width:31px;
+	height:30px;
+	right:-2px;
+	top:242px;
+	background:transparent url("../img/news_arrows.png") no-repeat -31px 0;
+	z-index:1500;	
+}
+.content.news .news_date{
+	position:absolute;
+}
+.content.news .news_date span{ 
+	display:block;
+	height:26px;
+	width:92px;
+	font:normal 11px/26px Arial, sans-seruif;
+	color:#262626;
+	text-align:center;
+	cursor:pointer;
+}
+.content.news .news_date .news_text{
+	display:none;
+	position:absolute;
+	width:260px;
+	top:32px;
+	left:-22px;
+	padding:6px 10px;
+	background:#fff;
+	overflow:hidden;
+}
+.content.news .news_date .news_text a{
+	font:bold 11px/12px Arial, sans-serif;
+	color:#262626;	
+}
+.content.news .news_date .news_text p{
+	margin:10px 0 0;
+	font:normal 11px/12px Arial, sans-serif;
+	color:#262626;	
+}
+.content.news .news_date .news_text .social_btn{
+	margin:10px 0 0;
+	float:right;
+	overflow:hidden;
+}
+.content.news .news_date .news_text .social_btn .vk_like{
+	float:left;
+	margin-right:10px;
+}
+.content.news .news_date .news_text .social_btn .face_like{
+	float:left;
+} 
+.content.news #news1{
+	top:93px;
+	left:56px;
+}
+.content.news #news2{
+	top:261px;
+	left:120px;
+}
+.content.news #news3{
+	top:349px;
+	left:405px;
+}
+.content.news #news4{
+	top:182px;
+	left:457px;
+}
+.content.news #news5{
+	top:16px;
+	left:577px;
+}
+.content.news #news6{
+	top:185px;
+	left:744px;
+}
+.content.news #news7{
+	top:350px;
+	left:793px;
+}
+
+/* Persons */
+.content.persons{
+	background:transparent url("../img/background_persons.jpg") no-repeat 50% 0;
+	padding:80px 0 0;
+}
+.content.persons .inner_cont{
+	position:relative;
+	width:1000px;
+	height:409px;
+	margin:0 auto;
+	overflow:hidden;
+}
+.content.persons .left_arrow{
+	position:absolute;
+	width:13px;
+	height:16px;
+	left:2px;
+	top:196px;
+	background:transparent url("../img/arrows_persons.png") no-repeat 0 0; 
+	cursor:pointer;
+}
+.content.persons .right_arrow{
+	position:absolute;
+	width:13px;
+	height:16px;
+	right:2px;
+	top:196px;
+	background:transparent url("../img/arrows_persons.png") no-repeat -13px 0;
+	cursor:pointer;  
+}
+.content.persons .person_item{
+	position:relative;
+	width:342px;
+	height:152px;
+	margin:0 0 45px 615px;
+	padding:10px 10px 20px;
+	background:#fff;
+	overflow:hidden;
+}
+.content.persons .person_item .person_img{
+	width:125px;
+	max-height:147px;
+	float:left;
+	margin:0 10px 6px 0;
+	overflow:hidden; 
+}
+.content.persons .person_item .person_img img{
+	width:125px;
+}
+.content.persons .person_item h1{
+	font:normal 18px/18px "UniCreditCYMedium", sans-serif;
+	margin:-3px 0 5px;
+	color:#262626;
+}
+.content.persons .person_item .person_title{
+	font:normal 12px/14px "UniCreditCYMedium", sans-serif;
+	color:#262626;
+}
+.content.persons .person_item .person_text{
+	margin:15px 0 0;
+	max-height:84px;
+	font:normal 10px/12px Arial, sans-serif;
+	color:#262626;
+	overflow:hidden;
+}
+.content.persons .person_item .story_link{
+	position:absolute;
+	bottom:0;
+	right:18px;
+	width:65px;
+	height:20px;
+	background:#000;
+	text-align:center;
+	overflow:hidden;  
+}
+.content.persons .person_item .story_link a{
+	font:normal 12px/14px "UniCreditCYMedium", sans-serif;
+	color:#fff;
+}
+/* главная персона */
+.content.persons .person_item.main_item{
+	position:absolute;
+	top:0;
+	left:22px;
+	width:488px;
+	height:355px;
+	margin:0;
+	padding:18px 18px 36px 36px;
+	background:#fff;
+	overflow:hidden;
+}
+.content.persons .person_item.main_item .person_img{
+	position:absolute;
+	width:312px;
+	max-height:365px;
+	top:18px;
+	right:18px;
+	float:none;
+	margin:0 0 0 20px;
+	overflow:hidden; 
+	z-index:1000;
+}
+.content.persons .person_item.main_item .person_img img{
+	width:314px;
+}
+.content.persons .person_item.main_item h1{
+	font:normal 20px/22px "UniCreditCYMedium", sans-serif;
+	margin:-3px 335px 10px 0;
+	color:#262626;
+}
+.content.persons .person_item.main_item .person_title{
+	position:relative;
+	left:-20px;
+	width:281px;
+	height:54px;
+	padding:0 20px;
+	font:normal 30px/54px "UniCreditCYMedium", sans-serif;
+	color:#fff;
+	background:transparent url("../img/title_persons.png") no-repeat 0 0;
+	z-index:1200;
+}
+.content.persons .person_item.main_item .person_text{
+	margin:10px 335px 0 0;
+	max-height:266px;
+	font:normal 12px/14px Arial, sans-serif;
+	color:#262626;
+	overflow:hidden;
+}
+.content.persons .person_item.main_item .story_link{
+	position:absolute;
+	bottom:0;
+	right:18px;
+	width:120px;
+	height:30px;
+	background:#000;
+	text-align:center;
+	overflow:hidden;  
+}
+.content.persons .person_item.main_item .story_link a{
+	font:normal 14px/30px "UniCreditCYMedium", sans-serif;
+	color:#fff;
+}
+
+/* Person story */
+.content.person_story{
+	background:transparent url("../img/background_persons.jpg") no-repeat 50% 0;
+	padding-top:104px;
+	height:100%;
+}
+.content.person_story .inner_cont{
+	position:relative;
+	width:900px;
+	padding:50px 0;
+	left:50%;
+	margin:0 0 0 -450px;
+	background:#fff;
+	overflow:hidden;
+}
+.content.person_story .story_img_box{
+	width:900px;
+	height:200px;
+	margin:0 0 50px;
+	overflow:hidden;
+}
+.content.person_story .story_img_box img{
+	width:900px;
+}
+.content.person_story .person_story_title{
+	position:absolute;
+	left:20px;
+	top:216px;
+	width:281px;
+	height:54px;
+	padding:0 20px;
+	font:normal 30px/54px "UniCreditCYMedium", sans-serif;
+	color:#fff;
+	background:transparent url("../img/title_persons.png") no-repeat 0 0;
+}
+.content.person_story .person_story_text{
+	overflow:hidden;
+	color:#555;
+}
+.content.person_story .person_story_text h2{
+	margin:0 55px 1em 275px;
+	font:normal 30px/36px "Georgia", Times, serif;
+}
+.content.person_story .person_story_text h3{
+	margin:0 55px .5em 275px;
+	font:normal 18px/24px "Trebuchet MS", sans-serif;
+}
+.content.person_story .person_story_text p{
+	margin:0 55px 1em 275px;
+	font:normal 12px/14px "Trebuchet MS", sans-serif;
+}
+.content.person_story .person_story_text .inset{
+	float:left;
+	margin: 20px 20px 20px 80px;
+	padding:20px;
+	width:200px;
+	box-shadow:0 0 5px rgba(0, 0, 0, .5);
+	background:#ffffff;
+	background:url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNkYmRiZGIiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+	background:-moz-linear-gradient(top,  #ffffff 0%, #dbdbdb 100%);
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#dbdbdb));
+	background:-webkit-linear-gradient(top,  #ffffff 0%,#dbdbdb 100%);
+	background:-o-linear-gradient(top,  #ffffff 0%,#dbdbdb 100%);
+	background:-ms-linear-gradient(top,  #ffffff 0%,#dbdbdb 100%);
+	background:linear-gradient(top,  #ffffff 0%,#dbdbdb 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#dbdbdb',GradientType=0 );
+
+}
+.content.person_story .person_story_text .inset p{
+	margin:0 0 1em;
+	font:italic 16px/20px "Georgia", Times, sans-serif;	
+}
+.content.person_story .person_story_text .inset p + p{
+	margin:0;
+	font:normal 12px/14px "Trebuchet MS", sans-serif;	
+}
+.content.person_story .person_story_text .social_btn{
+	float:right;
+	margin:10px 55px 0 0;
+	overflow:hidden;
+}
+.content.person_story .person_story_text .social_btn .vk_like{
+	float:left;
+	margin-right:10px;
+}
+.content.person_story .person_story_text .social_btn .face_like{
+	float:left;
+} 
+
+/* Person story */
+.content.tales{
+	position:relative;
+	background:transparent url("../img/background_tales.jpg") no-repeat 50% 0;
+	padding-top:150px;
+	height:364px;
+}
+.content.tales .jspArrowLeft{
+	position:absolute;
+	width:0;
+	height:514px;
+	top:0;
+	margin:0;
+	left:0;
+	background:transparent;
+	z-index:20000;
+	cursor:pointer;
+}
+.content.tales .jspArrowLeft:hover{
+	background:transparent url("../img/competition_arrows.png") no-repeat 0 0;
+}
+.content.tales .jspArrowRight{
+	position:absolute;
+	width:0;
+	height:514px;
+	top:0;
+	margin:0;
+	right:0;
+	background:transparent;
+	z-index:20000;
+	cursor:pointer;
+}
+.content.tales .jspArrowRight:hover{
+	background:transparent url("../img/competition_arrows.png") no-repeat -180px 0;
+}
+.content.tales .inner_cont{
+	position:relative;
+	width:963px;
+	left:50%;
+	margin:0 0 0 -481px;
+}
+.content.tales .inner_cont .scroll-pane{
+	width:963px;
+	overflow-x:auto;
+}
+.content.tales .inner_cont table{
+	margin:0;
+}
+.content.tales .inner_cont table td .slide{
+	width:134px;
+	height:190px;
+	margin:0 10px;
+	padding:5px;
+	overflow:hidden;
+}
+.content.tales .inner_cont table td .slide_up{
+	background:transparent url("../img/slide_up.jpg") no-repeat 0 0;
+}
+.content.tales .inner_cont table td .slide_down{
+	background:transparent url("../img/slide_down.jpg") no-repeat 0 0;
+}
+.content.tales .inner_cont table td .img{
+	width:134px;
+	height:101px;
+	margin:0 0 5px 0;
+	overflow:hidden;
+}
+.content.tales .inner_cont table td .img img{
+	width:134px;
+}
+.content.tales .inner_cont table td .slide_description{
+	max-height:84px;
+	overflow:hidden; 
+}
+.content.tales .inner_cont table td .slide_title{
+	width:75px;
+	min-height:20px;
+	font:normal 9px/10px "UniCreditCYBold", sans-serif;
+	color:#000;
+	padding-right:59px;
+	margin:0 0 5px 0;
+}
+.content.tales .inner_cont table td .slide_text{
+	max-height:56px;
+	font:normal 8px/8px "UniCreditCYMedium", sans-serif;
+	color:#000;	
+}
+.content.tales .inner_cont table tr.slide_dates td{
+	height:130px;
+	padding:0 0 20px;
+	vertical-align:bottom;
+	text-align:center; 
+}
+.content.tales .inner_cont table .slide_dates td span{
+	background:#000;
+	padding:2px 10px;
+	font:normal 16px/16px "UniCreditCYMedium", sans-serif;
+	color:#fff;
+}
+
+/* скроллбар */
+.jspContainer{
+	overflow:hidden;
+	position:relative;
+}
+.jspPane{
+	position:absolute;
+}
+.jspHorizontalBar{
+	position:absolute;
+	bottom:0;
+	left:0;
+	width:963px;
+	margin:0 auto;
+	height:11px;
+}
+.jspHorizontalBar *{
+	margin:0;
+	padding:0;
+}
+.jspCap{
+	display:none;
+}
+.jspHorizontalBar .jspCap{
+	float:left;
+}
+.jspTrack{
+	position:relative;
+	background:transparent url("../img/slide_bar.png") no-repeat 0 0;
+}
+.jspDrag{
+	background:transparent url("../img/slider.png") no-repeat 0 0;
+	height:7px;
+	margin:2px 0 0;
+	position:relative;
+	top:0;
+	left:0;
+	cursor:pointer;
+}
+.jspHorizontalBar .jspTrack,
+.jspHorizontalBar .jspDrag{
+	float:left;
+	height:100%;
+}

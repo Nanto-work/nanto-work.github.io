@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Citibank</title>
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/jquery-ui-1.10.3.custom.css">
+	<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+	<div class="wrap">
+		<img src="img/index_bg.jpg" alt="">
+		<a href="#" id="miles-more__calc-trigger">Калькулятор</a>
+	</div>
+
+	<div class="miles-more__calc" style="display:none;">
+		<div class="miles-more__calc-shadow"></div>
+		<div class="miles-more__calc-wrap">
+			<div class="cont">
+				
+				<h2>Кредитная карта Ситибанка Miles & More<br>
+				Покупайте больше — путешествуйте чаще!</h2>
+
+				<a href="#" class="close-button"></a>
+
+				<div class="card-selector active">
+					<div class="card-image blue"></div>
+					<span>Citibank Miles & More</span>
+				</div>
+				<div class="card-selector">
+					<div class="card-image yellow"></div>
+					<span>Citibank Miles & More<br>Premium*</span>
+				</div>
+
+				<table class="miles-more__calc-table">
+					<thead>
+						<tr>
+							<td colspan="3">Сколько Вы тратите в месяц в рублях?</td>
+							<td>Заработанные<br>премиальные<br>мили за год</td>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>
+								<i id="cart"></i>
+								<span class="payment">Шоппинг</span>
+							</td>
+							<td>
+								<input type="text" value="0" id="shopping" class="pay-input" maxlength="5">
+							</td>
+							<td>
+								<div class="slider"></div>
+							</td>
+							<td class="annual-miles-cont">
+								<span class="annual-miles">0</span>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<i id="bottle"></i>
+								<span class="payment">Продукты</span>
+							</td>
+							<td>
+								<input type="text" value="0" id="products" class="pay-input">
+							</td>
+							<td>
+								<div class="slider"></div>
+							</td>
+							<td class="annual-miles-cont">
+								<span class="annual-miles">0</span>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<i id="coctail"></i>
+								<span class="payment double">Рестораны/<br>развлечения</span>
+							</td>
+							<td>
+								<input type="text" value="0" id="fun" class="pay-input">
+							</td>
+							<td>
+								<div class="slider"></div>
+							</td>
+							<td class="annual-miles-cont">
+								<span class="annual-miles">0</span>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<i id="airplane"></i>
+								<span class="payment double">Покупки за границей/<br>отпуск</span>
+							</td>
+							<td>
+								<input type="text" value="0" id="abroad" class="pay-input">
+							</td>
+							<td>
+								<div class="slider"></div>
+							</td>
+							<td class="annual-miles-cont">
+								<span class="annual-miles">0</span>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<i id="games"></i>
+								<span class="payment">Другие траты</span>
+							</td>
+							<td>
+								<input type="text" value="0" id="other" class="pay-input">
+							</td>
+							<td>
+								<div class="slider"></div>
+							</td>
+							<td class="annual-miles-cont">
+								<span class="annual-miles">0</span>
+							</td>
+						</tr>
+						<tr class="pre-last">
+							<td colspan="2">
+								<span class="payment">Учитывать приветственные мили?&nbsp;<i class="info" title="Для получения приветственных селектов необходимо совершить операции на общую сумму в 10 000 рублей в течение 60 дней с момента открытия карты."></i></span>
+							</td>
+							<td id="tiny-slider-container">
+								<span class="welcome-miles" id="yes">Да</span>
+								<div class="tiny-slider-wrap">
+									<div class="tiny-slider-inner-wrap">
+										<div class="tiny-slider"></div>
+									</div>
+								</div>
+								<span class="welcome-miles active" id="no">Нет</span>
+							</td>
+							<td class="annual-miles-cont">
+								<span class="annual-miles">0</span>
+							</td>
+						</tr>
+						<tr class="last">							
+							<td colspan="3" align="right">
+								<span class="label">Общая сумма премиальных миль</span>
+							</td>
+							<td>
+								<span class="total-annual-miles">0</span>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="miles-more__footer">
+				<a href="#" class="get-result">ЧТО МОЖНО ПОЛУЧИТЬ?</a>
+			</div>
+		</div>
+		<div class="miles-more__disclaimer">* Премиум</div>
+	</div>
+
+	<div class="miles-more__result" style="display:none;">
+		<div class="miles-more__result-shadow"></div>
+		<div class="miles-more__result-wrap">
+			<div class="cont">
+				<h2>Что можно получить</h2>
+				<a href="#" class="close-result-button"></a>
+				<div class="result-info">
+
+					<div class="result-image enough-miles">						
+						<div class="europe" style="display:none;"></div>
+						<div class="usa" style="display:none;"></div>
+						<div class="usa-top" style="display:none;"></div>
+					</div>
+					<div class="result-text enough-miles">
+						<span class="intro">За год Вы можете заработать</span>
+						<span class="miles-result-amount">
+							<span class="total">0</span> премиальных миль
+						</span>
+
+						<span class="result-advise">
+							<span class="europe" style="display:none;">Этого достаточно, чтобы получить премиальный билет в Европу и обратно!</span>
+							<span class="usa" style="display:none;">Этого достаточно, чтобы получить премиальный билет в CША и обратно!</span>
+							<span class="usa-top" style="display:none;">Этого достаточно, чтобы получить премиальный билет первого класса в CША и обратно!</span>							
+						</span>
+					</div>
+
+					<div class="result-image not-enough-miles"></div>
+
+					<div class="result-text not-enough-miles">
+						<span class="miles-result-amount">
+							Для получения премиального билета Вам необходимо заработать еще
+							<span class="total">0</span><br>
+							<span class="total-string">премиальных<br>миль</span>
+						</span>
+
+						<span class="result-advise">
+							Каждое использование карты приближает Вас к премиальному билету, получить который Вы можете, накопив 15 000 миль!
+						</span>
+					</div>
+				</div>
+
+
+
+				<div class="result-plate enough-miles">
+					<i class="percent"></i>
+					Расплачиваясь картой Ситибанка, Вы можете сэкономить<br>
+					до 10 000 рублей у партнеров по всему миру!
+				</div>
+				<div class="result-plate not-enough-miles">
+					<i class="percent"></i>
+					Расплачиваясь картой Ситибанка, Вы можете сэкономить<br>
+					до 10 000 рублей у партнеров по всему миру!
+				</div>
+
+
+			</div>
+			<div class="miles-more__footer">
+				<a href="#" class="okay">OK</a>
+			</div>
+		</div>
+		<!-- <div class="miles-more__result-disc">fsdgdfg</div> -->
+	</div>
+
+	<script src="js/jquery-1.11.3.min.js"></script>
+	<script type="text/javascript" src="js/jquery-ui-1.10.3.custom.min.js"></script>
+	<script type="text/javascript" src="js/application.js"></script>
+</body>
+</html>

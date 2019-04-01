@@ -1,0 +1,40 @@
+﻿.main_box_photokonkurs{
+   -ms-filter:"progid:DXImageTransform.Microsoft.Matrix(M11=0.981627183447664, M12=0.1908089953765448, M21=-0.1908089953765448, M22=0.981627183447664, SizingMethod='auto expand')";
+   filter:progid:DXImageTransform.Microsoft.Matrix(
+	M11=0.981627183447664,
+	M12=0.1908089953765448,
+	M21=-0.1908089953765448,
+	M22=0.981627183447664,
+	SizingMethod='auto expand');
+	margin-left: -15px; 
+	margin-top: -15px;
+}
+.main_box_cards{
+	-ms-filter:"progid:DXImageTransform.Microsoft.Matrix(M11=0.7071067811865474, M12=-0.7071067811865477, M21=0.7071067811865477, M22=0.7071067811865474, SizingMethod='auto expand')";
+	filter:progid:DXImageTransform.Microsoft.Matrix(
+	M11=0.7071067811865474,
+	M12=-0.7071067811865477,
+	M21=0.7071067811865477,
+	M22=0.7071067811865474,
+	SizingMethod='auto expand');
+	margin-left: -19px; 
+	margin-top: -42px;
+}
+.main_box_horo1{
+	width:216px;
+	height:216px;
+	position:absolute;
+	top:240px;
+	left:612px;
+	z-index:120;
+	border-radius:158px;
+}
+.main_box_horo2{
+	width:150px;
+	height:120px;
+	position:absolute;
+	top:230px;
+	left:825px;
+	z-index:120;
+	border-radius:90px;
+}

@@ -1,0 +1,133 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ru" lang="ru">
+<head>
+	<title>Общайся с друзьями из Facebook через QIP!</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link rel="stylesheet" href="skin/common.css" type="text/css" />
+	<link rel="stylesheet" href="skin/facebook.css" type="text/css" />
+	<link rel="stylesheet" href="skin/head.css" type="text/css" />
+</head>
+</head>
+<body>
+<div class="qip_main_wrapper">
+	<div class="qip_head_wrap">
+			<div class="qip_head">
+				<div class="qip_head_limiter">
+					<ul class="qh_list qh_main">
+						<li><a href="#" onclick="">Сделать стартовой</a></li>
+						<li><a href="#">Мобильная версия</a></li>
+						<li class="qh_extra qhm_city">
+							<div class="qhe_popup">
+								<p>
+									<select onchange="qipHead.switchCity(this)" disabled="disabled"></select>
+								</p>
+							</div> <span class="qhe_handler" onclick="qipHead.popup(this.parentNode);qipHead.cityListLoad('RU_45_45', this)"><span class="qh_pseudo qh_dropdown">Москва</span></span>
+						</li>
+					</ul>
+					<ul class="qh_list qh_user">
+						<li class="qhu_loading"></li>
+						<li class="qh_extra qhu_signin">
+							<form class="qhe_popup" action="#" method="post" onsubmit="return qipHead.signin(this)">
+								<input type="hidden" name="retpath" value="#" />
+								<p class="qhus_login">
+									<input type="text" name="login" value="" maxlength="60" placeholder="Логин" /><span>@</span>
+									<select name="host">
+										<option value="qip.ru" selected="selected">qip.ru</option>
+										<option value="pochta.ru">pochta.ru</option>
+										<option value="fromru.com">fromru.com</option>
+										<option value="front.ru">front.ru</option>
+										<option value="hotbox.ru">hotbox.ru</option>
+										<option value="hotmail.ru">hotmail.ru</option>
+										<option value="krovatka.su">krovatka.su</option>
+										<option value="land.ru">land.ru</option>
+										<option value="mail15.com">mail15.com</option>
+										<option value="mail333.com">mail333.com</option>
+										<option value="newmail.ru">newmail.ru</option>
+										<option value="nightmail.ru">nightmail.ru</option>
+										<option value="nm.ru">nm.ru</option>
+										<option value="pisem.net">pisem.net</option>
+										<option value="pochtamt.ru">pochtamt.ru</option>
+										<option value="pop3.ru">pop3.ru</option>
+										<option value="rbcmail.ru">rbcmail.ru</option>
+										<option value="smtp.ru">smtp.ru</option>
+										<option value="5ballov.ru">5ballov.ru</option>
+										<option value="aeterna.ru">aeterna.ru</option>
+										<option value="ziza.ru">ziza.ru</option>
+										<option value="memori.ru">memori.ru</option>
+										<option value="photofile.ru">photofile.ru</option>
+										<option value="fotoplenka.ru">fotoplenka.ru</option>
+										<option value="pochta.com">pochta.com</option>
+									</select>
+								</p>
+								<p class="qhus_password">
+									<input type="password" name="password" value="" placeholder="Пароль" maxlength="128" />
+								</p>
+								<p class="qhus_message"></p>
+								<p class="qhus_recover"><a href="#">Напомнить пароль</a></p>
+								<p class="qhus_flags">
+									<label>
+										<input type="checkbox" name="alien" value="0" checked="checked" /> запомнить меня</label>
+									<label>
+										<input type="checkbox" name="retpath" value="#" /> войти в почту</label>
+								</p>
+								<p class="qhus_submit">
+									<button type="submit" name="submit"><span>Войти</span></button>
+								</p>
+							</form><a class="qhe_handler" href="#" onclick="qipHead.popup(this.parentNode); return false;"><strong class="qh_pseudo">Войти на сайт</strong></a> </li>
+						<li><a href="#">Регистрация</a></li>
+					</ul>
+				</div>
+			</div>
+	</div>	
+	<div class="wrap">
+		<div class="header">
+			<a class="logo" href="../qip.ru/default.htm"><img src="i/logo/index.png" alt="" /></a>
+			<h1>Общайся с друзьями<br />из Facebook через QIP!</h1>
+			<button id="try-1" class="button add_fb" onclick="qipPopup('fb_add', true)"><i class="icon"></i>Добавить Facebook</button>
+			<form action="#" method="get"><button class="button dl_qip"><span class="note">QIP 2012 Версия 7221</span><i class="icon"></i>Скачать QIP</button></form>
+		</div>
+		<div class="instruction">
+			<h1>Как это работает?</h1>
+			<table class="list">
+				<tr>
+					<td class="download"><div class="icon"></div><h2>Скачай</h2><a href="#">Скачайте программу</a> QIP для компьютера и создайте QIP аккаунт, если у вас его ещё нет.</td>
+					<td width="5%"></td>
+					<td class="install"><div class="icon"></div><h2>Установи</h2>Добавьте в QIP вашу учётную запись Facebook. В списке  контактов вы увидите своих друзей.</td>
+					<td width="5%"></td>
+					<td class="talk"><div class="icon"></div><h2>Общайся</h2>Если с контактом из списка можно связаться, напротив него появится кнопка звонка или значок веб-камеры.</td>
+				</tr>
+			</table>
+		</div>
+		<table class="list2 q_mt10">
+			<tr>
+				<td class="list_td" valign="top"><div class="icon_td" id="read_td"></div><h3>Читай<br />ленту</h3></td>
+				<td width="1%"></td>
+				<td class="list_td" valign="top"><div class="icon_td" id="chat_td"></div><h3>Общайся<br />в чате</h3></td>
+				<td width="1%"></td>
+				<td class="list_td" valign="top"><div class="icon_td" id="write_td"></div><h3>Пиши<br />на стене</h3></td>
+				<td width="1%"></td>
+				<td class="list_td" valign="top"><div class="icon_td" id="talk_td"></div><h3>Разговаривай<br />с друзьями</h3></td>
+			</tr>
+		</table>
+	</div>
+</div>
+<div class="qip_footer qf_stretch">
+	<div class="qf_left"><a id="q_footer_pda" href="#" rel="nofollow">Мобильная версия</a></div>
+	<div class="qf_right">
+		<table class="q_fr">
+			<tr>
+				<td class="qf_counter">
+					<a class="qf_c31x31 qf_socials qf_tw" rel="nofollow" href="#" title="Официальная лента в Twitter" target="_blank"></a>
+					<a class="qf_c31x31 qf_socials qf_vk" rel="nofollow" href="#" title="Официальная группа Вконтакте" target="_blank"></a>
+					<a class="qf_c31x31 qf_socials qf_fb" rel="nofollow" href="#" title="Официальная страница в Facebook" target="_blank"></a>
+				</td>
+				<td class="qf_counter" id="qf_bm_counter">
+					<a id="q_footer_li_counter" href="#" target="_blank" rel="nofollow"></a>
+				</td>
+			</tr>
+		</table>
+	</div>
+	<div class="qf_center"><a id="q_footer_help" href="#" rel="nofollow">Помощь</a> <span class="qf_middot">·</span> <a id="q_footer_advertise" href="#" rel="nofollow">Реклама</a> <span class="qf_middot">·</span> <a id="q_footer_partner" href="#" rel="nofollow">Соглашение</a> <span class="qf_middot">·</span> <a id="q_footer_download_qip" href="#" rel="nofollow">Скачать QIP</a> <span class="qf_middot">·</span> <a id="q_footer_services" href="#" rel="nofollow">Все сервисы</a> <span class="qf_middot">·</span> &copy; QIP.ru</div>
+</div>
+</body>
+</html>
