@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>Info</title>
+		<link rel="stylesheet" type="text/css" href="fonts/fonts.css">
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<script src="js/jquery-3.3.1.min.js"></script>
+		<script src="js/script.js"></script>
+	</head>
+	<body class="sbornyye-gruzy">
+<div class="popup-bg">
+	<div id="windowQuestion" class="modal-window popup-window">
+		<a href="#" class="modal-w-close close-icon"></a>
+		<div class="modal-w-title">ЕСТЬ ВОПРОС?</div>
+		<div class="modal-w-desc">Напишите нам и наши менеджеры<br /> вскоре с вами свяжутся</div>
+		<form class="modal-w-form" action="#">
+			<input placeholder="Имя" class="modal-wf-el modal-wf-el_name" type="text" />
+			<input placeholder="Телефон" class="modal-wf-el modal-wf-el_phone" type="tel" />
+			<input placeholder="Текст сообщения" class="modal-wf-el modal-wf-el_desc" type="text" />
+			<button class="modal-w-btn purple-btn">ОТПРАВИТЬ</button>
+		</form>
+	</div>
+	<div id="windowApplication" class="modal-window popup-window">
+		<a href="#" class="modal-w-close close-icon"></a>
+		<div class="modal-w-title">ЗАЯВКА</div>
+		<div class="modal-w-desc">Напишите нам и наши менеджеры<br /> вскоре с вами свяжутся</div>
+		<form class="modal-w-form" action="#">
+			<input placeholder="Имя" class="modal-wf-el modal-wf-el_name" type="text" />
+			<input placeholder="Телефон" class="modal-wf-el modal-wf-el_phone" type="tel" />
+			<input placeholder="Кратко опишите задачу" class="modal-wf-el modal-wf-el_desc" type="text" />
+			<button class="modal-w-btn purple-btn">ОСТАВИТЬ ЗАЯВКУ</button>
+		</form>
+	</div>
+	<div id="windowOrderRing" class="modal-window popup-window">
+		<a href="#" class="modal-w-close close-icon"></a>
+		<div class="modal-w-title">ЗАКАЗ ОБРАТНОГО ЗВОНКА</div>
+		<div class="modal-w-desc">Оставьте свои контактные данные<br />и наш менеджер вскоре с вами свяжется</div>
+		<form class="modal-w-form" action="#">
+			<input placeholder="Имя" class="modal-wf-el modal-wf-el_name" type="text" />
+			<input placeholder="Телефон" class="modal-wf-el modal-wf-el_phone" type="tel" />
+			<button class="modal-w-btn purple-btn">ЗАКАЗАТЬ ЗВОНОК</button>
+		</form>
+	</div>
+	<div id="windowSuccess" class="modal-window popup-window modal-window_success">
+		<a href="#" class="modal-w-close close-icon"></a>
+		<div class="modal-w-title">СПАСИБО!</div>
+		<div class="modal-w-desc">Ваши данные успешно отправлены<br />и наш менеджер вскоре с вами свяжется</div>
+		<button class="modal-w-btn purple-btn">ХОРОШО</button>
+	</div>
+</div>
+		<div class="wrapper">
+<header class="header g-section">
+	<div class="head-box g-inner">
+		<div class="head-b-logo">
+			<a class="head-bl-link" href="/">
+				<img class="head-bll-img" src="i/logo.png" />
+			</a>
+		</div>
+		<input type="checkbox" id="nav-checkbox" class="head-b-navcheckbox">
+    	<label for="nav-checkbox" class="head-b-navbtn"><div class="head-b-navicon"></div></label>
+		<nav class="head-b-nav">
+			<div class="head-bn-item"><a class="head-bni-link" href="/">Главная</a></div>
+			<div class="head-bn-item head-bn-item_dropdown">
+				<a class="head-bni-link" href="#">Наши услуги</a>
+				<div class="head-bni-wrap">
+					<ul class="head-bniw-list">
+						<li><a class="head-bni-link" href="/sbornyye-gruzy">Сборные грузы</a></li>
+						<li><a class="head-bni-link" href="/aviaperevozki">Авиаперевозки</a></li>
+						<li><a class="head-bni-link" href="/gruzoperevozki">Грузоперевозки</a></li>
+						<li><a class="head-bni-link" href="/zhd-perevozki">Ж/Д перевозки</a></li>
+						<li><a class="head-bni-link" href="/morskie-perevozki">Морские перевозки</a></li>
+						<li><a class="head-bni-link" href="/ekspress-dostavka-1">Экспресс доставка</a></li>
+						<li><a class="head-bni-link" href="/dostavka-avto">Доставка авто</a></li>
+						<li><a class="head-bni-link" href="/hranenie-gruza">Хранение груза</a></li>
+						<li><a class="head-bni-link" href="/otslezhivanie-gruza">Отслеживание груза</a></li>
+						<li><a class="head-bni-link" href="/specpredlozhenie">Товары из ИКЕА и других торговых сетей под заказ</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="head-bn-item"><a class="head-bni-link" href="/news">Новости</a></div>
+			<div class="head-bn-item"><a class="head-bni-link" href="/partners">Партнеры</a></div>
+			<div class="head-bn-item"><a class="head-bni-link" href="/contacts">Контакты</a></div>
+		</nav>
+		<div class="head-b-phone">
+			<div class="head-bp-box">
+				<a class="head-bpb-link" href="tel:+78007775904">+7 (800) 7775904</a>
+				<div class="head-bpb-desc">Бесплатный звонок</div>
+			</div>
+			<div class="head-bp-btnbox">
+				<a href="#" class="head-bpb-btn purple-btn btnLink" data-window="windowOrderRing">ЗАКАЗАТЬ ЗВОНОК</a>
+			</div>
+		</div>
+	</div>
+</header>
+<section class="slide g-section slide_modular">
+	<div class="slide-bg"></div>
+	<div class="slide-box g-inner">
+		<div class="slide-b-about">
+			<div class="slide-ba-title">
+				<div class="slide-bat-normal">Доставка сборных грузов на Камчатку</div>
+			</div>
+			<div class="slide-ba-desc">Компания «Промит» на протяжении семи лет профессионально занимается тем, что отправляет грузы из Москвы на Камчатку, причем, основной упор мы делаем именно на контейнерные перевозки. А не так давно, после многочисленных обращений и просьб постоянных клиентов, мы начали транспортировать и сборные грузы.</div>
+		</div>
+		<div id="sborWindowQuestion" class="modal-window">
+			<div class="modal-w-title">Онлайн заявка</div>
+			<div class="modal-w-desc">Напишите нам и наши менеджеры<br /> вскоре с вами свяжутся</div>
+			<form class="modal-w-form" action="#">
+				<input placeholder="Имя" class="modal-wf-el modal-wf-el_name" type="text" />
+				<input placeholder="Телефон" class="modal-wf-el modal-wf-el_phone" type="tel" />
+				<input placeholder="Кратко опишите задачу" class="modal-wf-el modal-wf-el_desc" type="text" />
+				<button class="modal-w-btn purple-btn">ОТПРАВИТЬ</button>
+			</form>
+		</div>
+	</div>
+</section>
+<section class="article g-section article_modular">
+	<div class="article-box g-inner">
+		<div class="blocktitle_center">Преимущества работы с компанией “Промит”</div>
+		<p>К вопросу предоставления доставки сборных грузов мы решили подойти комплексно. В частности, мы готовы забрать груз со склада отправителя (например, в том случае, если необходимо перевезти мебель из Москвы), наши сотрудники могут оформить документацию, связанную с перевозкой, а сам груз мы доставим либо на указанную площадку, либо лично получателю.</p>
+		<p>Плюсы работы с нашей компанией:</p>
+			<ul>
+				<li>Мы сотрудничаем с компанией «Спасские ворота», которая застрахует каждый контейнер заказчика.</li>
+				<li>В случае несоблюдения сроков доставки груза (по нашей вине), мы гарантируем выплату денежной компенсации нашим клиентам.</li>
+				<li>К вопросу транспортировки хрупких грузов мы подходим со всей ответственностью и осторожностью.</li>
+			</ul>
+		<p>Нашими постоянными клиентами являются такие крупные организации, как фирма «Мегамет», школа иностранных языков Babelfish, компании "Еврострой", "Все для дома", «Агротек», «Эгэ-Пласт» и др.</p>
+		<p>Нам доверяют многие, о чем свидетельствуют многочисленные положительные отзывы о нашей организации. В своей работе мы придерживаемся политики «прозрачности» и потому готовы предоставить каждому желающему контактные данные наших клиентов, которые, безусловно, подтвердят:</p>
+		<p>ТК «Промит» не дает пустых обещаний, а реально работает!</p>
+	</div>
+</section>
+<section class="services g-section">
+	<div class="services-six-box g-inner">
+		<div class="blocktitle_center">Почему работают с нами:</div>
+		<div class="services-b-table">
+			<div class="services-bt-row">
+				<div class="services-btr-cell">
+					<div class="services-btrc-link entrance-icon">
+						<div class="services-btrcl-title">Удобный подъезд</div>
+						<div class="services-btrcl-desc">Склад в Москве, подъезд с двух шоссе и прямой заезд с МКАД.</div>
+					</div>
+				</div>
+				<div class="services-btr-cell">
+					<div class="services-btrc-link clock-icon">
+						<div class="services-btrcl-title">Расширенный режим работы</div>
+						<div class="services-btrcl-desc">Склад работает в будни до 19:00 в субботу до 17:00.</div>
+					</div>
+				</div>
+				<div class="services-btr-cell">
+					<div class="services-btrc-link storage-icon">
+						<div class="services-btrcl-title">Бесплатная консолидация и хранение груза</div>
+						<div class="services-btrcl-desc">Соберем в одном месте все ваши грузы</div>
+					</div>
+				</div>
+			</div>
+			<div class="services-bt-row">
+				<div class="services-btr-cell">
+					<div class="services-btrc-link sms-icon">
+						<div class="services-btrcl-title">Бесплатное смс оповещение</div>
+						<div class="services-btrcl-desc">Сообщим о месте нахождения груза.</div>
+					</div>
+				</div>
+				<div class="services-btr-cell">
+					<div class="services-btrc-link quick-icon">
+						<div class="services-btrcl-title">Быстрая отгрузка</div>
+						<div class="services-btrcl-desc">У нас постоянный поток грузов, контейнер не стоит на складе по несколько дней.</div>
+					</div>
+				</div>
+				<div class="services-btr-cell">
+					<div class="services-btrc-link unpaid-icon">
+						<div class="services-btrcl-title">Бесплатная доставка</div>
+						<div class="services-btrcl-desc">Бесплатно доставим ваш габаритный груз (не более 3 м) "до двери" в П-Камчатском</div>
+					</div>
+				</div>
+			</div>	
+		</div>
+	</div>	
+</section>
+<section class="prices g-section">
+	<div class="prices-box g-inner">
+		<div class="blocktitle_center">Цены на доставку груза</div>
+		<div class="prices-b-wrap">
+			<div class="prices-bw-item light-icon">
+				<div class="prices-bwi-title">Нетяжеловесный груз</div>
+				<div class="prices-bwi-subtitle">4500<p class="prices-bwis-desc">руб./ м3</p></div>
+				<div class="prices-bwi-text">Без дополнительных сборов. Услуги по оформлению жд накладной 300 руб.</div>
+				<a href="#" class="prices-bwi-btn purple-btn btnLink" data-window="windowApplication">ЗАКАЗАТЬ</a>
+			</div>
+			<div class="prices-bw-item heavy-icon">
+				<div class="prices-bwi-title">Тяжеловесный груз</div>
+				<div class="prices-bwi-subtitle">5900<p class="prices-bwis-desc">руб./ м3</p></div>
+				<div class="prices-bwi-text">Без дополнительных сборов. Услуги по оформлению жд накладной 300 руб.</div>
+				<a href="#" class="prices-bwi-btn purple-btn btnLink" data-window="windowApplication">ЗАКАЗАТЬ</a>
+			</div>
+			<div class="prices-bw-item airdelivery-icon">
+				<div class="prices-bwi-title">Авиа доставка на Камчатку</div>
+				<div class="prices-bwi-subtitle">ПО запросу</div>
+				<div class="prices-bwi-text">Возможно оказание помощи с оформлением всех необходимых документов.</div>
+				<a href="#" class="prices-bwi-btn purple-btn btnLink" data-window="windowApplication">ЗАКАЗАТЬ</a>
+			</div>
+		</div>
+	</div>
+</section>
+<section class="services g-section services_modular">
+	<div class="services-box g-inner">
+		<div class="services-b-article">
+			<div class="services-bi-title blocktitle_left">Дополнительные услуги</div>
+		</div>
+		<div class="services-b-table">
+			<div class="services-bt-row">
+				<div class="services-btr-cell">
+					<div class="services-btrc-link lathing-icon">
+						<div class="services-btrcl-title">Обрешетка</div>
+						<div class="services-btrcl-desc">Бережно упакуем ваш груз.</div>
+					</div>
+				</div>
+				<div class="services-btr-cell">
+					<div class="services-btrc-link insurance-icon">
+						<div class="services-btrcl-title">Индивидуальное страхование</div>
+						<div class="services-btrcl-desc">Подберем оптимальный пакет страхования. Мы работаем со страховой компанией Спасские Ворота.</div>
+					</div>
+				</div>
+			</div>
+			<div class="services-bt-row">
+				<div class="services-btr-cell">
+					<div class="services-btrc-link instruction-icon">
+						<div class="services-btrcl-title">Работаем по поручению</div>
+						<div class="services-btrcl-desc">Можем купить, проверить,консолидировать экспедировать ваш груз.</div>
+					</div>
+				</div>
+				<div class="services-btr-cell">
+					<div class="services-btrc-link get-icon">
+						<div class="services-btrcl-title">Заберем ваш груз</div>
+						<div class="services-btrcl-desc">Мы сами приедем за вашим грузом. Тарифы зависят от расстояния и обьема грузов.</div>
+					</div>
+				</div>
+			</div>	
+		</div>
+	</div>	
+</section>
+<section class="carousel_modular g-section">
+	<div class="blocktitle_center">Фотографии с погрузки</div>
+</section>
+<section class="carousel g-section">
+	<div class="carousel-box g-inner">
+		<div class="carousel-b-wrap">
+			<div class="carousel-item"><img width="360" height="270" src="img/carousel-1.jpg" class="attachment-medium size-medium" alt=""></div>
+			<div class="carousel-item"><img width="360" height="270" src="img/carousel-2.jpg" class="attachment-medium size-medium" alt=""></div>
+			<div class="carousel-item"><img width="360" height="270" src="img/carousel-3.jpg" class="attachment-medium size-medium" alt=""></div>
+			<div class="carousel-item"><img width="360" height="270" src="img/carousel-2.jpg" class="attachment-medium size-medium" alt=""></div>
+			<div class="carousel-item"><img width="360" height="270" src="img/carousel-1.jpg" class="attachment-medium size-medium" alt=""></div>
+			<div class="carousel-item"><img width="360" height="270" src="img/carousel-2.jpg" class="attachment-medium size-medium" alt=""></div>
+			<div class="carousel-item"><img width="360" height="270" src="img/carousel-1.jpg" class="attachment-medium size-medium" alt=""></div>
+			<div class="carousel-item"><img width="360" height="270" src="img/carousel-3.jpg" class="attachment-medium size-medium" alt=""></div>
+			<div class="carousel-item"><img width="360" height="270" src="img/carousel-2.jpg" class="attachment-medium size-medium" alt=""></div>
+			<div class="carousel-item"><img width="360" height="270" src="img/carousel-1.jpg" class="attachment-medium size-medium" alt=""></div>
+		</div>
+		<div class="carousel-b-paginator"></div>
+		<a class="carousel-b-link purple-btn long-btn" href="#">ЗАКАЗАТЬ УСЛУГУ</a>
+	</div>
+</section>
+<section class="address g-section">
+	<div class="address-box g-inner">
+		<div class="address-b-title blocktitle_center">АДРЕСА НАШИХ СКЛАДОВ</div>
+		<div class="address-b-wrap">
+			<div class="address-bw-item">
+				<div class="address-bwi-title">г. Москва</div>
+				<div class="address-bwi-text">
+					<p class="address-bwit-paragraph">Адрес: г. Москва, ул. Ижорская, д. 15, стр. 2</p>
+					<p class="address-bwit-paragraph">Телефон: <a href="tel:+788007775904">8 800 777 5904</a></p>
+				</div>
+				<div class="address-bwi-map"><iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A7d8346467690e144ac117d895e429ea5dc9b3117b68254235669380af03bffab&amp;source=constructor" width="555" height="298" frameborder="0"></iframe></div>
+				<div class="address-bwi-desc">время приема груза :<br />будни -  c 9:00 до 18:00<br />суббота - по запросу<br />воскресенье выходной</div>
+			</div>
+			<div class="address-bw-item">
+				<div class="address-bwi-title">Камчатка</div>
+				<div class="address-bwi-text">
+					<p class="address-bwit-paragraph">Адрес: г. Петропавловск-Камчатский, пр. Победы, д. 79Б</p>
+					<p class="address-bwit-paragraph">Телефон: <a href="tel:+74152302030">+7 (4152) 30-20-30</a></p>
+				</div>
+				<div class="address-bwi-map"><iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A84d44041fffc4b8309800b98cb37a5030f76172c114ba1323c9fd348a547f0e3&amp;source=constructor" width="555" height="298" frameborder="0"></iframe></div>
+			</div>
+		</div>
+	</div>
+</section>
+<section class="contacts g-section">
+	<div class="contacts-bg"></div>
+	<div class="contacts-box g-inner">
+		<div class="contacts-b-text">
+			<div class="contacts-bt-title">НАШИ КОНТАКТЫ</div>
+			<div class="contacts-bt-wrap">
+				<div class="contacts-btw-item">
+					<div class="contacts-btwi-title">г. Москва</div>
+					<div class="contacts-btwi-string">Телефон: <a href="tel:+74993907576">8 499 3907576</a>, звонки по России <a href="tel:+78007775904">8 800 7775904</a></div>
+					<div class="contacts-btwi-string">E-mail: <a href="mailto:info@promit.pro">info@promit.pro</a></div>
+					<div class="contacts-btwi-string">Skype: <a href="skype:promitpro?call">promitpro</a></div>
+					<div class="contacts-btwi-string">Склад: ул. Ижорская 15 стр. 2 тел. <a href="tel:+79636349582">+7 (963) 634-95-82</a></div>
+				</div>
+				<div class="contacts-btw-item">
+					<div class="contacts-btwi-title">г. Санкт-Петербург</div>
+					<div class="contacts-btwi-string">Телефон: <a href="tel:+79623433464">+7 (962) 343-34-64</a></div>
+				</div>
+				<div class="contacts-btw-item">
+					<div class="contacts-btwi-title">г. Петропавловск-Камчатский</div>
+					<div class="contacts-btwi-string">Телефон: <a href="tel:+74152302030">+7 (4152) 30-20-30</a>; <a href="tel:+79294552030">+7 (929) 455-20-30</a></div>
+					<div class="contacts-btwi-string">Адрес: проспект Победы 79А</div>
+				</div>
+				<div class="contacts-btw-item">
+					<div class="contacts-btwi-title">г. Владивосток</div>
+					<div class="contacts-btwi-string">Телефон: <a href="tel:+79147029178">+7 (914) 702-91-78</a></div>
+				</div>
+			</div>
+		</div>
+		<div id="contactWindowQuestion" class="modal-window">
+			<div class="modal-w-title">ОСТАЛИСЬ ВОПРОСЫ?</div>
+			<div class="modal-w-desc">Напишите нам и наши менеджеры<br /> вскоре с вами свяжутся</div>
+			<form class="modal-w-form" action="#">
+				<input placeholder="Имя" class="modal-wf-el modal-wf-el_name" type="text" />
+				<input placeholder="Телефон" class="modal-wf-el modal-wf-el_phone" type="tel" />
+				<input placeholder="Текст сообщения" class="modal-wf-el modal-wf-el_desc" type="text" />
+				<button class="modal-w-btn purple-btn">ОТПРАВИТЬ</button>
+			</form>
+		</div>
+	</div>
+</section>
+<footer class="footer g-section">
+	<div class="foot-social">
+		<div class="foot-s-box">
+			<img class="foot-sb-img" src="i/logo.png" />
+			<div class="foot-sb-iconbox">
+				<a href="#" class="foot-sbi-link social-icon foot-sbi-face"></a>
+				<a href="#" class="foot-sbi-link social-icon foot-sbi-inst"></a>
+				<a href="#" class="foot-sbi-link social-icon foot-sbi-vk"></a>
+			</div>
+		</div>
+	</div>
+	<div class="foot-copy">
+		<span class="foot-c-string">© 2011 - 2019 ООО Промит</span>
+	</div>
+</footer>
+		</div>
+	</body>
+</html>

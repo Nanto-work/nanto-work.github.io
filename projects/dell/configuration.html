@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+    <title>Конфигуратор серверного оборудования - конфигурация</title>
+<link href="main.css" rel="stylesheet"></head>
+<body>
+<!-- specialist question start -->
+<div class="overlay">
+	<div class="question-wrapper">
+		<span class="close-question"></span>
+		<div class="question-title">Задать вопрос специалисту</div>
+		<form class="question-form" action="#">
+			<input class="question-form-input" type="text" placeholder="Ваше имя">
+			<input class="question-form-input input-phone required" type="tel" placeholder="+7 (___) ___-__-__">
+			<input class="question-form-input required" type="email" placeholder="E-mail">
+			<textarea class="question-form-textarea" placeholder="Текст вопроса"></textarea>
+			<label class="question-form-check label-checkbox"><input type="checkbox">Соглашаюсь с&nbsp;<a class="g-underline" href="#">политикой обработки данных</a></label>
+			<button class="question-form-btn" type="submit">Отправить сообщение</button>
+		</form>
+	</div>
+</div>
+<!-- specialist question end -->
+<!-- header start -->
+	<header class="header">
+		<div class="header-wrap g-inner">
+			<div class="header-box">
+				<div class="header-logo">
+					<span class="header-title">Конфигуратор серверного оборудования</span>
+				</div>
+				<div class="header-btns">
+					<a class="header-btn hp-btn active"></a>
+					<a class="header-btn dell-btn"></a>
+				</div>
+				<form action="#" class="header-search">
+					<input class="search-input" type="search" placeholder="Поиск по партномеру / конфигуратору">
+					<button class="search-btn" type="submit"></button>
+				</form>
+			</div>
+		</div>
+	</header>
+<!-- header end -->
+	<section class="main">
+		<div class="main-wrap g-inner">
+<!-- selected config start -->
+			<div class="selected-config-block">
+				<div class="selected-config-block-top">
+					<div class="block-title">Выбранная конфигурация</div>
+					<a class="backward-link">Вернуться назад</a>
+				</div>
+				<div class="selected-config-wrap">
+					<div class="selected-config-box">
+						<div class="selected-config-img-wrap">
+							<img class="selected-config-img" src="img/pic2.jpg">
+						</div>
+						<div class="selected-config-title-block">
+							<div class="selected-config-title">Сервер HP ProLiant DL360 Gen10</div>
+							<ul class="selected-config-link-list">
+								<li><a href="#" class="selected-config-link">HPE Proliant ВД380 Gen10 Quickspecs</a></li>
+								<li><a href="#" class="selected-config-link">Технические данные</a></li>
+								<li><a href="#" class="selected-config-link">Гарантийные обязательства</a></li>
+								<li><a href="#" class="selected-config-link">Описание платформы</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="selected-config-box">
+						<div class="selected-config-desc-block">
+							<div class="selected-config-desc-block-wrap"> <!-- при необходимости динамический контент можно обернуть в этот блок-->
+								<div class="selected-config-title">Предустановленная конфигурация</div>
+								<ul class="selected-config-desc-list">
+									<li>LxIntel® Xeon-Gold 5118</li>
+									<li>Lx32GB Dual Rank x4 DDR2-2666</li>
+									<li>LxIntel® Xeon-Gold 5118</li>
+									<li>Lx32GB Dual Rank x4 DDR2-2666</li>
+									<li>LxIntel® Xeon-Gold 5118</li>
+									<li>LxIntel® Xeon-Gold 5118</li>
+									<li>Lx32GB Dual Rank x4 DDR2-2666</li>
+									<li>LxIntel® Xeon-Gold 5118</li>
+									<li>Lx32GB Dual Rank x4 DDR2-2666</li>
+									<li>LxIntel® Xeon-Gold 5118</li>
+								</ul>
+							</div>
+							<a href="#" class="selected-config-desc-showall">Показать весь список</a>
+						</div>
+						<div class="selected-config-brand">
+							<img class="selected-config-brand-img" src="i/hp-logo.png">
+						</div>
+					</div>
+				</div>
+			</div>
+<!-- selected config end -->
+<!-- configuration start -->
+			<div class="configuration-block">
+				<div class="configuration-block-top">
+					<div class="block-title">Конфигурирование</div>
+					<a class="configuration-save-btn" href="#">Сохранить конфигурацию</a>
+				</div>
+				<div class="configuration-wrap">
+					<div class="configuration-box">
+						<div class="configuration-item-box">
+							<div class="configuration-item-topbox">
+								<div class="configuration-item-title">Процессор</div>
+								<div class="configuration-item-name">
+									<span class="configuration-item-name-title">Inte® Xeon-Gold 5118 (2,3 Ghz / 12-core / 105w)</span>
+								</div>
+								<a class="configuration-item-add" href="#">Добавить</a>
+							</div>
+							<form class="configuration-item-form">
+								<div class="cpu-name select-box change-option">
+									<div class="select-box__current" tabindex="1">
+										<div class="select-box__value">
+											<input class="select-box__input" type="radio" id="cpu-name-select0" value="" name="cpu-name-select-group" checked>
+											<p class="select-box__input-text">Выберите процессор</p>
+										</div>
+										<div class="select-box__value">
+											<input class="select-box__input" type="radio" id="cpu-name-select1" value="Intel® Xeon-Gold 6118 (2,6 Ghz / 12-core / 105w)" name="cpu-name-select-group">
+											<p class="select-box__input-text">Intel® Xeon-Gold 5118 (2,3 Ghz / 12-core / 105w)</p>
+										</div>
+										<div class="select-box__value">
+											<input class="select-box__input" type="radio" id="cpu-name-select2" value="Intel® Xeon-Gold 6118 (2,6 Ghz / 12-core / 120w)" name="cpu-name-select-group">
+											<p class="select-box__input-text">Intel® Xeon-Gold 6118 (2,6 Ghz / 12-core / 120w)</p>
+										</div>
+									</div>
+									<ul class="select-box__list">
+										<li><label class="select-box__option" for="cpu-name-select1" aria-hidden="aria-hidden">Intel® Xeon-Gold 5118 (2,3 Ghz / 12-core / 105w)</label></li>
+										<li><label class="select-box__option" for="cpu-name-select2" aria-hidden="aria-hidden">Intel® Xeon-Gold 6118 (2,6 Ghz / 12-core / 120w)</label></li>
+									</ul>
+								</div>
+								<div class="cpu-count select-box">
+									<div class="select-box__current" tabindex="1">
+										<div class="select-box__value">
+											<input class="select-box__input" type="radio" id="cpu-count-select0" value="" name="cpu-count-select-group" checked>
+											<p class="select-box__input-text">Кол-во</p>
+										</div>
+										<div class="select-box__value">
+											<input class="select-box__input" type="radio" id="cpu-count-select1" value="1" name="cpu-count-select-group">
+											<p class="select-box__input-text">1 шт.</p>
+										</div>
+										<div class="select-box__value">
+											<input class="select-box__input" type="radio" id="cpu-count-select2" value="2" name="cpu-count-select-group">
+											<p class="select-box__input-text">2 шт.</p>
+										</div>
+										<div class="select-box__value">
+											<input class="select-box__input" type="radio" id="cpu-count-select3" value="3" name="cpu-count-select-group">
+											<p class="select-box__input-text">3 шт.</p>
+										</div>
+										<div class="select-box__value">
+											<input class="select-box__input" type="radio" id="cpu-count-select4" value="4" name="cpu-count-select-group">
+											<p class="select-box__input-text">4 шт.</p>
+										</div>
+										<div class="select-box__value">
+											<input class="select-box__input" type="radio" id="cpu-count-select5" value="5" name="cpu-count-select-group">
+											<p class="select-box__input-text">5 шт.</p>
+										</div>
+										<div class="select-box__value">
+											<input class="select-box__input" type="radio" id="cpu-count-select6" value="6" name="cpu-count-select-group">
+											<p class="select-box__input-text">6 шт.</p>
+										</div>
+										<div class="select-box__value">
+											<input class="select-box__input" type="radio" id="cpu-count-select7" value="7" name="cpu-count-select-group">
+											<p class="select-box__input-text">7 шт.</p>
+										</div>
+										<div class="select-box__value">
+											<input class="select-box__input" type="radio" id="cpu-count-select8" value="8" name="cpu-count-select-group">
+											<p class="select-box__input-text">8 шт.</p>
+										</div>
+									</div>
+									<ul class="select-box__list">
+										<li><label class="select-box__option" for="cpu-count-select1" aria-hidden="aria-hidden">1 шт.</label></li>
+										<li><label class="select-box__option" for="cpu-count-select2" aria-hidden="aria-hidden">2 шт.</label></li>
+										<li><label class="select-box__option" for="cpu-count-select3" aria-hidden="aria-hidden">3 шт.</label></li>
+										<li><label class="select-box__option" for="cpu-count-select4" aria-hidden="aria-hidden">4 шт.</label></li>
+										<li><label class="select-box__option" for="cpu-count-select5" aria-hidden="aria-hidden">5 шт.</label></li>
+										<li><label class="select-box__option" for="cpu-count-select6" aria-hidden="aria-hidden">6 шт.</label></li>
+										<li><label class="select-box__option" for="cpu-count-select7" aria-hidden="aria-hidden">7 шт.</label></li>
+										<li><label class="select-box__option" for="cpu-count-select8" aria-hidden="aria-hidden">8 шт.</label></li>
+									</ul>
+								</div>
+								<span class="remove-item-form"></span>
+							</form>
+						</div>
+						<div class="configuration-item-box">
+							<div class="configuration-item-topbox">
+								<div class="configuration-item-title">Память</div>
+								<div class="configuration-item-name">
+									<span class="configuration-item-name-title">32GB Dual Rank x4 DDR4-2666 GAS-19-19 Registre</span>
+									<div class="configuration-item-description"><a href="#" class="configuration-item-description-link">Схема расположения по слотам</a></div>
+								</div>
+								<a class="configuration-item-add" href="#">Добавить</a>
+							</div>
+							<form class="configuration-item-form">
+								<div class="ram-name select-box change-option">
+									<div class="select-box__current" tabindex="1">
+										<div class="select-box__value">
+											<input class="select-box__input" type="radio" id="ram-name-select0" value="" name="ram-name-select-group" checked>
+											<p class="select-box__input-text">Выберите память</p>
+										</div>
+										<div class="select-box__value">
+											<input class="select-box__input" type="radio" id="ram-name-select1" value="1GB Dual Rank x4 DDR4-2666 GAS-19-19 Registre" name="ram-name-select-group">
+											<p class="select-box__input-text">1GB Dual Rank x4 DDR4-2666 GAS-19-19 Registre</p>
+										</div>
+										<div class="select-box__value">
+											<input class="select-box__input" type="radio" id="ram-name-select2" value="2GB Dual Rank x4 DDR4-2666 GAS-19-19 Registre" name="ram-name-select-group">
+											<p class="select-box__input-text">2GB Dual Rank x4 DDR4-2666 GAS-19-19 Registre</p>
+										</div>
+										<div class="select-box__value">
+											<input class="select-box__input" type="radio" id="ram-name-select3" value="4GB Dual Rank x4 DDR4-2666 GAS-19-19 Registre" name="ram-name-select-group">
+											<p class="select-box__input-text">4GB Dual Rank x4 DDR4-2666 GAS-19-19 Registre</p>
+										</div>
+										<div class="select-box__value">
+											<input class="select-box__input" type="radio" id="ram-name-select4" value="8GB Dual Rank x4 DDR4-2666 GAS-19-19 Registre" name="ram-name-select-group">
+											<p class="select-box__input-text">8GB Dual Rank x4 DDR4-2666 GAS-19-19 Registre</p>
+										</div>
+										<div class="select-box__value">
+											<input class="select-box__input" type="radio" id="ram-name-select5" value="16GB Dual Rank x4 DDR4-2666 GAS-19-19 Registre" name="ram-name-select-group">
+											<p class="select-box__input-text">16GB Dual Rank x4 DDR4-2666 GAS-19-19 Registre</p>
+										</div>
+										<div class="select-box__value">
+											<input class="select-box__input" type="radio" id="ram-name-select6" value="32GB Dual Rank x4 DDR4-2666 GAS-19-19 Registre" name="ram-name-select-group">
+											<p class="select-box__input-text">32GB Dual Rank x4 DDR4-2666 GAS-19-19 Registre</p>
+										</div>
+										<div class="select-box__value">
+											<input class="select-box__input" type="radio" id="ram-name-select7" value="64GB Dual Rank x4 DDR4-2666 GAS-19-19 Registre" name="ram-name-select-group">
+											<p class="select-box__input-text">64GB Dual Rank x4 DDR4-2666 GAS-19-19 Registre</p>
+										</div>
+										<div class="select-box__value">
+											<input class="select-box__input" type="radio" id="ram-name-select8" value="128GB Dual Rank x4 DDR4-2666 GAS-19-19 Registre" name="ram-name-select-group">
+											<p class="select-box__input-text">128GB Dual Rank x4 DDR4-2666 GAS-19-19 Registre</p>
+										</div>
+									</div>
+									<ul class="select-box__list">
+										<li><label class="select-box__option" for="ram-name-select1" aria-hidden="aria-hidden">1GB Dual Rank x4 DDR4-2666 GAS-19-19 Registre</label></li>
+										<li><label class="select-box__option" for="ram-name-select2" aria-hidden="aria-hidden">2GB Dual Rank x4 DDR4-2666 GAS-19-19 Registre</label></li>
+										<li><label class="select-box__option" for="ram-name-select3" aria-hidden="aria-hidden">4GB Dual Rank x4 DDR4-2666 GAS-19-19 Registre</label></li>
+										<li><label class="select-box__option" for="ram-name-select4" aria-hidden="aria-hidden">8GB Dual Rank x4 DDR4-2666 GAS-19-19 Registre</label></li>
+										<li><label class="select-box__option" for="ram-name-select5" aria-hidden="aria-hidden">16GB Dual Rank x4 DDR4-2666 GAS-19-19 Registre</label></li>
+										<li><label class="select-box__option" for="ram-name-select6" aria-hidden="aria-hidden">32GB Dual Rank x4 DDR4-2666 GAS-19-19 Registre</label></li>
+										<li><label class="select-box__option" for="ram-name-select7" aria-hidden="aria-hidden">64GB Dual Rank x4 DDR4-2666 GAS-19-19 Registre</label></li>
+										<li><label class="select-box__option" for="ram-name-select8" aria-hidden="aria-hidden">128GB Dual Rank x4 DDR4-2666 GAS-19-19 Registre</label></li>
+									</ul>
+								</div>
+								<div class="ram-count select-box">
+									<div class="select-box__current" tabindex="1">
+										<div class="select-box__value">
+											<input class="select-box__input" type="radio" id="ram-count-select0" value="" name="ram-count-select-group" checked>
+											<p class="select-box__input-text">Кол-во</p>
+										</div>
+										<div class="select-box__value">
+											<input class="select-box__input" type="radio" id="ram-count-select1" value="1" name="ram-count-select-group">
+											<p class="select-box__input-text">1 шт.</p>
+										</div>
+										<div class="select-box__value">
+											<input class="select-box__input" type="radio" id="ram-count-select2" value="2" name="ram-count-select-group">
+											<p class="select-box__input-text">2 шт.</p>
+										</div>
+										<div class="select-box__value">
+											<input class="select-box__input" type="radio" id="ram-count-select3" value="3" name="ram-count-select-group">
+											<p class="select-box__input-text">3 шт.</p>
+										</div>
+										<div class="select-box__value">
+											<input class="select-box__input" type="radio" id="ram-count-select4" value="4" name="ram-count-select-group">
+											<p class="select-box__input-text">4 шт.</p>
+										</div>
+										<div class="select-box__value">
+											<input class="select-box__input" type="radio" id="ram-count-select5" value="5" name="ram-count-select-group">
+											<p class="select-box__input-text">5 шт.</p>
+										</div>
+										<div class="select-box__value">
+											<input class="select-box__input" type="radio" id="ram-count-select6" value="6" name="ram-count-select-group">
+											<p class="select-box__input-text">6 шт.</p>
+										</div>
+										<div class="select-box__value">
+											<input class="select-box__input" type="radio" id="ram-count-select7" value="7" name="ram-count-select-group">
+											<p class="select-box__input-text">7 шт.</p>
+										</div>
+										<div class="select-box__value">
+											<input class="select-box__input" type="radio" id="ram-count-select8" value="8" name="ram-count-select-group">
+											<p class="select-box__input-text">8 шт.</p>
+										</div>
+									</div>
+									<ul class="select-box__list">
+										<li><label class="select-box__option" for="ram-count-select1" aria-hidden="aria-hidden">1 шт.</label></li>
+										<li><label class="select-box__option" for="ram-count-select2" aria-hidden="aria-hidden">2 шт.</label></li>
+										<li><label class="select-box__option" for="ram-count-select3" aria-hidden="aria-hidden">3 шт.</label></li>
+										<li><label class="select-box__option" for="ram-count-select4" aria-hidden="aria-hidden">4 шт.</label></li>
+										<li><label class="select-box__option" for="ram-count-select5" aria-hidden="aria-hidden">5 шт.</label></li>
+										<li><label class="select-box__option" for="ram-count-select6" aria-hidden="aria-hidden">6 шт.</label></li>
+										<li><label class="select-box__option" for="ram-count-select7" aria-hidden="aria-hidden">7 шт.</label></li>
+										<li><label class="select-box__option" for="ram-count-select8" aria-hidden="aria-hidden">8 шт.</label></li>
+									</ul>
+								</div>
+								<span class="remove-item-form"></span>
+							</form>
+						</div>
+						<div class="configuration-item-box">
+							<div class="configuration-item-topbox">
+								<div class="configuration-item-title">RAID контроллер</div>
+								<div class="configuration-item-name">
+									<span class="configuration-item-name-title">E-208i-a SR Gen10 Lh / No Chache /12 GB / 2</span>
+									<div class="configuration-item-description"><a href="#" class="configuration-item-description-link">Расчитать RAID массив</a></div>
+								</div>
+								<a class="configuration-item-add" href="#">Добавить</a>
+							</div>
+							<form class="configuration-item-form">
+								<div class="raid-type select-box">
+									<div class="select-box__current change-raid-type" tabindex="1">
+										<div class="select-box__value">
+											<input class="select-box__input" type="radio" id="raid-type-select0" value="" name="raid-type-select-group" checked>
+											<p class="select-box__input-text">Тип</p>
+										</div>
+										<div class="select-box__value">
+											<input class="select-box__input" type="radio" id="raid-type-select1" value="ssd" name="raid-type-select-group">
+											<p class="select-box__input-text">SSD</p>
+										</div>
+										<div class="select-box__value">
+											<input class="select-box__input" type="radio" id="raid-type-select2" value="hdd" name="raid-type-select-group">
+											<p class="select-box__input-text">HDD</p>
+										</div>
+									</div>
+									<ul class="select-box__list">
+										<li><label class="select-box__option" for="raid-type-select1" aria-hidden="aria-hidden">SSD</label></li>
+										<li><label class="select-box__option" for="raid-type-select2" aria-hidden="aria-hidden">HDD</label></li>
+									</ul>
+								</div>
+								<div class="raid-name-ssd select-box">
+									<div class="select-box__current change-option" tabindex="1">
+										<div class="select-box__value">
+											<input class="select-box__input" type="radio" id="raid-name-ssd-select0" value="" name="raid-name-ssd-select-group" checked>
+											<p class="select-box__input-text">Выберите модель</p>
+										</div>
+										<div class="select-box__value">
+											<input class="select-box__input" type="radio" id="raid-name-ssd-select1" value="Intel s4600" name="raid-name-ssd-select-group">
+											<p class="select-box__input-text">Intel s4600</p>
+										</div>
+										<div class="select-box__value">
+											<input class="select-box__input" type="radio" id="raid-name-ssd-select2" value="Intel s4700" name="raid-name-ssd-select-group">
+											<p class="select-box__input-text">Intel s4700</p>
+										</div>
+										<div class="select-box__value">
+											<input class="select-box__input" type="radio" id="raid-name-ssd-select3" value="Intel s4800" name="raid-name-ssd-select-group">
+											<p class="select-box__input-text">Intel s4800</p>
+										</div>
+										<div class="select-box__value">
+											<input class="select-box__input" type="radio" id="raid-name-ssd-select4" value="Intel s4900" name="raid-name-ssd-select-group">
+											<p class="select-box__input-text">Intel s4900</p>
+										</div>
+									</div>
+									<ul class="select-box__list">
+										<li><label class="select-box__option" for="raid-name-ssd-select1" aria-hidden="aria-hidden">Intel s4600</label></li>
+										<li><label class="select-box__option" for="raid-name-ssd-select2" aria-hidden="aria-hidden">Intel s4700</label></li>
+										<li><label class="select-box__option" for="raid-name-ssd-select3" aria-hidden="aria-hidden">Intel s4800</label></li>
+										<li><label class="select-box__option" for="raid-name-ssd-select4" aria-hidden="aria-hidden">Intel s4900</label></li>
+									</ul>
+								</div>
+								<div class="raid-name-hdd select-box">
+									<div class="select-box__current change-option" tabindex="1">
+										<div class="select-box__value">
+											<input class="select-box__input" type="radio" id="raid-name-hdd-select0" value="" name="raid-name-hdd-select-group" checked>
+											<p class="select-box__input-text">Выберите модель</p>
+										</div>
+										<div class="select-box__value">
+											<input class="select-box__input" type="radio" id="raid-name-hdd-select1" value="Intel h100" name="raid-name-hdd-select-group">
+											<p class="select-box__input-text">Intel h100</p>
+										</div>
+										<div class="select-box__value">
+											<input class="select-box__input" type="radio" id="raid-name-hdd-select2" value="Intel h200" name="raid-name-hdd-select-group">
+											<p class="select-box__input-text">Intel h200</p>
+										</div>
+										<div class="select-box__value">
+											<input class="select-box__input" type="radio" id="raid-name-hdd-select3" value="Intel h300" name="raid-name-hdd-select-group">
+											<p class="select-box__input-text">Intel h300</p>
+										</div>
+										<div class="select-box__value">
+											<input class="select-box__input" type="radio" id="raid-name-hdd-select4" value="Intel h400" name="raid-name-hdd-select-group">
+											<p class="select-box__input-text">Intel h400</p>
+										</div>
+									</div>
+									<ul class="select-box__list">
+										<li><label class="select-box__option" for="raid-name-hdd-select1" aria-hidden="aria-hidden">Intel h100</label></li>
+										<li><label class="select-box__option" for="raid-name-hdd-select2" aria-hidden="aria-hidden">Intel h200</label></li>
+										<li><label class="select-box__option" for="raid-name-hdd-select3" aria-hidden="aria-hidden">Intel h300</label></li>
+										<li><label class="select-box__option" for="raid-name-hdd-select4" aria-hidden="aria-hidden">Intel h400</label></li>
+									</ul>
+								</div>
+								<div class="raid-count select-box">
+									<div class="select-box__current" tabindex="1">
+										<div class="select-box__value">
+											<input class="select-box__input" type="radio" id="raid-count-select0" value="" name="raid-count-select-group" checked>
+											<p class="select-box__input-text">Кол-во</p>
+										</div>
+										<div class="select-box__value">
+											<input class="select-box__input" type="radio" id="raid-count-select1" value="1" name="raid-count-select-group">
+											<p class="select-box__input-text">1 шт.</p>
+										</div>
+										<div class="select-box__value">
+											<input class="select-box__input" type="radio" id="raid-count-select2" value="2" name="raid-count-select-group">
+											<p class="select-box__input-text">2 шт.</p>
+										</div>
+										<div class="select-box__value">
+											<input class="select-box__input" type="radio" id="raid-count-select3" value="3" name="raid-count-select-group">
+											<p class="select-box__input-text">3 шт.</p>
+										</div>
+										<div class="select-box__value">
+											<input class="select-box__input" type="radio" id="raid-count-select4" value="4" name="raid-count-select-group">
+											<p class="select-box__input-text">4 шт.</p>
+										</div>
+										<div class="select-box__value">
+											<input class="select-box__input" type="radio" id="raid-count-select5" value="5" name="raid-count-select-group">
+											<p class="select-box__input-text">5 шт.</p>
+										</div>
+										<div class="select-box__value">
+											<input class="select-box__input" type="radio" id="raid-count-select6" value="6" name="raid-count-select-group">
+											<p class="select-box__input-text">6 шт.</p>
+										</div>
+										<div class="select-box__value">
+											<input class="select-box__input" type="radio" id="raid-count-select7" value="7" name="raid-count-select-group">
+											<p class="select-box__input-text">7 шт.</p>
+										</div>
+										<div class="select-box__value">
+											<input class="select-box__input" type="radio" id="raid-count-select8" value="8" name="raid-count-select-group">
+											<p class="select-box__input-text">8 шт.</p>
+										</div>
+									</div>
+									<ul class="select-box__list">
+										<li><label class="select-box__option" for="raid-count-select1" aria-hidden="aria-hidden">1 шт.</label></li>
+										<li><label class="select-box__option" for="raid-count-select2" aria-hidden="aria-hidden">2 шт.</label></li>
+										<li><label class="select-box__option" for="raid-count-select3" aria-hidden="aria-hidden">3 шт.</label></li>
+										<li><label class="select-box__option" for="raid-count-select4" aria-hidden="aria-hidden">4 шт.</label></li>
+										<li><label class="select-box__option" for="raid-count-select5" aria-hidden="aria-hidden">5 шт.</label></li>
+										<li><label class="select-box__option" for="raid-count-select6" aria-hidden="aria-hidden">6 шт.</label></li>
+										<li><label class="select-box__option" for="raid-count-select7" aria-hidden="aria-hidden">7 шт.</label></li>
+										<li><label class="select-box__option" for="raid-count-select8" aria-hidden="aria-hidden">8 шт.</label></li>
+									</ul>
+								</div>
+								<span class="remove-item-form"></span>
+							</form>
+						</div>
+					</div>
+					<div class="result-box">
+						<div class="result-box-options">
+							<div class="block-title">Добавленные опции:</div>
+						</div>
+						<div class="result-box-price">
+							<div class="result-box-price-wrap">
+								<div class="result-box-price-number">790 000 руб.</div>
+								<div class="result-box-price-time">Срок поставки: 3 дня</div>
+							</div>
+							<div class="result-box-price-btnwrap">
+								<a href="#" class="result-box-btn">Оформить заказ</a>
+								<a href="#" class="result-box-desclink">Помощь с выбором</a>
+							</div>
+						</div>
+						<div class="result-box-contacts">
+							<span class="result-box-contacts-text">Если у вас возникли сложности с подбором оборудования, вы можете позвонить в наш call-центр или задать вопрос специалисту.</span>
+							<div class="result-box-links">
+								<a href="tel:+7495318833" class="phone-link">+ 7(495) 31 88 33</a>
+								<a href="#" class="specialist-link">Задать вопрос специалисту</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+<!-- configuration end -->
+		</div>
+	</section>
+<!-- footer start -->
+	<footer class="footer">
+		<div class="footer-wrap g-inner">
+			<div class="footer-box">
+				<div class="footer-copy">&copy; Конфигуратор серверного оборудования, 2019</div>
+				<div class="footer-linkbox">
+					<div class="footer-specialist">
+						<a href="#" class="specialist-link">Задать вопрос специалисту</a>
+					</div>
+					<div class="footer-phone">
+						<a href="tel:+7495318833" class="phone-link">+ 7(495) 31 88 33</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+<!-- footer end -->
+</body>
+<script type="text/javascript" src="bundle.js"></script></body>
+</html>

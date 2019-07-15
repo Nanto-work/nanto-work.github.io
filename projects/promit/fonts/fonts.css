@@ -1,0 +1,36 @@
+@charset "utf-8";
+
+@font-face {
+	font-family:'Raleway';
+	src:url('ralewayblack.woff') format('woff');
+	font-weight:900;
+	font-style:normal;
+}
+
+@font-face {
+	font-family:'SegoeUI';
+	src:url('segoeui-bold.woff') format('woff');
+	font-weight:bold;
+	font-style:normal;
+}
+
+@font-face {
+	font-family:'SFCompact';
+	src:url('sfcompacttext-regular.woff') format('woff');
+	font-weight:400;
+	font-style:normal;
+}
+
+@font-face {
+	font-family:'SFCompact';
+	src:url('sfcompacttext-bold.woff') format('woff');
+	font-weight:700;
+	font-style:normal;
+}
+
+@font-face {
+	font-family:'SFCompact';
+	src:url('sfcompacttext-light.woff') format('woff');
+	font-weight:300;
+	font-style:normal;
+}
