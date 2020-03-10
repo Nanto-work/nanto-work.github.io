@@ -1,0 +1,45 @@
+.information{
+	min-height:100%;
+	padding:0 20px;
+	background:#F5F6FA;
+	flex-grow: 1;
+	flex-shrink: 1;
+}
+.information__header{
+	height:108px;
+	padding:40px 0 0 88px;
+	font-size: 35px;
+	line-height: 35px;
+	color: #465168;
+	border-bottom:1px solid rgba(41, 49, 91, 0.3);
+}
+.information__body{
+	padding:10px 0 0 88px;
+	width:708px;
+}
+.information__desc{
+	margin-bottom:10px;
+	font-weight: 300;
+	font-size: 18px;
+	line-height: 21px;
+	color: #465168;
+}
+.information__data{
+	margin-bottom:15px;
+	font-weight: 700;
+	font-size: 18px;
+	line-height: 21px;
+	color: #465168;
+}
+.information__btnwrap{
+	padding-top:5px;
+	padding-bottom:15px;
+}
+.information__contacts-row{
+	display:flex;
+	flex-flow:row nowrap;
+	justify-content:space-between;
+}
+.information__contacts-row .information__data{
+	margin-bottom:8px;
+}

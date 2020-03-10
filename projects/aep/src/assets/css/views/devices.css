@@ -1,0 +1,24 @@
+.devices{
+	min-height:100%;
+	padding:0 20px;
+	background:#F5F6FA;
+	flex-grow: 1;
+	flex-shrink: 1;
+}
+.devices__header{
+	display:flex;
+	flex-flow:row nowrap;
+	justify-content:space-between;
+	height:108px;
+	padding:40px 88px 0 88px;
+	border-bottom:1px solid rgba(41, 49, 91, 0.3);
+}
+.devices__title{
+	font-size: 35px;
+	line-height: 35px;
+	color: #465168;
+}
+.devices__select{}
+.devices__body{
+	padding-top:28px;
+}

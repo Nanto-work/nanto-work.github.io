@@ -1,0 +1,27 @@
+@charset "utf-8";
+
+@import "../fonts/fonts.css";
+@import "reset.css";
+@import "vuebar.css";
+@import "global.css";
+@import "icons.css";
+
+@import "blocks/header.css";
+@import "blocks/navigation.css";
+@import "blocks/alarms.css";
+@import "blocks/device.css";
+@import "blocks/select.css";
+@import "blocks/login.css";
+@import "blocks/history-item.css";
+@import "blocks/info.css";
+@import "blocks/calls.css";
+@import "blocks/actions.css";
+@import "blocks/shutincident.css";
+@import "blocks/editinfo.css";
+
+@import "views/home.css";
+@import "views/information.css";
+@import "views/devices.css";
+@import "views/history.css";
+@import "views/fullhistory.css";
+@import "views/fullalarm.css";

@@ -1,0 +1,6 @@
+.home{
+	min-height:100%;
+	background:#F5F6FA;
+	flex-grow: 1;
+	flex-shrink: 1;
+}

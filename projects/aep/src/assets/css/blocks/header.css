@@ -1,0 +1,97 @@
+.header{
+	position:fixed;
+	height:70px;
+	width:100%;
+	padding:0 20px 0 90px;
+	display:flex;
+	flex-flow:row nowrap;
+	justify-content:space-between;
+	align-items:center;
+	background:#29315B;
+	z-index: 100;
+}
+.header__logo{
+	font-family:"Revue";
+	font-weight:400;
+	font-size:26px;
+	line-height:26px;
+	color:#FFFFFF;
+}
+.header__content{
+	display:flex;
+	flex-flow:row nowrap;
+	justify-content:flex-end;
+	align-items:center;	
+}
+.header__status{
+	margin-right:100px;
+}
+.header__status-title{
+	margin-right:20px;
+	font-size:16px;
+	line-height:19px;
+	color:#FFFFFF;
+}
+.header__status-type{
+	font-weight:700;
+	font-size:16px;
+	line-height:19px;
+	color:#FFFFFF;
+}
+.header-presence{
+	position:relative;
+	width:157px;
+	height:35px;
+	padding-right:52px;
+	border:1px solid #F2F3F5;
+	border-radius:3px;
+	margin-right:20px;
+	text-align:center;
+}
+.presence__title{
+	font-weight:700;
+	font-size:16px;
+	line-height:33px;
+	color:#FFFFFF;
+}
+.header-presence_no .presence__title{
+	color:#FF4C60;
+}
+.presence__check{
+	position:absolute;
+	width:32px;
+	height:25px;
+	top:5px;
+	right:20px;
+	background:transparent url("~@/assets/img/presence_yes.svg") no-repeat 0 0;
+	cursor:pointer;
+}
+.header-presence_no .presence__check{
+	right:14px;
+	background:transparent url("~@/assets/img/presence_no.svg") no-repeat 0 0;
+}
+.header__id{
+	margin-right:20px;
+	width:157px;
+	height:35px;
+	background:#55A8FD;
+	border-radius:2px;
+	text-align:center;
+}
+.header__id-title{
+	margin-right:7px;
+	font-weight:300;
+	font-size:16px;
+	line-height:35px;
+	color: #FFFFFF;
+}
+.header__id-number{
+	font-weight:700;
+	font-size:16px;
+	line-height:35px;
+	color:#FFFFFF;
+}
+.header__logout{
+	display:block;
+	cursor:pointer;
+}

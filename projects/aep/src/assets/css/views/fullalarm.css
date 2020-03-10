@@ -1,0 +1,145 @@
+.fullalarm{
+	min-height:100%;
+	padding:0 20px 20px;
+	background:#F5F6FA;
+	flex-grow: 1;
+	flex-shrink: 1;
+}
+.information__header_fullalarm{
+	height:86px;
+	font-weight: 700;
+	font-size: 20px;
+	line-height: 23px;
+	color: #29315B;
+}
+.fullalarm-box{
+	margin-top:50px;
+	padding-top:10px;
+	display:flex;
+	flex-flow:row nowrap;
+	justify-content:space-between;
+	align-items:stretch;
+	height:480px;
+}
+.fullalarm-box-colleft{
+	flex-shrink:0;
+	width:38%;
+	min-width:340px;
+	margin-right:20px;
+}
+.fullalarm-box .info{
+	position: relative;
+	border: 1px solid #FF4C60;
+}
+.fullalarm-box .calls{
+	margin-top:20px;
+	border: 1px solid #FF4C60;
+}
+.fullalarm_close .fullalarm-box .info,
+.fullalarm_close .fullalarm-box .calls{
+	border:none;
+}
+
+.my-actions{
+	margin-top: 20px;
+	padding:12px 16px;
+	background: #FFFFFF;
+	box-shadow: 0px 0px 5px rgba(51, 54, 60, 0.05);
+	border-radius: 4px;
+}
+.my-actions-header{
+	height:33px;
+	border-bottom:1px solid rgba(0, 0, 0, 0.3);
+}
+.my-actions__title{
+	padding: 0 9px;
+	font-weight: 700;
+	font-size: 16px;
+	line-height: 19px;
+	color: #2A325C;
+}
+.my-actions-btnwrap{
+	margin-top: 20px;
+	display:flex;
+	flex-flow:row nowrap;
+	justify-content:center;
+	align-items:center;
+}
+.my-actions-btnwrap .btn{
+	margin:0 14px;
+}
+.my-actions-btn-separator{
+	display: inline-block;
+	width:0;
+	height: 18px;
+	margin:0 14px;
+	border-left:1px solid #2A325C;
+}
+
+.my-actions-commentwrap{
+	margin-top:30px;
+	position: relative;
+	display:flex;
+	flex-flow: row nowrap;
+	justify-content: space-between;
+	align-items: flex-end;
+}
+.my-actions-comment{
+	flex-grow: 1;
+	flex-shrink: 1;
+	padding:8px 32px;
+	background: #F5F6FA;
+	border-radius: 7px;
+	font-family:"Roboto";
+	font-weight:300;
+	font-size:16px;
+	line-height:20px;
+	color:#2A325C;
+	border:none;
+}
+.my-actions-comment::placeholder{
+	color: #878787;
+}
+.my-actions-comment:focus{
+	outline: none;
+}
+.my-actions-comment-btn{
+	margin-left: 16px;
+	flex-grow: 0;
+	flex-shrink: 0;
+	opacity: 0.4;
+	pointer-events: none;
+}
+.my-actions-comment-btn.active{
+	opacity: 1;
+	pointer-events: all;
+}
+.fullalarm-closewrap{
+	margin-top:20px;
+	padding:16px 0;
+	background: #FFFFFF;
+	box-shadow: 0px 0px 5px rgba(51, 54, 60, 0.05);
+	border-radius: 4px;
+	text-align:center;
+}
+.fullalarm-info__edit{
+	position: absolute;
+	top:12px;
+	right:16px;
+	cursor:pointer;
+}
+
+.btn_take-incident{
+	display: block;
+	width:244px;
+	margin:25px auto;
+	text-align:center;
+	color:#FF4C60;
+	border: 1px solid #FF4C60;
+}
+.btn_take-incident:hover{
+	border: 1px solid #FF4C60;
+}
+.btn_take-incident:active{
+	border: 1px solid #FF4C60;
+}
