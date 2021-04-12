@@ -75,6 +75,9 @@ html,
 body{
 	scroll-behavior:smooth;
 }
+body{
+	background:#fff;
+}
 .main{
 	padding-top:58px;
 	min-width:360px;
