@@ -41,6 +41,9 @@ html{
 	--border-color: #c1c7d1;
 	--grey:			#868685;
 }
+body{
+	background:#fff;
+}
 .container{
 	max-width:106.25rem;
 	width:100%;
