@@ -1,0 +1,169 @@
+@charset "utf-8";
+
+/******************************************************************************
+	Reset
+******************************************************************************/
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+ul, ol{
+	list-style: none;
+}
+html{
+	height: 100%;
+	font-size: calc(100vw / 1366);
+	scroll-behavior: smooth;
+}
+body{
+	height: 100%;
+}
+a,
+a:hover,
+a:focus,
+a:active,
+input,
+input:hover,
+input:focus,
+input:active,
+button,
+button:hover,
+button:focus,
+button:active{
+	outline: none;
+	text-decoration: none;
+}
+
+
+/******************************************************************************
+	Variables
+******************************************************************************/
+html{
+	--green: 	#93D500;
+	--yellow: #F9D649;
+	--red: 		#BD2B33;
+	--blue: 	#0DAEFF;
+
+}
+
+
+
+/******************************************************************************
+	Content
+******************************************************************************/
+.top-slider-dots .slick-dots li:nth-child(1)::after{
+	content: 'Original\0a 449 мл';
+}
+.top-slider-dots .slick-dots li:nth-child(2)::after{
+	content: 'Apple Blast\0a 449 мл';
+}
+.top-slider-dots .slick-dots li:nth-child(3)::after{
+	content: 'Berry kick\0a 449 мл';
+}
+.top-slider-dots .slick-dots li:nth-child(4)::after{
+	content: 'Nitro Boost\0a 449 мл';
+}
+.top-slider-dots .slick-dots li:nth-child(5)::after{
+	content: 'Original\0a 0,5 л';
+}
+.top-slider-dots .slick-dots li:nth-child(6)::after{
+	content: 'Max\0a 1 л';
+}
+
+
+/******************************************************************************
+	Global
+******************************************************************************/
+body{
+	min-width: 320px;
+	font-family: Arial, sans-serif;
+	font-weight: 400;
+	background: #000;
+}
+.wrapper{
+	min-height: 100%;
+}
+.inner{
+	width: 100%;
+	padding-left: 56rem;
+	padding-right: 56rem;
+}
+.btn{
+	display: inline-flex;
+	flex-flow: row nowrap;
+	justify-content: center;
+	align-items: center;
+
+	padding: 12rem 18rem 10rem 28rem;
+	border-radius: 15rem;
+	background: var(--green);
+
+	font-family: Geometria;
+	font-size: 20rem;
+	line-height: 32rem;
+	text-align: center;
+	text-transform: uppercase;
+	color: #000;
+	box-shadow: none;
+	transition: box-shadow linear 0.2s;
+}
+.btn:hover{
+	box-shadow: 0 0 100rem var(--green);
+}
+.btn::after{
+	content: '';
+	display: inline-block;
+	width: 29rem;
+	height: 27rem;
+	margin-left: 11rem;
+	
+	background-color: transparent;
+	background-repeat: no-repeat;
+	background-position: 0 0;
+	background-size: contain;
+}
+
+
+/******************************************************************************
+	Player
+******************************************************************************/
+html {
+  --plyr-color-main: var(--green);
+}
+.plyr--stopped .plyr__controls{
+	display: none;
+}
+.plyr .plyr__control--overlaid svg{
+	display: none;
+}
+.plyr .plyr__control--overlaid{
+	width: 166rem;
+	height: 166rem;
+
+	background-color: transparent;
+	background-repeat: no-repeat;
+	background-position: 0 0;
+	background-size: contain;
+}
+.plyr .plyr__control--overlaid:hover{
+	background-color: transparent;
+	background-repeat: no-repeat;
+	background-position: 0 0;
+	background-size: contain;
+}
+.plyr--stopped::before{
+	content: '';
+	position: absolute;
+	top: 46rem;
+	left: 46rem;
+	width: 315rem;
+	height: 80rem;
+
+	background-color: transparent;
+	background-repeat: no-repeat;
+	background-position: 0 0;
+	background-size: contain;
+
+	z-index: 10;
+}

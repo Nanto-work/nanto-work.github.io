@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="25px" height="26px" viewBox="0 0 25 26" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 55 (78076) - https://sketchapp.com -->
+    <title>Search</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="HEADER" transform="translate(-1233.000000, -36.000000)" stroke="#21242A" stroke-width="4">
+            <g id="Search" transform="translate(1233.000000, 36.000000)">
+                <g id="Search-icon">
+                    <circle id="Oval" cx="11.5" cy="11.5" r="9.5"></circle>
+                    <path d="M18,19.0909091 L22.9090909,24" id="Path-4" stroke-linecap="round"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

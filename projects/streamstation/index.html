@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>STREAMSTATION</title>
+		<link rel="stylesheet" type="text/css" href="fonts/fonts.css">
+		<link rel="stylesheet" type="text/css" href="css/index.css">
+		<link rel="stylesheet" type="text/css" href="css/adaptive.css">
+		<link rel="stylesheet" type="text/css" href="css/base64.css">
+	</head>
+	<body class="main">
+		<div class="wrapper">
+			<header class="header">
+				<a href="/" class="header-logo">
+					<img class="header-logo__img" src="img/logo.svg" alt="STREAMSTATION">
+				</a>
+				<div class="header__btn" id="header__btn">
+					<span></span>
+				</div>
+				<div class="header-menu">
+					<div class="header-box">
+						<div class="header-langs">
+							<a href="#" class="header-langs__link header-langs__link_active">RU</a>
+							<span class="header-langs__divider">/</span>
+							<a href="#" class="header-langs__link">EN</a>
+						</div>
+						<a href="#modal-auth" class="header__profile js-modal-link">Личный кабинет</a>
+					</div>
+					<div class="header-menu-footer">
+						<div class="header-menu-footer-support">
+							<span class="header-menu-footer-support__desc">Техническая поддержка</span>
+							<a href="mailto:support@stream-station.ru" class="header-menu-footer-support__link">support@stream-station.ru</a>	
+						</div>
+						<a href="https://tlgg.ru/streamstation_bot" class="header-menu-footer__tg">streamstation_bot</a>
+					</div>
+				</div>
+			</header>
+			<section class="content">
+				<div class="promo">
+					<h1 class="promo__title"><span>Платформа</span><br>для рестрима</h1>
+					<div class="promo__desc">Делайте рестрим в любые социальные сети и rtmp каналы. Полностью бесплатно. Навсегда.</div>
+					<div class="promo-logos">
+						<img class="promo-logos__item twitch-logo" src="img/twitch-logo.svg" alt="Twitch">
+						<img class="promo-logos__item youtube-logo" src="img/youtube-logo.svg" alt="Youtube">
+						<img class="promo-logos__item vk-logo" src="img/vk-logo.svg" alt="VK">
+						<img class="promo-logos__item gg-logo" src="img/gg-logo.svg" alt="GoodGame">
+						<img class="promo-logos__item tiktok-logo" src="img/tiktok-logo.svg" alt="TikTok">
+						<img class="promo-logos__item facebook-logo" src="img/facebook-logo.svg" alt="Facebook">
+						<img class="promo-logos__item trovo-logo" src="img/trovo-logo.png" alt="Trovo">
+						<img class="promo-logos__item rtmp-logo" src="img/rtmp-logo.svg" alt="RTMP">
+					</div>
+				</div>
+				<form action="#" class="registration">
+					<div class="registration__title">Прокачай свой стрим</div>
+					<div class="registration__desc">Зарегистрируйся и пользуйся основными функциями полностью <span class="highlight">бесплатно</span></div>
+					<div class="registration-inputs">
+						<div class="input">
+							<input type="email" placeholder="Email">
+						</div>
+						<div class="input">
+							<input type="tel" placeholder="Номер телефона">
+						</div>
+						<div class="input">
+							<input type="text" placeholder="Промокод (если есть)">
+						</div>
+					</div>
+					<div class="registration-btnwrap">
+						<div class="registration-rules">Нажимая на кнопку, вы соглашаетесь на обработку ваших персональных данных согласно нашей <a href="#">политике конфиденциальности</a></div>
+						<button class="registration-btn btn" type="submit">Зарегистрироваться</button>
+					</div>
+				</form>
+			</section>
+			<footer class="footer">
+				<a href="/" class="footer-logo">
+					<img class="footer-logo__img" src="img/logo.svg" alt="STREAMSTATION">
+				</a>
+				<div class="footer-box">
+					<div class="footer-support">
+						<span class="footer-support__desc">Техническая поддержка</span>
+						<a href="mailto:support@stream-station.ru" class="footer-support__link">support@stream-station.ru</a>	
+					</div>
+					<a href="https://tlgg.ru/streamstation_bot" class="footer__tg">streamstation_bot</a>
+				</div>
+			</footer>
+		</div>
+		<div class="modal-wrap">
+			<form id="modal-auth" class="modal modal-auth" action="#">
+				<span class="modal__close js-modal-close"></span>
+				<div class="modal__title">Авторизация</div>
+				<div class="modal-inputs">
+					<div class="input">
+						<input type="text" placeholder="Логин">
+					</div>
+					<div class="input">
+						<input type="password" placeholder="Пароль">
+					</div>
+				</div>
+				<button class="modal__btn btn" type="submit">Войти</button>
+				<div class="modal-links">
+					<a href="#modal-remind" class="modal__link js-modal-link">Забыли пароль ?</a>
+					<a href="#modal-reg" class="modal__link-purple js-modal-link">Регистрация</a>
+				</div>
+			</form>
+			<form id="modal-remind" class="modal modal-remind" action="#">
+				<span class="modal__close js-modal-close"></span>
+				<div class="modal__title">Забыли пароль</div>
+				<div class="modal-inputs">
+					<div class="input">
+						<input type="email" placeholder="Email">
+					</div>
+				</div>
+				<div class="modal__desc">Новый пароль будет отправлен вам на ваш email</div>
+				<button class="modal__btn btn" type="submit">Восстановить пароль</button>
+			</form>
+			<div id="modal-remind-success" class="modal modal-remind-success">
+				<span class="modal__close js-modal-close"></span>
+				<div class="modal__title">Новый пароль отправлен на ваш email</div>
+				<button class="modal__btn btn js-modal-close" type="submit">Понятно</button>
+			</div>
+			<form id="modal-reg" class="modal modal-reg" action="#">
+				<span class="modal__close js-modal-close"></span>
+				<div class="modal__title">Регистрация</div>
+				<div class="modal__desc">Зарегистрируйся и <span class="highlight">бесплатно</span><br>протестируй все функции <span class="highlight">в течение 15 дней</span></div>
+				<div class="modal-inputs">
+					<div class="input">
+						<input type="email" placeholder="Email">
+					</div>
+					<div class="input">
+						<input type="tel" placeholder="Номер телефона">
+					</div>
+					<div class="input">
+						<input type="text" placeholder="Промокод (если есть)">
+					</div>
+				</div>
+				<div class="modal__reg-rules">Нажимая на кнопку, вы соглашаетесь на обработку ваших персональных данных согласно нашей <a href="#">политике конфиденциальности</a></div>
+				<button class="modal__btn btn" type="submit">Зарегистрироваться</button>
+			</form>
+			<div id="modal-reg-success" class="modal modal-reg-success">
+				<span class="modal__close js-modal-close"></span>
+				<div class="modal__title">Регистрация прошла успешно</div>
+				<div class="modal__desc">На почту отправлены данные<br>для входа на платформу</div>
+				<img class="modal-logo" src="img/logo.svg" alt="STREAMSTATION">
+			</div>
+		</div>
+		<script src="js/jquery-3.4.1.min.js"></script>
+		<script src="js/script.js"></script>
+	</body>
+</html>

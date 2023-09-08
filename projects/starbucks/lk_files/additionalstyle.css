@@ -1,0 +1,19 @@
+@charset "UTF-8";
+.stars-gold-label {
+  background-color: #a19160;
+}
+.btn-info {
+  color: #fff !important;
+}
+/*
+.btn-default {
+  color: #fff !important;
+}*/
+
+.create-btn {
+  background-color: #235456 !important;
+}
+
+.card .reload-card.second-page .input2 {
+  width: 50px;
+}

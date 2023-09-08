@@ -1,0 +1,356 @@
+function transferFundsTo() {
+    var transferToCardNumber = $("#transfer-funds-to-card-number").val();
+    var cardId = $("#selected-card-id").val();
+    var transferAmount = $("#transfer-funds-to-card-amount").val();
+    //var pattern = new RegExp("^[0-9]{12}$");
+
+    if ($(".transfer-funds-from-step2").hasClass("hidden")) {
+        $(".card-number-error-msg").hide().html("");
+
+        //if (pattern.test(transferToCardNumber)) {
+        if (transferToCardNumber!='') {
+            $(".transfer-funds-from-step1").hide();
+            $(".transfer-funds-from-step2").removeClass("hidden");
+            $('#btnContinue').addClass('hidden');
+            $('#btnSend').removeClass('hidden');
+            $('#btnContinue').hide();
+        } else {
+            //$(".transfer-card-number-error").show();
+        }
+    } else {
+        /*$.ajax({
+            url: host + "CardManagement/TransferFundsTo",
+            type: "POST",
+            dataType: "html",
+            contentType: "application/json; charset=utf-8",
+            data: JSON.stringify({ transferToCardNumber: transferToCardNumber, transferAmount: transferAmount }),
+            success: function (data) {
+                $("#card-management-container").html(data);
+                getCardInfo(cardId);
+                showSuccessfulMessage("РћРїРµСЂР°С†РёСЏ РїСЂРѕРІРµРґРµРЅР° СѓСЃРїРµС€РЅРѕ");
+            },
+            error: function (xhr, ajaxOptions, thrownError) {
+                showError(xhr);
+            }
+        });*/
+    }
+};
+
+function transferFundsFrom() {
+    var transferFromCardNumber = $("#transfer-funds-from-card-number").val();
+    var transferAmount = $("#transfer-funds-from-card-amount").val();
+    //var pattern = new RegExp("^[0-9]{12}$");
+
+    if ($(".transfer-funds-from-step2").hasClass("hidden")) {
+        if (transferFromCardNumber!='') {
+            $(".transfer-funds-from-step1").hide();
+            $(".transfer-funds-from-step2").removeClass("hidden");
+            $('#btnContinue').addClass('hidden');
+            $('#btnSend').removeClass('hidden');
+            $('#btnContinue').hide();
+        } else {
+            //$(".transfer-card-number-error").show();
+        }
+    } else {
+       /* $.ajax({
+            url: host + "CardManagement/TransferFundsFrom",
+            type: "POST",
+            dataType: "html",
+            contentType: "application/json; charset=utf-8",
+            data: JSON.stringify({ transferFromCardNumber: transferFromCardNumber, transferAmount: transferAmount }),
+            success: function (data) {
+                $("#card-management-container").html(data);
+                getCardInfo(cardId);
+                showSuccessfulMessage("РћРїРµСЂР°С†РёСЏ РїСЂРѕРІРµРґРµРЅР° СѓСЃРїРµС€РЅРѕ");
+            },
+            error: function (xhr, ajaxOptions, thrownError) {
+                showError(xhr);
+            }
+        });*/
+    }
+};
+
+
+$(document).ready(function () {
+    initCardBar();
+
+    var cardPartialType = $("#card-partial-type-hidden").val();
+
+    viewCardManagmentContent(cardPartialType);
+
+    // initialize scrollable
+    //$(".scrollable").scrollable();
+});
+/*
+
+
+var _currentCurrency = "рубль";
+var _currentCurrencyM = "рублей";
+var _currencyAmmount = 1;
+/!*var _currencyAmmountMin = 500;
+var _currencyAmmountMax = 10000;*!/
+var _currencyAmmountMin = 10;
+var _currencyAmmountMax = 10000;
+*/
+
+function viewCardManagmentContent(partialType) {
+    var selectedCardId = $("#selected-card-id").val();
+    var bankCardAddStatus = $("#bank-card-add-status").val();
+    var timeStamp = new Date;
+    timeStamp = timeStamp.getTime();
+
+    $("#bank-card-add-status").val(0);
+    $("li", "ul.my-card-container").removeClass("selected");
+
+    $("input", "ul.my-card-container").each(function () {
+        $(this).attr("src", "/CardManagement/GetCardImage?cardId=" + ($(this).attr("id")) + "&width=88&height=56&stamp=" + timeStamp);
+    });
+    $("input[id=" + selectedCardId + "]", "ul.my-card-container").attr("src", "/CardManagement/GetCardImage?cardId=" + selectedCardId + "&width=115&height=72&stamp=" + timeStamp).parent().addClass("selected");
+
+    if ($("a#" + partialType, "#nav-menu").length > 0) {
+        $("li", "#nav-menu").removeClass("selected");
+        $("a#" + partialType, "#nav-menu").closest("li").addClass("selected");
+    }
+
+}
+
+function initCardBar() {
+    $("#card_add").click(function () {
+        viewCardManagmentContent("AddCard");
+        setUnselectedCards();
+    });
+
+    $("input", "ul.my-card-container").click(function () {
+        selectCard(this);
+    });
+};
+
+function setUnselectedCards() {
+    var timeStamp = new Date;
+    timeStamp = timeStamp.getTime();
+
+    $("li", "ul.my-card-container").removeClass("selected");
+
+};
+
+function selectCard(obj) {
+    //if (!$(obj).parent().hasClass("selected")) {
+    $("li", "#nav-menu").removeClass("selected");
+    $("li.first", "#nav-menu").addClass("selected");
+
+    var selectedCardId = ($(obj).attr("id"));
+    $("#selected-card-id").val(selectedCardId);
+
+    //viewCardManagmentContent("CardInformation");
+    viewCardManagmentContent($("#card-partial-type").val());
+    //getCardInfo(selectedCardId);
+
+    //}
+};
+
+function lockUIElements() {
+
+}
+
+function getCardInfo(cardId) {
+
+};
+
+function addNewCard() {
+    var cardNumber = $("#add-card-number").val();
+    var pinCode = $("#add-pin-code").val();
+    var cardIsDefault = $("#add-card-default").is(":checked");
+    var cardPartialType = $("#card-partial-type-hidden").val();
+
+
+};
+
+function deleteCard() {
+    var cardPartialType = $("#card-partial-type-hidden").val();
+
+    if ($("#UnregisterCard").is(":checked")) {
+
+    }
+};
+
+function sortTransaction(sortOrderType) {
+    var cardId = $("#selected-card-id").val();
+    var pageNumber = $("#current-page-number").val();
+    var currentSortOrderType = $("#current-sort-order-type").val();
+
+    if (currentSortOrderType != sortOrderType) {
+        pageNumber = 0;
+    }
+
+};
+
+function showTransactionPage(pageNumber) {
+    var pageNumberElement = $("#current-page-number");
+    var sortOrderType = $("#current-sort-order-type").val();
+
+    pageNumberElement.val(pageNumber - 1);
+    sortTransaction(sortOrderType);
+};
+
+function selectPredefinedAmout(obj) {
+    if (!$(obj).hasClass("active")) {
+        $("button", $(obj).parent()).removeClass("active");
+        $(obj).addClass("active");
+        $("#amount-hidden").val("");
+        $("#amount-hidden").val(parseInt($(obj).html()));
+        $("#one-time-reload-amount-list").val(parseInt($(obj).html()));
+    }
+};
+
+function selectOwnAmount(obj) {
+    $(".enter-own-amount").show();
+    $(obj).attr("onclick", "");
+    $("#one-time-reload-amount-list").change(function () {
+        $("#amount-hidden").val($("#one-time-reload-amount-list").val());
+        $("li", ".predefined-amount-selector").removeClass("selected");
+    });
+
+};
+
+function changeReloadMethod() {
+    $("#one-time-reload").toggle();
+    $("#auto-reload-settings").toggle();
+    $(".postback-message-container").empty();
+    $(".error").removeClass("error");
+};
+
+function reloadByLimitClick() {
+    if ($("input[name=reload-by-limit]").is(":checked")) {
+        $(".reload-by-limit-input").removeAttr("disabled");
+    } else {
+        $(".reload-by-limit-input").attr("disabled", "disabled");
+    }
+};
+
+function reloadByDateClick() {
+    if ($("input[name=reload-by-date]").is(":checked")) {
+        $(".reload-by-date-input").removeAttr("disabled");
+    } else {
+        $(".reload-by-date-input").attr("disabled", "disabled");
+    }
+};
+
+function reloadByDayClick() {
+    if ($("input[name=reload-by-day]").is(":checked")) {
+        $(".reload-by-day-input").removeAttr("disabled");
+    } else {
+        $(".reload-by-day-input").attr("disabled", "disabled");
+    }
+};
+
+function changeReloadSettings() {
+
+};
+
+function saveAutoReloadRules() {
+    var isLowLimitAmountRule = $("#reload-by-limit-id").prop("checked");
+    var lowLimit = $("#reload-by-limit-low-limit").val();
+    var lowLimitAmoun = $("#reload-by-limit-amount").val();
+
+    var isEveryMonthAmount = $("#reload-by-date").prop("checked");
+    var everyMonthDate = $("#reload-by-date-day").val();
+    var everyMonthAmount = $("#reload-by-date-amount").val();
+
+    var isEveryWeekAmount = $("#reload-by-day").prop("checked");
+    var everyWeekDay = $("#week-days-list").val();
+    var everyWeekAmount = $("#reload-by-day-amount").val();
+
+
+};
+
+function disableAutoReloadRules() {
+
+};
+
+function replaceCommaToDot(obj) {
+    $(obj).val($(obj).val().replace(",", "."));
+};
+
+function activateSaveAutoReloadButton() {
+    $("button", ".save-auto-reload-settings-button").removeClass("no-active").click(function () {
+        saveAutoReloadRules();
+    });
+};
+
+function addBankCard(obj) {
+    jConfirm("В момент привязки карты с вашего банковского счета будет удержана сумма в " + _currencyAmmount + " " +
+        _currentCurrency + ", которая по истечении нескольких часов будет возвращена на него.", "Внимание", function (result) {
+        if (result) {
+            var amount = $("#amount-hidden").val();
+
+        }
+    });
+};
+
+function removeBankCard() {
+    jConfirm("Подтвердите отключение карты банка", "Внимание", function (result) {
+        if (result) {
+        }
+    });
+};
+
+
+//Для CyberSource делается через сервер
+//Для Assist по технологии OneClick опять через перенаправление на сайт ASSIST
+/*function oneTimeReloadCard(obj) {
+    var amount = $("#amount-hidden").val();
+    if (isFinite(amount) && parseInt(amount) >= _currencyAmmountMin && parseInt(amount) <= _currencyAmmountMax) {
+        $("#error-area").removeClass('own-amount-error');
+        $("#error-area").addClass('own-amount');
+        $("#hidden-error").hide();
+        jConfirm("Подтвердите пополнение карты на " + amount + " " + _currentCurrencyM, "Внимание", function (result) {
+            if (result) {
+
+                var amount = $("#amount-hidden").val();
+
+            }
+        });
+    } else {
+        alert(_currencyAmmountMin);
+        var _mess = '';
+        if (amount < _currencyAmmountMin) { _mess = 'не меньше ' + _currencyAmmountMin + ' ' + _currentCurrencyM + '.' };
+        if (amount > _currencyAmmountMax) { _mess = 'не больше ' + _currencyAmmountMax + ' ' + _currentCurrencyM + '.' };
+        showErrorMessage("Сумма должна быть " + _mess, $(".reload-information-content"))
+    }
+};*/
+
+
+function changePageTitle(title) {
+    if (title.length > 0) {
+        document.title = title + ' "Мои награды Старбакс"';
+    } else {
+        document.title = 'Информация о карте "Мои награды Старбакс"';
+    }
+};
+
+function saveCardData(cardId) {
+    var isDefaultCard = $("#DefaultCardCheckBox").is(':checked');
+    var cardPartialType = $("#card-partial-type-hidden").val();
+    var nickName = $("#nick-name-id").val();
+
+};
+
+function lockOrRestoreCard(cardStatus) {
+    var isLock = false;
+    var message = "Карта успешно разблокирована!";
+
+    if (cardStatus == 'lock') {
+        isLock = true;
+        message = "Карта успешно заблокирована!";
+    }
+
+}
+
+function payThisCard() {
+    jCustomPrompt('Введите пин код: ', '', "Оплатить этой картой", function (result) {
+        if (result && result.length == 6) {
+            $('#pinCodeHidden').val(result);
+            $('#payThisCard').submit();
+        }
+    });
+}

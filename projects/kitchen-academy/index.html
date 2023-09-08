@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Main page</title>
+		<link rel="stylesheet" type="text/css" href="fonts/fonts.css?2">
+		<link rel="stylesheet" type="text/css" href="css/slick.css?2">
+		<link rel="stylesheet" type="text/css" href="css/settings.css?2">
+		<link rel="stylesheet" type="text/css" href="css/index.css?2">
+		<link rel="stylesheet" type="text/css" href="css/adaptive.css?2">
+		<link rel="stylesheet" type="text/css" href="css/base64.css?2">
+	</head>
+	<body class="main">
+		<div class="screen1">
+			<div class="header">
+				<div class="header-wrap inner">
+					<a href="#" class="header__eda-logo logo-eda"></a>
+					<div class="header-burger">
+						<span class="header-burger__btn"></span>
+					</div>
+					<a href="#" class="header__5ka-logo logo-5ka"></a>
+				</div>
+				<div class="header-imgbox">
+					<img class="header-imgbox__img header-imgbox__img_1" src="img/cook1.png" alt="">
+					<img class="header-imgbox__img header-imgbox__img_2" src="img/cook2-clear.png" alt="">
+					<img class="header-imgbox__img header-imgbox__img_3" src="img/cook3-clear.png" alt="">
+				</div>
+			</div>
+			<div class="screen1-content content">
+				<h2 class="content__title">Готовим <br>без остатка!</h2>
+				<div class="screen1-content__text">Готовить дома такие же интересные и красивые блюда, как в ресторане, легко. <br>Вам не потребуется ничего особенного, разве что фантазия. А продукты и посуду <br>можно купить в магазине у дома, например, в «Пятёрочке». Совместно с этой <br>сетью и отличными шеф-поварами мы подготовили для вас видео- мастер-классы. <br>В них мы показали, как из одного доступного продукта сделать несколько очень <br>вкусных и красивых блюд.</div>
+				<div id="screen2-btn" class="screen1-content__btn arrows-down"></div>
+			</div>
+		</div>
+		<div class="screen2">
+			<div class="header header_big">
+				<div class="header-wrap inner">
+					<a href="#" class="header__eda-logo logo-eda"></a>
+					<div class="header-burger">
+						<span class="header-burger__btn"></span>
+					</div>
+					<a href="#" class="header__5ka-logo logo-5ka"></a>
+				</div>
+			</div>
+			<div id="cooks-slider" class="cooks-slider">
+				<div class="cooks-slider-nav">
+					<button class="cooks-slider-nav__btn slider-btn-round__prev js-cook-prev"></button>
+					<button class="cooks-slider-nav__btn slider-btn-round__next js-cook-next"></button>
+				</div>
+				<div class="cooks-slider-item" data-cook="1">
+					<div class="cooks-slider-content content">
+						<div class="cooks-slider-header">
+							<div class="cooks-slider-header__imgwrap">
+								<img class="cooks-slider-header__img cooks-slider-header__img_1" src="img/cook1.png" alt="">
+							</div>
+							<div class="cooks-slider-header-text">
+								<div class="cooks-slider-header__name">Антон Ковальков</div>
+								<div class="cooks-slider-header__desc">Шеф-повар московского ресторана DFF, один из самых ярких молодых профессионалов, развивающих направление «Новая русская кухня». Прикоснуться к волшебству можете и вы! В видео Антон покажет, как превратить тыкву в самое главное блюдо на столе.</div>
+								<div class="cooks-slider-header-recipe">
+									<div class="cooks-slider-header-recipe__text">Готовим без остатка тыкву</div>
+									<img class="cooks-slider-header-recipe__img" src="img/food-pumpkin.png" alt="">
+								</div>
+							</div>
+						</div>
+						<div class="cooks-slider-video">
+							<div class="cooks-slider-video__overlay">
+								<div class="cooks-slider-video__play"></div>
+							</div>
+							<iframe width="920rem" height="518rem" src="https://www.youtube.com/embed/WyC7g0b4r0M?enablejsapi=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+						</div>
+						<div class="cooks-slider-recipes">
+							<div class="cooks-slider-recipes-item recipe-item">
+								<div class="recipe-item-imgwrap">
+									<div class="recipe-item-imgwrap__number">1</div>
+									<img class="recipe-item-imgwrap__img" src="img/recipe4.png" alt="">
+								</div>
+								<div class="recipe-item-textwrap">
+									<div class="recipe-item-textwrap__title">Пряный тыквенный суп с грушей</div>
+									<div class="recipe-item-textwrap__desc">Яркая демонстрация того, как классический рецепт тыквенного супа можно раскрасить за счёт ввода в игру новых ингредиентов: груши и ароматного орехового масла.</div>
+									<a href="recipe-1.html?food=1" class="recipe-item-textwrap__btn btn">Приготовить</a>
+								</div>
+							</div>
+							<div class="cooks-slider-recipes-item recipe-item">
+								<div class="recipe-item-imgwrap">
+									<div class="recipe-item-imgwrap__number">2</div>
+									<img class="recipe-item-imgwrap__img" src="img/recipe5.png" alt="">
+								</div>
+								<div class="recipe-item-textwrap">
+									<div class="recipe-item-textwrap__title">Стейк из тыквы со шпинатом и мягким сыром</div>
+									<div class="recipe-item-textwrap__desc">Вегетарианский стейк — это необязательно скучно. Шеф-повар Антон Ковальков показывает, как из обыкновенной тыквы сделать нарядное, сытное и вкусное блюдо, которое обязательно войдет в сборник семейных рецептов. В этом рецепте стейк из тыквы подается с песто из шпината лимонной рикоттой.</div>
+									<a href="recipe-1.html?food=2" class="recipe-item-textwrap__btn btn">Приготовить</a>
+								</div>
+							</div>
+							<div class="cooks-slider-recipes-item recipe-item">
+								<div class="recipe-item-imgwrap">
+									<div class="recipe-item-imgwrap__number">3</div>
+									<img class="recipe-item-imgwrap__img" src="img/recipe6.png" alt="">
+								</div>
+								<div class="recipe-item-textwrap">
+									<div class="recipe-item-textwrap__title">Табуле из киноа с тыквой</div>
+									<div class="recipe-item-textwrap__desc">Легкий ближневосточный салат табуле можно сделать более красочным и сытным, добавив в него кусочки запеченной тыквы. Таким образом, этот салат переходит в категорию горячих закусок, что как нельзя кстати подходит для холодного времени года.</div>
+									<a href="recipe-1.html?food=3" class="recipe-item-textwrap__btn btn">Приготовить</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="cooks-slider-item" data-cook="2">
+					<div class="cooks-slider-content content">
+						<div class="cooks-slider-header">
+							<div class="cooks-slider-header__imgwrap">
+								<img class="cooks-slider-header__img cooks-slider-header__img_2" src="img/cook2-clear.png" alt="">
+							</div>
+							<div class="cooks-slider-header-text">
+								<div class="cooks-slider-header__name">Дмитрий Погорелов</div>
+								<div class="cooks-slider-header__desc">Шеф-повар, ведущий радио- и телепередач, автор книг по кулинарии. На канале «Еда» ведущий программ «Кухня по заявкам», «Высший пилотаж», «Банкет. Фуршет. Недорого».</div>
+								<div class="cooks-slider-header-recipe">
+									<div class="cooks-slider-header-recipe__text">Готовим без остатка капусту</div>
+									<img class="cooks-slider-header-recipe__img" src="img/food-cabbage.png" alt="">
+								</div>
+							</div>
+						</div>
+						<div class="cooks-slider-video">
+							<div class="cooks-slider-video__overlay">
+								<div class="cooks-slider-video__play"></div>
+							</div>
+							<iframe width="920rem" height="518rem" src="https://www.youtube.com/embed/ZLWxPE7eFs0?enablejsapi=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+						</div>
+						<div class="cooks-slider-recipes">
+							<div class="cooks-slider-recipes-item recipe-item">
+								<div class="recipe-item-imgwrap">
+									<div class="recipe-item-imgwrap__number">1</div>
+									<img class="recipe-item-imgwrap__img" src="img/recipe1.png" alt="">
+								</div>
+								<div class="recipe-item-textwrap">
+									<div class="recipe-item-textwrap__title">Курица с имбирем в капустных листьях</div>
+									<div class="recipe-item-textwrap__desc">По известным источникам, ухой в XI—XII веках называли любой суп, из чего бы он сделан ни был; более того, некоторые виды блюда представляли собой что-то подобное современному компоту.</div>
+									<a href="recipe-2.html?food=1" class="recipe-item-textwrap__btn btn">Приготовить</a>
+								</div>
+							</div>
+							<div class="cooks-slider-recipes-item recipe-item">
+								<div class="recipe-item-imgwrap">
+									<div class="recipe-item-imgwrap__number">2</div>
+									<img class="recipe-item-imgwrap__img" src="img/recipe2.png" alt="">
+								</div>
+								<div class="recipe-item-textwrap">
+									<div class="recipe-item-textwrap__title">Салат из капусты с аджикой, орехами и молодым сыром</div>
+									<div class="recipe-item-textwrap__desc">По известным источникам, ухой в XI—XII веках называли любой суп, из чего бы он сделан ни был; более того, некоторые виды блюда представляли собой что-то подобное современному компоту.</div>
+									<a href="recipe-2.html?food=2" class="recipe-item-textwrap__btn btn">Приготовить</a>
+								</div>
+							</div>
+							<div class="cooks-slider-recipes-item recipe-item">
+								<div class="recipe-item-imgwrap">
+									<div class="recipe-item-imgwrap__number">3</div>
+									<img class="recipe-item-imgwrap__img" src="img/recipe3.png" alt="">
+								</div>
+								<div class="recipe-item-textwrap">
+									<div class="recipe-item-textwrap__title">Курица с имбирем в капустных листьях</div>
+									<div class="recipe-item-textwrap__desc">По известным источникам, ухой в XI—XII веках называли любой суп, из чего бы он сделан ни был; более того, некоторые виды блюда представляли собой что-то подобное современному компоту.</div>
+									<a href="recipe-2.html?food=3" class="recipe-item-textwrap__btn btn">Приготовить</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="cooks-slider-item" data-cook="3">
+					<div class="cooks-slider-content content">
+						<div class="cooks-slider-header">
+							<div class="cooks-slider-header__imgwrap">
+								<img class="cooks-slider-header__img cooks-slider-header__img_3" src="img/cook3-clear.png" alt="">
+							</div>
+							<div class="cooks-slider-header-text">
+								<div class="cooks-slider-header__name">Лариса Кацева</div>
+								<div class="cooks-slider-header__desc">Настоящая одесситка, автор нескольких кулинарных книг, блогер, телерадиоведущая и просто очень яркая женщина. Лара, как никто другой, умеет создать праздничный стол буквально из ничего, и этому сложному искусству она научит и вас.</div>
+								<div class="cooks-slider-header-recipe">
+									<div class="cooks-slider-header-recipe__text">Готовим без остатка курицу</div>
+									<img class="cooks-slider-header-recipe__img" src="img/food-chicken.png" alt="">
+								</div>
+							</div>
+						</div>
+						<div class="cooks-slider-video">
+							<div class="cooks-slider-video__overlay">
+								<div class="cooks-slider-video__play"></div>
+							</div>
+							<iframe width="920rem" height="518rem" src="https://www.youtube.com/embed/T3c2qNMMbmQ?enablejsapi=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+						</div>
+						<div class="cooks-slider-recipes">
+							<div class="cooks-slider-recipes-item recipe-item">
+								<div class="recipe-item-imgwrap">
+									<div class="recipe-item-imgwrap__number">1</div>
+									<img class="recipe-item-imgwrap__img" src="img/recipe7.png" alt="">
+								</div>
+								<div class="recipe-item-textwrap">
+									<div class="recipe-item-textwrap__title">Израильский шницель с куриным попкорном</div>
+									<div class="recipe-item-textwrap__desc">Израильский шницель традиционно готовят из куриной грудки. Куриная грудка состоит из большого и малого филе. В этом рецепте Лара Кацова рассказывает, как приготовить традиционный израильский шницель из большой части и что сделать с оставшейся малой.</div>
+									<a href="recipe-3.html?food=1" class="recipe-item-textwrap__btn btn">Приготовить</a>
+								</div>
+							</div>
+							<div class="cooks-slider-recipes-item recipe-item">
+								<div class="recipe-item-imgwrap">
+									<div class="recipe-item-imgwrap__number">2</div>
+									<img class="recipe-item-imgwrap__img" src="img/recipe8.png" alt="">
+								</div>
+								<div class="recipe-item-textwrap">
+									<div class="recipe-item-textwrap__title">Куриный бульон с манными кнедликами</div>
+									<div class="recipe-item-textwrap__desc">Еврейский «Пенициллин» — лучшее лекарство от осенней хандры и зимних холодов. Кого из нас в детстве не поили куриным бульоном при первых признаках простуды? Наша версия — очень густой, наваристый и сытный суп с манными кнедликами.</div>
+									<a href="recipe-3.html?food=2" class="recipe-item-textwrap__btn btn">Приготовить</a>
+								</div>
+							</div>
+							<div class="cooks-slider-recipes-item recipe-item">
+								<div class="recipe-item-imgwrap">
+									<div class="recipe-item-imgwrap__number">3</div>
+									<img class="recipe-item-imgwrap__img" src="img/recipe9.png" alt="">
+								</div>
+								<div class="recipe-item-textwrap">
+									<div class="recipe-item-textwrap__title">Пирог с курицей и луком</div>
+									<div class="recipe-item-textwrap__desc">В этот большой пирог можно добавить самые разные части курицы, оставшиеся от приготовления других блюд. Главное — предварительно их запечь, тогда начинка получится сочной и очень нежной.</div>
+									<a href="recipe-3.html?food=3" class="recipe-item-textwrap__btn btn">Приготовить</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="discount-slider">
+				<div class="discount-slider-header">
+					<div class="discount-slider-header-text">
+						<div class="discount-slider-header__title">Профессиональная посуда для ваших кулинарных экспериментов</div>
+						<div class="discount-slider-header__desc">Все продукты мы купили в сети магазинов <span class="fw900">«Пятёрочка»</span>. Сковородки, кастрюли и ножи можно приобрести со скидками до 86% там же. Приходите в «Пятёрочку», получайте наклейки за покупки и обменивайте их на скидки!</div>
+					</div>
+					<!-- <img class="discount-slider-header__label" src="img/discount-label.png" alt=""> -->
+				</div>
+				<div class="discount-slider-body inner">
+					<div class="discount-slider-wrap">
+						<div class="discount-slider-item">
+							<div class="item-discount">
+								<div class="item-discount__imgwrap">
+									<img class="item-discount__img" src="img/discount1.png" alt="">
+								</div>
+								<div class="item-discount__title">Сковорода 26см со съемной бакелитовой ручкой</div>
+								<div class="item-discount-prices">
+									<div class="prices-item">
+										<span class="prices-item__count-0">Без наклеек</span>
+										<span class="prices-item__val">3999<sup>99</sup></span>
+									</div>
+									<div class="prices-item">
+										<span class="prices-item__count-num">5</span>
+										<span class="prices-item__val">1599<sup>99</sup></span>
+									</div>
+									<div class="prices-item">
+										<span class="prices-item__count-num">10</span>
+										<span class="prices-item__val">999<sup>99</sup></span>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="discount-slider-item">
+							<div class="item-discount">
+								<div class="item-discount__imgwrap">
+									<img class="item-discount__img" src="img/discount2.png" alt="">
+								</div>
+								<div class="item-discount__title">Сковорода 24см со съемной бакелитовой ручкой</div>
+								<div class="item-discount-prices">
+									<div class="prices-item">
+										<span class="prices-item__count-0">Без наклеек</span>
+										<span class="prices-item__val">3999<sup>99</sup></span>
+									</div>
+									<div class="prices-item">
+										<span class="prices-item__count-num">5</span>
+										<span class="prices-item__val">1499<sup>99</sup></span>
+									</div>
+									<div class="prices-item">
+										<span class="prices-item__count-num">10</span>
+										<span class="prices-item__val">949<sup>99</sup></span>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="discount-slider-item">
+							<div class="item-discount">
+								<div class="item-discount__imgwrap">
+									<img class="item-discount__img" src="img/discount3.png" alt="">
+								</div>
+								<div class="item-discount__title">Сковорода 20см со съемной бакелитовой ручкой</div>
+								<div class="item-discount-prices">
+									<div class="prices-item">
+										<span class="prices-item__count-0">Без наклеек</span>
+										<span class="prices-item__val">2999<sup>99</sup></span>
+									</div>
+									<div class="prices-item">
+										<span class="prices-item__count-num">5</span>
+										<span class="prices-item__val">1099<sup>99</sup></span>
+									</div>
+									<div class="prices-item">
+										<span class="prices-item__count-num">10</span>
+										<span class="prices-item__val">699<sup>99</sup></span>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="discount-slider-item">
+							<div class="item-discount">
+								<div class="item-discount__imgwrap">
+									<img class="item-discount__img" src="img/discount4.png" alt="">
+								</div>
+								<div class="item-discount__title">Кастрюля 3,6л со стеклянной крышкой</div>
+								<div class="item-discount-prices">
+									<div class="prices-item">
+										<span class="prices-item__count-0">Без наклеек</span>
+										<span class="prices-item__val">3999<sup>99</sup></span>
+									</div>
+									<div class="prices-item">
+										<span class="prices-item__count-num">5</span>
+										<span class="prices-item__val">1699<sup>99</sup></span>
+									</div>
+									<div class="prices-item">
+										<span class="prices-item__count-num">10</span>
+										<span class="prices-item__val">1199<sup>99</sup></span>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="discount-slider-item">
+							<div class="item-discount">
+								<div class="item-discount__imgwrap">
+									<img class="item-discount__img" src="img/discount5.png" alt="">
+								</div>
+								<div class="item-discount__title">Кастрюля 2,0л со стеклянной крышкой</div>
+								<div class="item-discount-prices">
+									<div class="prices-item">
+										<span class="prices-item__count-0">Без наклеек</span>
+										<span class="prices-item__val">3599<sup>99</sup></span>
+									</div>
+									<div class="prices-item">
+										<span class="prices-item__count-num">5</span>
+										<span class="prices-item__val">1499<sup>99</sup></span>
+									</div>
+									<div class="prices-item">
+										<span class="prices-item__count-num">10</span>
+										<span class="prices-item__val">999<sup>99</sup></span>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="discount-slider-item">
+							<div class="item-discount">
+								<div class="item-discount__imgwrap">
+									<img class="item-discount__img" src="img/discount6.png" alt="">
+								</div>
+								<div class="item-discount__title">Ковш 1,3л со стеклянной крышкой</div>
+								<div class="item-discount-prices">
+									<div class="prices-item">
+										<span class="prices-item__count-0">Без наклеек</span>
+										<span class="prices-item__val">2999<sup>99</sup></span>
+									</div>
+									<div class="prices-item">
+										<span class="prices-item__count-num">5</span>
+										<span class="prices-item__val">1299<sup>99</sup></span>
+									</div>
+									<div class="prices-item">
+										<span class="prices-item__count-num">10</span>
+										<span class="prices-item__val">899<sup>99</sup></span>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="discount-slider-item">
+							<div class="item-discount">
+								<div class="item-discount__imgwrap">
+									<img class="item-discount__img" src="img/discount7.png" alt="">
+								</div>
+								<div class="item-discount__title">Нож для фруктов и овощей</div>
+								<div class="item-discount-prices">
+									<div class="prices-item">
+										<span class="prices-item__count-0">Без наклеек</span>
+										<span class="prices-item__val">1899<sup>99</sup></span>
+									</div>
+									<div class="prices-item">
+										<span class="prices-item__count-num">3</span>
+										<span class="prices-item__val">699<sup>99</sup></span>
+									</div>
+									<div class="prices-item">
+										<span class="prices-item__count-num">6</span>
+										<span class="prices-item__val">299<sup>99</sup></span>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="discount-slider-item">
+							<div class="item-discount">
+								<div class="item-discount__imgwrap">
+									<img class="item-discount__img" src="img/discount8.png" alt="">
+								</div>
+								<div class="item-discount__title">Нож универсальный</div>
+								<div class="item-discount-prices">
+									<div class="prices-item">
+										<span class="prices-item__count-0">Без наклеек</span>
+										<span class="prices-item__val">2499<sup>99</sup></span>
+									</div>
+									<div class="prices-item">
+										<span class="prices-item__count-num">3</span>
+										<span class="prices-item__val">799<sup>99</sup></span>
+									</div>
+									<div class="prices-item">
+										<span class="prices-item__count-num">6</span>
+										<span class="prices-item__val">349<sup>99</sup></span>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="discount-slider-item">
+							<div class="item-discount">
+								<div class="item-discount__imgwrap">
+									<img class="item-discount__img" src="img/discount9.png" alt="">
+								</div>
+								<div class="item-discount__title">Нож поварской</div>
+								<div class="item-discount-prices">
+									<div class="prices-item">
+										<span class="prices-item__count-0">Без наклеек</span>
+										<span class="prices-item__val">2999<sup>99</sup></span>
+									</div>
+									<div class="prices-item">
+										<span class="prices-item__count-num">3</span>
+										<span class="prices-item__val">899<sup>99</sup></span>
+									</div>
+									<div class="prices-item">
+										<span class="prices-item__count-num">6</span>
+										<span class="prices-item__val">599<sup>99</sup></span>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="discount-slider-item">
+							<div class="item-discount">
+								<div class="item-discount__imgwrap">
+									<img class="item-discount__img" src="img/discount10.png" alt="">
+								</div>
+								<div class="item-discount__title">Нож кухонный</div>
+								<div class="item-discount-prices">
+									<div class="prices-item">
+										<span class="prices-item__count-0">Без наклеек</span>
+										<span class="prices-item__val">2999<sup>99</sup></span>
+									</div>
+									<div class="prices-item">
+										<span class="prices-item__count-num">3</span>
+										<span class="prices-item__val">799<sup>99</sup></span>
+									</div>
+									<div class="prices-item">
+										<span class="prices-item__count-num">6</span>
+										<span class="prices-item__val">599<sup>99</sup></span>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="discount-slider-item">
+							<div class="item-discount">
+								<div class="item-discount__imgwrap">
+									<img class="item-discount__img" src="img/discount11.png" alt="">
+								</div>
+								<div class="item-discount__title">Нож хлеборезный</div>
+								<div class="item-discount-prices">
+									<div class="prices-item">
+										<span class="prices-item__count-0">Без наклеек</span>
+										<span class="prices-item__val">2999<sup>99</sup></span>
+									</div>
+									<div class="prices-item">
+										<span class="prices-item__count-num">3</span>
+										<span class="prices-item__val">799<sup>99</sup></span>
+									</div>
+									<div class="prices-item">
+										<span class="prices-item__count-num">6</span>
+										<span class="prices-item__val">599<sup>99</sup></span>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="discount-slider-item">
+							<div class="item-discount">
+								<div class="item-discount__imgwrap">
+									<img class="item-discount__img" src="img/discount12.png" alt="">
+								</div>
+								<div class="item-discount__title">Крышка 26см с эффектом<br>софт-тач</div>
+								<div class="item-discount-prices">
+									<div class="prices-item">
+										<span class="prices-item__count-0">Без наклеек</span>
+										<span class="prices-item__val">1099<sup>99</sup></span>
+									</div>
+									<div class="prices-item">
+										<span class="prices-item__count-num">3</span>
+										<span class="prices-item__val">499<sup>99</sup></span>
+									</div>
+									<div class="prices-item">
+										<span class="prices-item__count-num">6</span>
+										<span class="prices-item__val">399<sup>99</sup></span>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="discount-slider-item">
+							<div class="item-discount">
+								<div class="item-discount__imgwrap">
+									<img class="item-discount__img" src="img/discount13.png" alt="">
+								</div>
+								<div class="item-discount__title">Крышка 24см с эффектом<br>софт-тач</div>
+								<div class="item-discount-prices">
+									<div class="prices-item">
+										<span class="prices-item__count-0">Без наклеек</span>
+										<span class="prices-item__val">999<sup>99</sup></span>
+									</div>
+									<div class="prices-item">
+										<span class="prices-item__count-num">3</span>
+										<span class="prices-item__val">399<sup>99</sup></span>
+									</div>
+									<div class="prices-item">
+										<span class="prices-item__count-num">6</span>
+										<span class="prices-item__val">299<sup>99</sup></span>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="discount-slider-nav"></div>
+				</div>
+			</div>
+			<div class="footer">
+				<div class="footer-wrap inner">
+					<div class="footer-wrap-item footer-wrap-item_1">
+						<div class="footer-cook footer-cook_2 js-cook-link" data-cook="2">
+							<div class="footer-cook-imgwrap">
+								<img class="footer-cook__img" src="img/cook2.png" alt="">
+								<img class="footer-cook__img-hover" src="img/cook2-hover.png" alt="">
+							</div>
+							<div class="footer-cook-text">
+								<div class="footer-cook__name">Дмитрий<br>Погорелов</div>
+								<div class="footer-cook__title">Готовим без остатка<br>капусту</div>
+								<div class="footer-cook__arrows arrows-left"></div>
+							</div>
+						</div>
+						<div class="footer-cook footer-cook_3 js-cook-link" data-cook="3">
+							<div class="footer-cook-imgwrap">
+								<img class="footer-cook__img" src="img/cook3.png" alt="">
+								<img class="footer-cook__img-hover" src="img/cook3-hover.png" alt="">
+							</div>
+							<div class="footer-cook-text">
+								<div class="footer-cook__name">Лариса<br>Кацева</div>
+								<div class="footer-cook__title">Готовим без остатка<br>курицу</div>
+								<div class="footer-cook__arrows arrows-right"></div>
+							</div>
+						</div>
+					</div>
+					<div class="footer-wrap-item footer-wrap-item_2">
+						<div class="footer-cook footer-cook_1 js-cook-link" data-cook="1">
+							<div class="footer-cook-imgwrap">
+								<img class="footer-cook__img" src="img/cook1.png" alt="">
+								<img class="footer-cook__img-hover" src="img/cook1-hover.png" alt="">
+							</div>
+							<div class="footer-cook-text">
+								<div class="footer-cook__name">Антон<br>Ковальков</div>
+								<div class="footer-cook__title">Готовим без остатка<br>тыкву</div>
+								<div class="footer-cook__arrows arrows-left"></div>
+							</div>
+						</div>
+						<div class="footer-cook footer-cook_3 js-cook-link" data-cook="3">
+							<div class="footer-cook-imgwrap">
+								<img class="footer-cook__img" src="img/cook3.png" alt="">
+								<img class="footer-cook__img-hover" src="img/cook3-hover.png" alt="">
+							</div>
+							<div class="footer-cook-text">
+								<div class="footer-cook__name">Лариса<br>Кацева</div>
+								<div class="footer-cook__title">Готовим без остатка<br>курицу</div>
+								<div class="footer-cook__arrows arrows-right"></div>
+							</div>
+						</div>
+					</div>
+					<div class="footer-wrap-item footer-wrap-item_3">
+						<div class="footer-cook footer-cook_1 js-cook-link" data-cook="1">
+							<div class="footer-cook-imgwrap">
+								<img class="footer-cook__img" src="img/cook1.png" alt="">
+								<img class="footer-cook__img-hover" src="img/cook1-hover.png" alt="">
+							</div>
+							<div class="footer-cook-text">
+								<div class="footer-cook__name">Антон<br>Ковальков</div>
+								<div class="footer-cook__title">Готовим без остатка<br>тыкву</div>
+								<div class="footer-cook__arrows arrows-left"></div>
+							</div>
+						</div>
+						<div class="footer-cook footer-cook_4 js-cook-link" data-cook="2">
+							<div class="footer-cook-imgwrap">
+								<img class="footer-cook__img" src="img/cook2.png" alt="">
+								<img class="footer-cook__img-hover" src="img/cook2-hover.png" alt="">
+							</div>
+							<div class="footer-cook-text">
+								<div class="footer-cook__name">Дмитрий<br>Погорелов</div>
+								<div class="footer-cook__title">Готовим без остатка<br>капусту</div>
+								<div class="footer-cook__arrows arrows-right"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="sharebox" class="sharebox">
+			<a href="#" class="sharebox__link icon-tg"></a>
+			<a href="#" class="sharebox__link icon-tw"></a>
+			<a href="#" class="sharebox__link icon-ok"></a>
+			<a href="#" class="sharebox__link icon-vk"></a>
+			<a href="#" class="sharebox__link icon-fb"></a>
+			<span id="sharebox-btn" class="sharebox__icon icon-heart"></span>
+		</div>
+		<a href="contest.html" class="contestbox contest-link">
+			<div class="contestbox__text">Участвовать<br>в конкурсе<br>от «Пятёрочки»!</div>
+			<img class="contestbox__img" src="img/contest-btn.png" alt="Участвовать в конкурсе от «Пятёрочки»!">
+			<div class="contestbox-mob">КОНКУРС!</div>
+		</a>
+		<div id="mob-menu" class="mob-menu">
+			<div class="mob-menu-header">
+				<a href="#" class="mob-menu-header__eda-logo logo-eda_black"></a>
+				<div class="header-close"></div>
+				<a href="#" class="mob-menu-header__5ka-logo logo-5ka"></a>
+			</div>
+			<div class="mob-menu-body">
+				<div class="mob-menu-body__title">Готовим<br>без остатка!</div>
+				<div class="mob-menu-body-list">
+					<a href="#" class="mob-menu-body-list__link">О проекте</a>
+					<a href="#" class="mob-menu-body-list__link">Готовим без остатка капусту</a>
+					<a href="#" class="mob-menu-body-list__link">Готовим без остатка курицу</a>
+					<a href="#" class="mob-menu-body-list__link">Готовим без остатка тыкву</a>
+					<a href="#" class="mob-menu-body-list__link">Выиграйте призы</a>
+				</div>
+				<div class="mob-menu-body-social">
+					<div class="mob-menu-body-social__title">Поделиться</div>
+					<div class="mob-menu-body-social-list">
+						<a href="#" class="mob-menu-body-social__link icon-tg"></a>
+						<a href="#" class="mob-menu-body-social__link icon-tw"></a>
+						<a href="#" class="mob-menu-body-social__link icon-ok"></a>
+						<a href="#" class="mob-menu-body-social__link icon-vk"></a>
+						<a href="#" class="mob-menu-body-social__link icon-fb"></a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="js/jquery-3.6.0.min.js"></script>
+		<script src="js/slick.min.js"></script>
+		<script src="js/jquery.waitforimages.min.js"></script>
+		<script src="js/jquery.touchSwipe.min.js"></script>
+		<script src="js/script.js?2"></script>
+	</body>
+</html>

@@ -1,0 +1,41 @@
+@font-face {
+    font-family:'RotondaC';
+    src:url('../fonts/RotondaC-Bold.woff') format('woff');
+    font-weight:700;
+    font-style:normal;
+}
+
+@font-face {
+    font-family:'RotondaC';
+    src:url('../fonts/RotondaC.woff') format('woff');
+    font-weight:400;
+    font-style:normal;
+}
+
+@font-face {
+    font-family:'OfficinaSans';
+    src:url('../fonts/OfficinaSansBook.woff') format('woff');
+    font-weight:400;
+    font-style:normal;
+}
+
+@font-face {
+    font-family:'OfficinaSans';
+    src:url('../fonts/OfficinaSansBlack.woff') format('woff');
+    font-weight:900;
+    font-style:normal;
+}
+
+@font-face {
+    font-family:'MDLZ';
+    src:url('../fonts/MDLZBITETYPE-Regular.woff') format('woff');
+    font-weight:400;
+    font-style:normal;
+}
+
+@font-face {
+    font-family:'ALBOROTO';
+    src:url('../fonts/ALBOROTO.woff') format('woff');
+    font-weight:400;
+    font-style:normal;
+}

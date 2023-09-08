@@ -1,0 +1,132 @@
+/**
+ *  @author Eugene Terentev <eugene@terentev.net>
+ */
+
+function ajaxWorkingActive() {
+    var docHeight = jQuery(document).height();
+    jQuery("body").append("<div id='overlay'></div>");
+    jQuery("#overlay")
+        .height(docHeight)
+        .css({
+            'opacity' : 0.4,
+            'position': 'absolute',
+            'top': 0,
+            'left': 0,
+            'background-color': 'black',
+            'width': '100%',
+            'z-index': 5000
+        });
+}
+
+function ajaxWorkingDisable() {
+    jQuery('#overlay').remove();
+}
+
+
+jQuery('[datacheck="true"]').change(function () {
+    OnChecked();
+});
+
+function OnChecked() {
+    var s = 0;
+    jQuery('body').find('[datacheck="true"]').each(function () {
+        if (jQuery(this).prop('checked')) {
+            s++;
+        }
+    });
+
+    if (s == 3) {
+        jQuery('body').find('#btnAddReg').prop("disabled", false);
+    } else {
+        jQuery('body').find('#btnAddReg').prop("disabled", true);
+    }
+}
+jQuery(document).ready(function () {
+    OnChecked();
+});
+
+// Stars playing
+/*
+$(function () {
+    var capopentime = .67;
+    var $glasscontainer = $('.tab-content').find('.tab-pane.active').find('.glass');
+    var $starcontainer = $('.tab-content').find('.tab-pane.active').find('.star-container');
+    var starcount = 10;
+    var starw = 14;
+    var starh = 12;
+    var startime = .5;
+    var startimegap = .1;
+    var glassbottomw = 86;
+    var glassa = 6.2;
+    var glassstep = starh * Math.tan(glassa * Math.PI / 180);
+
+    $(document).ready(function () {
+        starcount = $('#glassstartcount').attr('data-value');
+        if (starcount > 0) {
+            $glasscontainer.toggleClass('playing', false).toggleClass('cap_open', false);
+            setTimeout(function () {
+                launch();
+            }, 200);
+        }
+
+        $('.nav.nav-tabs.nav-justified li a').on('click', function (e) {
+            if (starcount > 0) {
+
+                $('.tab-content').find('.tab-pane').each(function () {
+                    if (!$(this).hasClass('active')) {
+                        $glasscontainer = $(this).find('.glass-container');
+                        $starcontainer = $(this).find('.star-container');
+                    }
+                });
+
+                $glasscontainer.toggleClass('playing', false).toggleClass('cap_open', false);
+                setTimeout(function () {
+                    launch();
+                }, 200);
+            }
+        });
+    });
+
+    function launch() {
+        $starcontainer.html('');
+        $glasscontainer.toggleClass('playing', true);
+        // open cap
+        $glasscontainer.toggleClass('cap_open', true);
+        var $star = $('<div class="star" />');
+        setTimeout(function () {
+            var glassw = glassbottomw;
+            var l = 0;
+            var b = 0;
+            var shift = 0;
+            // generate stars
+
+            for (var i = 0; i < starcount; i++) {
+                (function () {
+                    var $star_clone = $star.clone();
+                    $starcontainer.append($star_clone);
+                    setTimeout(function () {
+                        $star_clone.toggleClass('star_posed', true).css({
+                            transform: 'rotate(' + Math.round(Math.random() * 180 - 90) + 'deg)',
+                            left: l - shift,
+                            bottom: b
+                        });
+                        if (l + 2 * starw < glassw) {
+                            l = l + starw;
+                        } else {
+                            // go upper
+                            glassw += 2 * glassstep;
+                            l = 0;
+                            b += starh;
+                            shift += glassstep;
+                        }
+                    }, (i + 1) * startimegap * 1000);
+                })();
+            }
+            // close cap
+            setTimeout(function () {
+                $glasscontainer.toggleClass('cap_open', false);
+            }, starcount * startimegap * 1000);
+        }, capopentime * 1000);
+    }
+});*/
+

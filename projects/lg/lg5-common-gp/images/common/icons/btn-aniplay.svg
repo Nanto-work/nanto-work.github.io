@@ -1,0 +1,19 @@
+<svg id="Button_Play" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+  <defs>
+    <style>
+      .cls-1, .cls-2 {
+        opacity: 0.75;
+      }
+
+      .cls-2, .cls-3 {
+        fill: #fff;
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <g id="Play">
+    <circle id="bg" class="cls-1" cx="16" cy="16" r="15"/>
+    <path id="line" class="cls-2" d="M800,1248a16,16,0,1,1-16,16A16,16,0,0,1,800,1248Zm0.031,1.34a14.69,14.69,0,1,1-14.687,14.69A14.691,14.691,0,0,1,800.031,1249.34Z" transform="translate(-784 -1248)"/>
+    <path id="play-2" data-name="play" class="cls-3" d="M797,1259.66v8.66a0.638,0.638,0,0,0,.977.58c0.389-.24,6.06-3.89,6.709-4.3a0.7,0.7,0,0,0,0-1.17c-0.467-.3-6.164-4.01-6.729-4.34A0.631,0.631,0,0,0,797,1259.66Z" transform="translate(-784 -1248)"/>
+  </g>
+</svg>

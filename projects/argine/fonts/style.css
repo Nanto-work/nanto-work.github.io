@@ -1,0 +1,15 @@
+@charset "utf-8";
+
+@font-face{
+	font-family:'Red Hat Display';
+	src:url('RedHatDisplay-Regular.woff') format('woff');
+	font-weight:400;
+	font-style:normal;
+}
+
+@font-face{
+	font-family:'Red Hat Display';
+	src:url('RedHatDisplay-Bold.woff') format('woff');
+	font-weight:700;
+	font-style:normal;
+}

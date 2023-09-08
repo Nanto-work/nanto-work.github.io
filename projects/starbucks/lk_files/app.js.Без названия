@@ -1,0 +1,296 @@
+/**
+ *  @author Eugene Terentev <eugene@terentev.net>
+ */
+
+function activateSaveAutoReload() {
+    if($('#reload-by-limit-low-limit').val()!=='' && $('#reload-by-limit-amount').val()!=='' && $('#reload-by-limit-dateend').val()!=='') {
+        $("#btnSave").removeAttr("disabled");
+    }
+};
+
+
+$(function () {
+    $(document).ready(function () {
+
+        var _currentCurrency = "рубль";
+        var _currentCurrencyM = "рублей";
+        var _currencyAmmount = 1;
+        var _currencyAmmountMin = 500;
+        var _currencyAmmountMax = 10000;
+
+        function firstCardPayment() {
+
+            var csrfParam = $('meta[name="csrf-param"]').attr("content");
+            var csrfToken = $('meta[name="csrf-token"]').attr("content");
+
+
+            ajaxWorkingActive();
+
+            $.ajax({
+                url : "/card/page/first-pay-card",
+                type: "post",
+                data : {firstcard:true,  csrfParam : csrfToken },
+                success: function(data, textStatus, jqXHR)
+                {
+                    ajaxWorkingDisable();
+
+                    if(data.message) {
+                        $('div.validation.error').hide();
+                    } else if(data.error){
+                        $('div.validation.error').html('<p>'+data.error+'</p>').show();
+                        $('a.bs-example-modal-sm').show();
+                    } else {
+                        $('div.validation.error').html('<p>Неизвестная ошибка. Попробуйте позже.</p>').show();
+                        $('a.bs-example-modal-sm').show();
+                    }
+                },
+                error: function (jqXHR, textStatus, errorThrown)
+                {
+
+                   if(errorThrown == 'Too Many Requests') {
+                       $('div.validation.error').html('<p>Вы отправили слишком много запросов. Попробуйте позже.</p>').show();
+                       ajaxWorkingDisable();
+                       $('a.bs-example-modal-sm').show();
+                   } else if(errorThrown !='Found') {
+                       $('div.validation.error').html('<p>' + textStatus + ' '+errorThrown+'</p>').show();
+                   }
+                }
+            });
+        }
+
+        function AmountPayment() {
+            var csrfParam = $('meta[name="csrf-param"]').attr("content");
+            var csrfToken = $('meta[name="csrf-token"]').attr("content");
+
+            var amount = $('#reload-card input#amount-hidden').val();
+            var unmbr = $('#reload-card input[name="unmbr"]').val();
+
+            if (isFinite(amount) && parseInt(amount) >= _currencyAmmountMin && parseInt(amount) <= _currencyAmmountMax) {
+                ajaxWorkingActive();
+                $.ajax({
+                    url: "/card/page/pay-amount",
+                    type: "post",
+                    data: {amount: amount, unmbr: unmbr,  csrfParam: csrfToken},
+                    success: function (data, textStatus, jqXHR) {
+                        ajaxWorkingDisable();
+
+                        if (data.message && (data.message!='OK.' || data.message=='')) {
+                            $('.enter-own-amount').hide();
+                            $('.reload-now-button').hide();
+                            //$('#hidden-error').html('Баланс успешно пополнен').show();
+                            $('#hidden-error').html('Ваш запрос принят, в случае его успешного выполненеия ваш баланс будет пополнен на указанную вами сумму').show();
+                        } else if (data.message && data.message=='OK.') {
+                            jQuery('#btnPayAmount').show();
+                            $('#hidden-error').html('Не удалось пополнить баланс. Возможно, на данной карте нет денег.').show();
+                        } else if (data.error) {
+                            $('#hidden-error').html('<p>' + data.error + '</p>').show();
+                            jQuery('#btnPayAmount').show();
+                        } else {
+                            $('#hidden-error').html('<p>Неизвестная ошибка.</p>').show();
+                        }
+                    },
+                    error: function (jqXHR, textStatus, errorThrown) {
+                        //$('#hidden-error').html('<p>Error request.</p>').show();
+                        $('#hidden-error').html('<p>'+textStatus+'</p>').show();
+                        jQuery('#btnPayAmount').show();
+                    }
+                });
+            } else {
+                var _mess = '';
+                ajaxWorkingDisable();
+                if (amount < _currencyAmmountMin) { _mess = 'не меньше ' + _currencyAmmountMin + ' ' + _currentCurrencyM + '.' };
+                if (amount > _currencyAmmountMax) { _mess = 'не больше ' + _currencyAmmountMax + ' ' + _currentCurrencyM + '.' };
+                $('#hidden-error').html("Сумма должна быть " + _mess).show();
+                jQuery('#btnPayAmount').show();
+            }
+        }
+
+        $('div[data-pjax-container]').on('click', 'a.bs-example-modal-sm', function (e) {
+            $('div.modal[role=dialog]').show();
+        });
+
+        $('div[data-pjax-container]').on('click', '.bs-example-modal-sm button[data-dismiss=modal]', function (e) {
+            $('div.modal[role=dialog]').hide();
+        });
+
+        $('div[data-pjax-container]').on('click', '.bs-example-modal-sm button[data-ok=modal]', function (e) {
+            $('div.modal[role=dialog]').hide();
+            $('.bs-example-modal-sm').hide();
+            firstCardPayment();
+        });
+
+        $('div[data-pjax-container]').on('click','.list-group .list-group-item', function (e) {
+
+            $('.list-group .list-group-item').each(function () {
+                if($(this).hasClass('active')) {
+                    $(this).removeClass('active');
+                }
+            });
+
+            $(this).addClass('active');
+            $('#reload-card input[name=unmbr]').attr('value', $(this).attr('data-number'));
+            $('#save-amount input[name=unmbr]').attr('value', $(this).attr('data-number'));
+
+            if($(this).attr('data-autoreload')=== true || $(this).attr('data-autoreload')=== 'true') {
+                $('#card-autoreload').hide();
+                $('#card-autoreload-active').show();
+            } else {
+                $('#card-autoreload').show();
+                $('#card-autoreload-active').hide();
+            }
+
+        });
+
+        $('div[data-pjax-container]').on('click', 'a.bs-example-modal-confirm',function (e) {
+            e.preventDefault();
+            $('div.bs-example-modal-confirm').show();
+            $('#delete-card input[name=unmbr]').attr('value', $(this).attr('data-number'));
+        });
+
+
+        $('div[data-pjax-container]').on('click', '.bs-example-modal-confirm button[data-dismiss=modal]', function (e) {
+            $('div.modal[role=confirm]').hide();
+            return false;
+        });
+
+        $('div[data-pjax-container]').on('click', '.bs-example-modal-confirm button[data-ok=modal]', function (e) {
+            $('div.modal[role=confirm]').hide();
+            $('.bs-example-modal-confirm').hide();
+            $( "#action-bank-card" ).trigger( "pjax:send" );
+            $('form#delete-card').submit();
+            return true;
+        });
+
+        $('div[data-pjax-container]').on('click','#btnPayAmount', function (e) {
+            ajaxWorkingActive();
+            $('.modal-body .text-center').html('Подтвердите пополнение карты на '+$('#amount-hidden').val()+' рублей');
+            jQuery('.bs-pay-amount-modal-sm[role=confirmpay]').show();
+        });
+
+        $('div[data-pjax-container]').on('click', 'button[data-dismiss=confirmpay]', function (e) {
+            jQuery('.bs-pay-amount-modal-sm[role=confirmpay]').hide();
+            ajaxWorkingDisable();
+        });
+
+        $('div[data-pjax-container]').on('click', 'button[data-ok=confirmpay]', function (e) {
+            jQuery('.bs-pay-amount-modal-sm[role=confirmpay]').hide();
+            jQuery('#btnPayAmount').hide();
+            $('.bs-example-modal-sm').hide();
+            AmountPayment();
+        });
+
+        $('div[data-pjax-container]').on('click', 'input[name="inlineRadioOptions"]', function(){
+            $(this).tab('show');
+        });
+
+        $('a.cancel').on('click',function(){
+            $('#tab1').tab('show');
+            $('input[data-target="tab1"]').attr('checked', 'checked');
+        });
+
+        $("#one-time-reload-amount-list").change(function () {
+            $("#amount-hidden").val($("#one-time-reload-amount-list").val());
+            $("li", ".predefined-amount-selector").removeClass("selected");
+        });
+    });
+});
+
+
+// Stars playing
+$(function () {
+    var starStartCount = 26;
+    var capOpenTime = .67;
+    var $cap = $('.tab-content').find('.tab-pane.active').find('.cap');
+    var $glassContainer = $('.tab-content').find('.tab-pane.active').find('.glass');
+
+    var starCount = 0;
+    var starWidth = 17;
+    var starHeight = 17;
+    var starTimeGap = .1;
+    var glassBottomWidth = 110;
+    var glassAngle = 6.2;
+    var glassStep = starHeight * Math.tan(glassAngle * Math.PI / 180);
+    $(document).ready(function () {
+        //starCount = starStartCount;
+        starCount = $('#glassstartcount').attr('data-value');
+        if (starCount > 0) {
+            //$cap.toggleClass('open', false);
+            setTimeout(function () {
+                launch();
+            }, 200);
+        }
+
+        $('.nav.nav-tabs.nav-justified li a').on('click', function (e) {
+            if (starCount > 0) {
+
+                $('.tab-content').find('.tab-pane').each(function () {
+                    if (!$(this).hasClass('active')) {
+                        $glassContainer = $(this).find('.glass');
+                        $cap = $(this).find('.cap');
+                    }
+                });
+
+                $cap.toggleClass('playing', false).toggleClass('open', false);
+                setTimeout(function () {
+                    launch();
+                }, 200);
+            }
+        });
+
+
+
+        function launch() {
+            //$glassContainer.html('');
+
+            $glassContainer.find('.star.posed').each(function(){
+                    $(this).remove();
+                }
+            );
+
+            // open cap
+            //$cap.toggleClass('open', true);
+            var $star = $('<div class="star" />');
+            setTimeout(function () {
+                // initial variables
+                var glassWidth = glassBottomWidth;
+                var left = 20;
+                var bottom = 2;
+                var shift = 0;
+                // generate stars
+
+                var _loop = function _loop(i) {
+                    (function () {
+                        // generate stars
+                        var $starClone = $star.clone();
+                        $glassContainer.append($starClone);
+                        // show, move, and rotate stars
+                        setTimeout(function () {
+                            $starClone.toggleClass('posed', true).css({
+                                transform: 'rotate(' + Math.round(Math.random() * 180 - 90) + 'deg)',
+                                left: left - shift,
+                                bottom: bottom
+                            });
+                            if (left + 2 * starWidth < glassWidth) {
+                                left = left + starWidth;
+                            } else {
+                                // go upper
+                                glassWidth += 2 * glassStep;
+                                left = 20;
+                                bottom += starHeight;
+                                shift += glassStep;
+                            }
+                        }, (i + 1) * starTimeGap * 1000);
+                    })();
+                };
+
+                for (var i = 0; i < starCount; i++) {
+                    _loop(i);
+                }
+                // close cap
+                setTimeout(function () {
+                    $cap.toggleClass('open', false);
+                }, starCount * starTimeGap * 1000);
+            }, capOpenTime * 1000);
+        }
+    });
+});

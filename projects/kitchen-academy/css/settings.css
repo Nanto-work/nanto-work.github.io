@@ -1,0 +1,129 @@
+@charset "utf-8";
+
+/******************************************************************************
+	Reset
+******************************************************************************/
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+ul, ol{
+	list-style: none;
+}
+html{
+	height: 100%;
+	font-size: 1px;
+	scroll-behavior: smooth;
+}
+body{
+	height: 100%;
+}
+a,
+a:hover,
+a:focus,
+a:active,
+input,
+input:hover,
+input:focus,
+input:active,
+button,
+button:hover,
+button:focus,
+button:active{
+	outline: none;
+	text-decoration: none;
+}
+
+
+/******************************************************************************
+	Variables
+******************************************************************************/
+html{
+	--5des: 	"5ka Sans Design", sans-serif;
+	--5pointy:	"5ka Sans Pointy", sans-serif;
+
+
+	--red:		#BF0108;
+	--black:	#1E1E1E;
+	--grey: 	#6F6F6F;
+}
+
+
+/******************************************************************************
+	Global
+******************************************************************************/
+body{
+	min-width: 320px;
+	font-family: var(--5des);
+}
+.inner{
+	margin-left: auto;
+	margin-right: auto;
+	width: 100%;
+	max-width: 1441rem;
+}
+.content{
+	margin-left: auto;
+	margin-right: auto;
+	width: 920rem;
+}
+.fw900{
+	font-weight: 900;
+}
+.content__title{
+	font-weight: 900;
+	font-size: 62rem;
+	line-height: 75rem;
+	text-align: center;
+	text-transform: uppercase;
+	color: var(--red);
+}
+.content__title br{
+	display: none;
+}
+.btn{
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: center;
+	align-items: center;
+	position:relative;
+	width: 230rem;
+	height: 56rem;
+	background: var(--red);
+	border-radius: 12rem;
+		
+	font-weight: 600;
+	font-size: 18rem;
+	line-height: 18rem;
+	color: #fff;
+}
+.btn::before{
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	border-radius: 12rem;
+	box-shadow: 0 0 12rem var(--red);
+	z-index: -1;
+	opacity: 0;
+	transition: opacity linear 0.2s;
+}
+.btn:hover::before{
+	opacity: 0.5;
+}
+.backlink{
+	display: inline-block;
+	height: 23rem;
+	padding-left: 27rem;
+	font-weight: 600;
+	font-size: 14rem;
+	line-height: 23rem;
+	color: var(--black);
+	background-color: transparent;
+	background-repeat: no-repeat;
+	background-position: 0 50%;
+	background-size: 12rem 23rem;
+}

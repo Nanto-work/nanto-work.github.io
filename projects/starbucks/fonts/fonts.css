@@ -1,0 +1,25 @@
+@charset "utf-8";
+
+@font-face {
+	font-family:"Inter";
+	src:local("Inter"), local("Inter-Regular"),
+		url("Inter-Regular.woff") format("woff");
+	font-weight:400;
+	font-style:normal;
+}
+
+@font-face {
+	font-family:"Inter";
+	src:local("Inter"), local("Inter-SemiBold"),
+		url("Inter-SemiBold.woff") format("woff");
+	font-weight:600;
+	font-style:normal;
+}
+
+@font-face {
+	font-family:"Inter";
+	src:local("Inter"), local("Inter-Bold"),
+		url("Inter-Bold.woff") format("woff");
+	font-weight:700;
+	font-style:normal;
+}
