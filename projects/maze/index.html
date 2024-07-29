@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Поиск выхода из лабиринта</title>
+<link href="css/style.css" rel="stylesheet" type="text/css" media="all">
+<script src="js/jquery-1.9.1.min.js"></script>
+<script src="js/script.js"></script>
+</head>
+<body>
+	<div class="linkBox">
+		<span>Введите значения высоты и ширины лабиринта. Значения должны быть от 10 до 50 (клеток), иначе генерация и вычисление пути займёт слишком много времени:</span>
+		<div class="genMazeBoxInputs">
+			<input id="countY" type="text" placeholder="Высота" />
+			<input id="countX" type="text" placeholder="Ширина" />
+		</div>
+	</div>
+	<div class="genMazeLink">
+		<a id="generateMaze" href="#">Сгенерировать лабиринт</a>
+		<a id="calcPath" href="#">Вычислить путь к выходу</a>
+		<a id="showPath" href="#">Показать путь к выходу</a>
+	</div>
+	<div class="wrapper">
+		<table id="maze">
+			<tbody></tbody>
+		</table>
+	</div>
+</body>
+</html>
